@@ -101,37 +101,37 @@
 <table align="center">
   <tr>
     <td align="center" width="25%">
-      <img src="imgs/intersections_a.png" width="100%"><br>
+      <img src="intersections_a.png" width="100%"><br>
       (a) <code>2-LANE</code>
     </td>
     <td align="center" width="25%">
-      <img src="imgs/intersections_b.png" width="100%"><br>
+      <img src="intersections_b.png" width="100%"><br>
       (b) <code>4-LANE</code>
     </td>
     <td align="center" width="25%">
-      <img src="imgs/intersections_c.png" width="100%"><br>
+      <img src="intersections_c.png" width="100%"><br>
       (c) <code>T-CROSS</code>
     </td>
     <td align="center" width="25%">
-      <img src="imgs/intersections_d.png" width="100%"><br>
+      <img src="intersections_d.png" width="100%"><br>
       (d) <code>PXO</code>
     </td>
   </tr>
   <tr>
     <td align="center" width="25%">
-      <img src="imgs/intersections_e.png" width="100%"><br>
+      <img src="intersections_e.png" width="100%"><br>
       (e) <code>LOW-DEN</code>
     </td>
     <td align="center" width="25%">
-      <img src="imgs/intersections_f.png" width="100%"><br>
+      <img src="intersections_f.png" width="100%"><br>
       (f) <code>HIGH-DEN</code>
     </td>
     <td align="center" width="25%">
-      <img src="imgs/intersections_g.png" width="100%"><br>
+      <img src="intersections_g.png" width="100%"><br>
       (g) <code>HIGH-VIS</code>
     </td>
     <td align="center" width="25%">
-      <img src="imgs/intersections_h.png" width="100%"><br>
+      <img src="intersections_h.png" width="100%"><br>
       (h) <code>LOW-VIS</code>
     </td>
   </tr>
