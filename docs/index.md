@@ -1,4 +1,6 @@
 # SPADE
+
+SPaT Attack Detection and Evaluation dataset
  
 ![Overview of the SPADE dataset focal point](spat_overview.png)
 
