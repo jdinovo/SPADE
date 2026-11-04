@@ -28,3 +28,6 @@ MOSAIC scenarios are each within their respective folders. Java application code
 2. Generation script dry run `DRY_RUN=1 ./run_spade.sh`
 
 3. Run the dataset generation `./run_spade.sh`
+
+4. For run metadate file cleanup use `./run_spade.sh clean`
+
