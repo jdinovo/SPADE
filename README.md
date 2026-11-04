@@ -25,4 +25,3 @@
 2. Generation script dry run `DRY_RUN=1 ./run_spade.sh`
 
 3. Run the dataset generation `./run_spade.sh`
->>>>>>> a1b37be (Initial Commit)
