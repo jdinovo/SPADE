@@ -1,0 +1,45 @@
+sqlite3 ../application/2lane3way.db "
+SELECT DISTINCT r.id
+FROM Route r
+JOIN ConnectionConsistsOf cco ON r.connection_id = cco.connection_id
+WHERE cco.node_id = '477084749' LIMIT 40;"
+1000
+1022
+1018
+1017
+1016
+1015
+1014
+1013
+1032
+1031
+1028
+1027
+1025
+1024
+1023
+1042
+1038
+1037
+1036
+1035
+1034
+1053
+1052
+1051
+1050
+1049
+1047
+1046
+1066
+1065
+1064
+1062
+1059
+1058
+12432
+12433
+12430
+12431
+12436
+12434

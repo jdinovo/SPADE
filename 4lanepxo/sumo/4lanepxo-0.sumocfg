@@ -1,0 +1,10 @@
+<configuration>
+    <input>
+        <net-file value="4lanepxo.net.xml" />
+        <additional-files value="4lanepxo.buildings.xml" />
+    </input>
+    <time>
+        <begin value="0" />
+        <end value="1000" />
+    </time>
+</configuration>

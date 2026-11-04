@@ -1,0 +1,47 @@
+{
+    "initialization": {
+        "waitForInitMessages": true
+    },
+    "map": "2lane4way.osm",
+    "stepSize": "50 ms",
+    "visualizer": true,
+    "showMapPattern": false,
+    "showLidar": false,
+    "showRoutes": false,
+    "cameraPosition": {
+        "latitude": 45.39972612977912,
+        "longitude": -75.72056321335863
+    },
+    "vehicleTypes": {
+        "Car": {
+            "sensors": [],
+            "skills": [],
+            "features": []
+        }
+    },
+    "trajectories": {},
+    "screenshotInterval": "0 s",
+    "extrapolation": {
+        "benchmarkAccuracy": false
+    },
+    "lidarNumberOfThreads": 1,
+    "lidarAbsoluteCoordinates": true,
+    "lidarFrameTransport": "RAW",
+    "defaultLidarConfiguration": {
+        "horizontalFieldOfView": 120,
+        "verticalFieldOfView": 4.0,
+        "horizontalResolution": 1.0,
+        "verticalResolution": 1.0,
+        "pitchOffset": 2.0,
+        "range": 200.0,
+        "samplingRate": 20.0,
+        "position": {
+            "x": 0.0,
+            "y": 0.1,
+            "z": -1.45
+        },
+        "lidarNoise": "0 m",
+        "measurementTimeOffset": 0.0
+    },
+    "lidarConfigurations": {}
+}

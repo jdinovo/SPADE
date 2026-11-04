@@ -1,0 +1,45 @@
+sqlite3 ../application/4lane4way-test.db "
+SELECT DISTINCT r.id
+FROM Route r
+JOIN ConnectionConsistsOf cco ON r.connection_id = cco.connection_id
+WHERE cco.node_id = 'cluster_4701100015_4701100016_899856526_899859210' LIMIT 40;"
+102
+1094
+1096
+1102
+1131
+1133
+1139
+1316
+1318
+1324
+20
+205
+207
+213
+22
+279
+28
+281
+287
+390
+392
+398
+427
+429
+435
+57
+59
+612
+614
+620
+65
+798
+799
+805
+872
+874
+879
+909
+911
+916

@@ -1,0 +1,10 @@
+<configuration>
+    <input>
+        <net-file value="2lane3way.net.xml" />
+        <additional-files value="2lane3way.buildings.xml" />
+    </input>
+    <time>
+        <begin value="0" />
+        <end value="1000" />
+    </time>
+</configuration>

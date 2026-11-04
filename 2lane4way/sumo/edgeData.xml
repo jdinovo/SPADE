@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-10-13T17:53:30.011741-05:00 by Eclipse SUMO GUI 1.28.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane4way/sumo/2lane4way.net.xml"/>
+        <route-files value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane4way/sumo/2lane4way.passenger.trips.xml"/>
+        <additional-files value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane4way/sumo/2lane4way.poly.xml.gz,/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane4way/sumo/output.add.xml,/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane4way/sumo/2lane4way.dat.add.xml"/>
+    </input>
+
+    <output>
+        <tripinfo-output value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane4way/sumo/tripinfos.xml"/>
+        <statistic-output value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane4way/sumo/stats.xml"/>
+    </output>
+
+    <processing>
+        <ignore-route-errors value="true"/>
+        <tls.actuated.jam-threshold value="30"/>
+    </processing>
+
+    <routing>
+        <device.rerouting.adaptation-steps value="18"/>
+        <device.rerouting.adaptation-interval value="10"/>
+    </routing>
+
+    <report>
+        <verbose value="true"/>
+        <duration-log.statistics value="true"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <gui_only>
+        <gui-settings-file value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane4way/sumo/2lane4way.view.xml"/>
+    </gui_only>
+
+</sumoConfiguration>
+-->
+
+<meandata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/meandata_file.xsd">
+</meandata>

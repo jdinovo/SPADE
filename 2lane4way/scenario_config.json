@@ -1,0 +1,37 @@
+{
+    "simulation": {
+        "id": "2lane4way",
+        "duration": "1000s",
+        "randomSeed": 268965854,
+        "projection": {
+            "centerCoordinates": {
+                "latitude": 45.39972612977912,
+                "longitude": -75.72056321335863
+            },
+            "cartesianOffset": {
+                "x": -441453.05,
+                "y": -5026281.87
+            }
+        },
+        "network": {
+            "netMask": "255.255.0.0",
+            "vehicleNet": "10.1.0.0",
+            "rsuNet": "10.2.0.0",
+            "tlNet": "10.3.0.0",
+            "csNet": "10.4.0.0",
+            "serverNet": "10.5.0.0",
+            "tmcNet": "10.6.0.0"
+        }
+    },
+    "federates": {
+        "application": true,
+        "environment": false,
+        "cell": true,
+        "ns3": false,
+        "omnetpp": false,
+        "output": true,
+        "sns": true,
+        "sumo": true,
+        "phabmacs": false
+    }
+}

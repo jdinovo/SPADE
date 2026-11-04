@@ -1,0 +1,70 @@
+{
+    "prototypes": [
+        {
+            "name": "Car",
+            "length": "4 m",
+            "minGap": "2.5 m",
+            "maxSpeed": "36 m/s",
+            "vehicleClass": "Car",
+            "accel": 2.6,
+            "decel": 4.5,
+            "sigma": 0.5,
+            "tau": 1.0,
+            "speedFactor": 1.0,
+            "deviations": {
+                "speedFactor": 0.1
+            },
+            "applications": [
+                "org.example.VehicleApp(\"false\")"
+            ]
+        },
+        {
+            "name": "TrafficLight",
+            "applications": ["org.example.RsuSpatApp"]
+        }
+    ],
+  "trafficLights": [
+    {
+      "name": "TrafficLight",
+      "tlGroupId": "477084749"
+    }
+  ],
+  "vehicles": [
+    {
+      "startingTime": 0.5,
+      "targetFlow": 60,
+      "maxNumberVehicles": 3,
+      "route": "1049",
+      "types": [
+        { "name": "Car" }
+      ]
+    },
+        {
+      "startingTime": 0.0,
+      "targetFlow": 60,
+      "maxNumberVehicles": 4,
+      "route": "1052",
+      "types": [
+        { "name": "Car" }
+      ]
+    },
+        {
+      "startingTime": 0.0,
+      "targetFlow": 60,
+      "maxNumberVehicles": 4,
+      "route": "1065",
+      "types": [
+        { "name": "Car" }
+      ]
+    },
+            {
+      "startingTime": 0.0,
+      "targetFlow": 60,
+      "maxNumberVehicles": 4,
+      "route": "12432",
+      "types": [
+        { "name": "Car" }
+      ]
+    }
+  ]
+}

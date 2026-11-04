@@ -1,0 +1,17 @@
+{
+  "perceptionConfiguration": {
+    "vehicleIndex": {
+      "enabled": true,
+      "type": "grid"
+    },
+    "trafficLightIndex": {
+      "enabled": true
+    },
+    "wallIndex": {
+      "enabled": true
+    }
+  },
+  "navigationConfiguration": {
+    "databaseFile": "4lanepxo-test.db"
+  }
+}

@@ -1,0 +1,3326 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<osm version='0.6' generator='MOSAIC OSM-Export'>
+	<node id="901210958" lat="45.424107" lon="-75.675278" version="1"/>
+	<node id="901207788" lat="45.428100" lon="-75.676281" version="1"/>
+	<node id="1243243170" lat="45.427528" lon="-75.687165" version="1"/>
+	<node id="901205379" lat="45.426893" lon="-75.684234" version="1"/>
+	<node id="901206475" lat="45.429373" lon="-75.686368" version="1"/>
+	<node id="901211819" lat="45.430269" lon="-75.674187" version="1"/>
+	<node id="901208428" lat="45.428935" lon="-75.679353" version="1"/>
+	<node id="901205564" lat="45.428832" lon="-75.674539" version="1"/>
+	<node id="901057158" lat="45.428017" lon="-75.687537" version="1"/>
+	<node id="80000500" lat="45.421284" lon="-75.677082" version="1"/>
+	<node id="80000501" lat="45.421244" lon="-75.677178" version="1"/>
+	<node id="80000502" lat="45.420940" lon="-75.677926" version="1"/>
+	<node id="80000510" lat="45.422603" lon="-75.673903" version="1"/>
+	<node id="80000511" lat="45.423550" lon="-75.671657" version="1"/>
+	<node id="1419741876" lat="45.430357" lon="-75.686998" version="1"/>
+	<node id="901205346" lat="45.431484" lon="-75.675213" version="1"/>
+	<node id="80000512" lat="45.424013" lon="-75.670542" version="1"/>
+	<node id="1653163398" lat="45.429626" lon="-75.683679" version="1"/>
+	<node id="80000513" lat="45.427447" lon="-75.684866" version="1"/>
+	<node id="80000503" lat="45.422111" lon="-75.675087" version="1"/>
+	<node id="80000504" lat="45.421842" lon="-75.675729" version="1"/>
+	<node id="80000505" lat="45.421730" lon="-75.675997" version="1"/>
+	<node id="80000506" lat="45.422555" lon="-75.674046" version="1"/>
+	<node id="901215392" lat="45.424936" lon="-75.683824" version="1"/>
+	<node id="80000507" lat="45.422538" lon="-75.674084" version="1"/>
+	<node id="80000508" lat="45.422169" lon="-75.674951" version="1"/>
+	<node id="80000509" lat="45.422618" lon="-75.673869" version="1"/>
+	<node id="901206682" lat="45.422966" lon="-75.673084" version="1"/>
+	<node id="80000520" lat="45.423502" lon="-75.686459" version="1"/>
+	<node id="80000521" lat="45.423595" lon="-75.686522" version="1"/>
+	<node id="80000522" lat="45.423628" lon="-75.686542" version="1"/>
+	<node id="901206446" lat="45.425295" lon="-75.677689" version="1"/>
+	<node id="80000523" lat="45.423665" lon="-75.686564" version="1"/>
+	<node id="80000524" lat="45.430312" lon="-75.676302" version="1"/>
+	<node id="80000514" lat="45.427438" lon="-75.684888" version="1"/>
+	<node id="80000515" lat="45.426775" lon="-75.686436" version="1"/>
+	<node id="901215145" lat="45.427494" lon="-75.684763" version="1"/>
+	<node id="80000516" lat="45.426765" lon="-75.686460" version="1"/>
+	<node id="80000517" lat="45.423012" lon="-75.686159" version="1"/>
+	<node id="80000518" lat="45.423337" lon="-75.686352" version="1"/>
+	<node id="80000519" lat="45.423422" lon="-75.686406" version="1"/>
+	<node id="80000091" lat="45.430871" lon="-75.676687" version="1"/>
+	<node id="80000092" lat="45.432378" lon="-75.673088" version="1"/>
+	<node id="80000093" lat="45.432096" lon="-75.673766" version="1"/>
+	<node id="80000094" lat="45.432044" lon="-75.673890" version="1"/>
+	<node id="80000095" lat="45.431529" lon="-75.675107" version="1"/>
+	<node id="80000096" lat="45.431524" lon="-75.675118" version="1"/>
+	<node id="80000097" lat="45.426844" lon="-75.684192" version="1"/>
+	<node id="80000098" lat="45.426318" lon="-75.683746" version="1"/>
+	<node id="80000099" lat="45.426039" lon="-75.681193" version="1"/>
+	<node id="901212065" lat="45.426273" lon="-75.683708" version="1"/>
+	<node id="80000090" lat="45.430880" lon="-75.676664" version="1"/>
+	<node id="901205546" lat="45.429585" lon="-75.677800" version="1"/>
+	<node id="10698447849" lat="45.423971" lon="-75.686120" version="1"/>
+	<node id="901205559" lat="45.427679" lon="-75.680383" version="1"/>
+	<node id="901209914" lat="45.425728" lon="-75.676637" version="1"/>
+	<node id="901208823" lat="45.430798" lon="-75.678829" version="1"/>
+	<node id="901214496" lat="45.432674" lon="-75.682460" version="1"/>
+	<node id="12077380165" lat="45.425669" lon="-75.671863" version="1"/>
+	<node id="412678992" lat="45.424130" lon="-75.683152" version="1"/>
+	<node id="901212263" lat="45.426722" lon="-75.679557" version="1"/>
+	<node id="901210070" lat="45.426502" lon="-75.680081" version="1"/>
+	<node id="10698447858" lat="45.423744" lon="-75.686613" version="1"/>
+	<node id="901206818" lat="45.424488" lon="-75.674391" version="1"/>
+	<node id="901211198" lat="45.430233" lon="-75.676249" version="1"/>
+	<node id="901214224" lat="45.428970" lon="-75.677297" version="1"/>
+	<node id="901206602" lat="45.432929" lon="-75.687025" version="1"/>
+	<node id="901207931" lat="45.427363" lon="-75.678024" version="1"/>
+	<node id="901054929" lat="45.425502" lon="-75.687582" version="1"/>
+	<node id="80000370" lat="45.430358" lon="-75.684697" version="1"/>
+	<node id="80000371" lat="45.430153" lon="-75.684523" version="1"/>
+	<node id="80000130" lat="45.430885" lon="-75.680648" version="1"/>
+	<node id="80000372" lat="45.429665" lon="-75.684112" version="1"/>
+	<node id="80000131" lat="45.430834" lon="-75.680768" version="1"/>
+	<node id="80000373" lat="45.429589" lon="-75.684049" version="1"/>
+	<node id="80000132" lat="45.425992" lon="-75.681086" version="1"/>
+	<node id="80000374" lat="45.429574" lon="-75.684036" version="1"/>
+	<node id="80000133" lat="45.425348" lon="-75.680524" version="1"/>
+	<node id="80000375" lat="45.432906" lon="-75.686970" version="1"/>
+	<node id="5680724790" lat="45.425496" lon="-75.671999" version="1"/>
+	<node id="80000134" lat="45.425018" lon="-75.680235" version="1"/>
+	<node id="80000376" lat="45.432870" lon="-75.686884" version="1"/>
+	<node id="80000135" lat="45.424860" lon="-75.680097" version="1"/>
+	<node id="80000377" lat="45.432819" lon="-75.686821" version="1"/>
+	<node id="80000136" lat="45.424482" lon="-75.679768" version="1"/>
+	<node id="80000378" lat="45.432638" lon="-75.686657" version="1"/>
+	<node id="80000137" lat="45.426471" lon="-75.680158" version="1"/>
+	<node id="80000379" lat="45.432006" lon="-75.686102" version="1"/>
+	<node id="80000138" lat="45.426422" lon="-75.680277" version="1"/>
+	<node id="80000139" lat="45.426092" lon="-75.681062" version="1"/>
+	<node id="80000129" lat="45.430993" lon="-75.680388" version="1"/>
+	<node id="901210164" lat="45.423311" lon="-75.682446" version="1"/>
+	<node id="901214768" lat="45.425504" lon="-75.685516" version="1"/>
+	<node id="80000380" lat="45.431423" lon="-75.685610" version="1"/>
+	<node id="80000381" lat="45.428270" lon="-75.678799" version="1"/>
+	<node id="80000140" lat="45.425447" lon="-75.685472" version="1"/>
+	<node id="80000382" lat="45.427778" lon="-75.678380" version="1"/>
+	<node id="80000141" lat="45.424614" lon="-75.684802" version="1"/>
+	<node id="80000383" lat="45.427430" lon="-75.678083" version="1"/>
+	<node id="80000142" lat="45.428223" lon="-75.683041" version="1"/>
+	<node id="80000384" lat="45.430094" lon="-75.682563" version="1"/>
+	<node id="80000143" lat="45.428206" lon="-75.683081" version="1"/>
+	<node id="80000385" lat="45.429821" lon="-75.683211" version="1"/>
+	<node id="80000144" lat="45.427557" lon="-75.684615" version="1"/>
+	<node id="80000386" lat="45.427625" lon="-75.680336" version="1"/>
+	<node id="80000145" lat="45.427538" lon="-75.684658" version="1"/>
+	<node id="80000387" lat="45.427160" lon="-75.679934" version="1"/>
+	<node id="80000146" lat="45.426712" lon="-75.686597" version="1"/>
+	<node id="80000388" lat="45.426811" lon="-75.679633" version="1"/>
+	<node id="80000147" lat="45.426690" lon="-75.686646" version="1"/>
+	<node id="80000389" lat="45.426785" lon="-75.679610" version="1"/>
+	<node id="80000148" lat="45.426508" lon="-75.687056" version="1"/>
+	<node id="80000149" lat="45.426465" lon="-75.687152" version="1"/>
+	<node id="901214752" lat="45.428841" lon="-75.683479" version="1"/>
+	<node id="80000390" lat="45.428223" lon="-75.680858" version="1"/>
+	<node id="80000391" lat="45.427719" lon="-75.680418" version="1"/>
+	<node id="80000150" lat="45.426368" lon="-75.687368" version="1"/>
+	<node id="80000392" lat="45.428334" lon="-75.680952" version="1"/>
+	<node id="80000151" lat="45.426252" lon="-75.687656" version="1"/>
+	<node id="80000393" lat="45.429447" lon="-75.681889" version="1"/>
+	<node id="80000152" lat="45.430683" lon="-75.682850" version="1"/>
+	<node id="80000394" lat="45.429428" lon="-75.681873" version="1"/>
+	<node id="80000153" lat="45.430654" lon="-75.682832" version="1"/>
+	<node id="80000395" lat="45.423253" lon="-75.672185" version="1"/>
+	<node id="80000154" lat="45.430624" lon="-75.682807" version="1"/>
+	<node id="80000396" lat="45.423217" lon="-75.672156" version="1"/>
+	<node id="80000155" lat="45.430246" lon="-75.682487" version="1"/>
+	<node id="80000397" lat="45.421842" lon="-75.670993" version="1"/>
+	<node id="80000156" lat="45.430222" lon="-75.682475" version="1"/>
+	<node id="80000398" lat="45.421743" lon="-75.670909" version="1"/>
+	<node id="80000157" lat="45.430747" lon="-75.680980" version="1"/>
+	<node id="80000399" lat="45.421712" lon="-75.670882" version="1"/>
+	<node id="80000158" lat="45.430492" lon="-75.681596" version="1"/>
+	<node id="80000159" lat="45.430462" lon="-75.681670" version="1"/>
+	<node id="901211271" lat="45.432094" lon="-75.675727" version="1"/>
+	<node id="901208097" lat="45.428411" lon="-75.685424" version="1"/>
+	<node id="80000160" lat="45.430403" lon="-75.681813" version="1"/>
+	<node id="80000161" lat="45.430352" lon="-75.681937" version="1"/>
+	<node id="80000162" lat="45.430309" lon="-75.682042" version="1"/>
+	<node id="80000163" lat="45.430258" lon="-75.682167" version="1"/>
+	<node id="80000164" lat="45.430184" lon="-75.682345" version="1"/>
+	<node id="901206925" lat="45.429508" lon="-75.681940" version="1"/>
+	<node id="80000165" lat="45.430741" lon="-75.678781" version="1"/>
+	<node id="80000166" lat="45.429472" lon="-75.682025" version="1"/>
+	<node id="80000167" lat="45.429459" lon="-75.682054" version="1"/>
+	<node id="80000168" lat="45.429359" lon="-75.682284" version="1"/>
+	<node id="80000169" lat="45.429350" lon="-75.682307" version="1"/>
+	<node id="901211263" lat="45.426108" lon="-75.675757" version="1"/>
+	<node id="901214537" lat="45.428894" lon="-75.681425" version="1"/>
+	<node id="80000170" lat="45.429186" lon="-75.682684" version="1"/>
+	<node id="80000171" lat="45.428870" lon="-75.683413" version="1"/>
+	<node id="80000172" lat="45.426670" lon="-75.686475" version="1"/>
+	<node id="80000173" lat="45.426648" lon="-75.686456" version="1"/>
+	<node id="80000174" lat="45.426442" lon="-75.686276" version="1"/>
+	<node id="80000175" lat="45.426201" lon="-75.686077" version="1"/>
+	<node id="80000176" lat="45.426166" lon="-75.686050" version="1"/>
+	<node id="80000177" lat="45.427280" lon="-75.686971" version="1"/>
+	<node id="80000178" lat="45.426818" lon="-75.686599" version="1"/>
+	<node id="80000179" lat="45.426793" lon="-75.686578" version="1"/>
+	<node id="1655123258" lat="45.430062" lon="-75.686979" version="1"/>
+	<node id="80000180" lat="45.427139" lon="-75.673117" version="1"/>
+	<node id="80000181" lat="45.427125" lon="-75.673105" version="1"/>
+	<node id="80000182" lat="45.425690" lon="-75.671882" version="1"/>
+	<node id="80000183" lat="45.423939" lon="-75.684226" version="1"/>
+	<node id="80000184" lat="45.423812" lon="-75.684120" version="1"/>
+	<node id="80000185" lat="45.423727" lon="-75.684156" version="1"/>
+	<node id="80000186" lat="45.423408" lon="-75.684906" version="1"/>
+	<node id="80000187" lat="45.423403" lon="-75.684919" version="1"/>
+	<node id="80000188" lat="45.425683" lon="-75.676608" version="1"/>
+	<node id="80000189" lat="45.425539" lon="-75.676485" version="1"/>
+	<node id="901212774" lat="45.430154" lon="-75.680384" version="1"/>
+	<node id="80000190" lat="45.425302" lon="-75.676283" version="1"/>
+	<node id="901210139" lat="45.430146" lon="-75.682439" version="1"/>
+	<node id="80000191" lat="45.425239" lon="-75.676230" version="1"/>
+	<node id="80000192" lat="45.425098" lon="-75.676111" version="1"/>
+	<node id="80000193" lat="45.424165" lon="-75.675327" version="1"/>
+	<node id="80000194" lat="45.427300" lon="-75.677970" version="1"/>
+	<node id="80000195" lat="45.426186" lon="-75.677035" version="1"/>
+	<node id="80000196" lat="45.426079" lon="-75.676945" version="1"/>
+	<node id="80000197" lat="45.426054" lon="-75.676924" version="1"/>
+	<node id="80000198" lat="45.425773" lon="-75.676665" version="1"/>
+	<node id="80000199" lat="45.424176" lon="-75.675117" version="1"/>
+	<node id="80000530" lat="45.430568" lon="-75.687307" version="1"/>
+	<node id="80000531" lat="45.430580" lon="-75.687351" version="1"/>
+	<node id="80000532" lat="45.430586" lon="-75.687402" version="1"/>
+	<node id="80000533" lat="45.428166" lon="-75.685171" version="1"/>
+	<node id="5791143897" lat="45.423156" lon="-75.681077" version="1"/>
+	<node id="80000534" lat="45.430482" lon="-75.687080" version="1"/>
+	<node id="80000535" lat="45.430736" lon="-75.687288" version="1"/>
+	<node id="80000525" lat="45.430275" lon="-75.676278" version="1"/>
+	<node id="80000526" lat="45.431403" lon="-75.677235" version="1"/>
+	<node id="80000527" lat="45.430502" lon="-75.687196" version="1"/>
+	<node id="80000528" lat="45.430533" lon="-75.687233" version="1"/>
+	<node id="80000529" lat="45.430555" lon="-75.687268" version="1"/>
+	<node id="901207157" lat="45.426245" lon="-75.682276" version="1"/>
+	<node id="901210307" lat="45.422017" lon="-75.669980" version="1"/>
+	<node id="80000540" lat="45.427377" lon="-75.686933" version="1"/>
+	<node id="80000541" lat="45.427826" lon="-75.685849" version="1"/>
+	<node id="3859505168" lat="45.423317" lon="-75.687501" version="1"/>
+	<node id="80000300" lat="45.432408" lon="-75.683093" version="1"/>
+	<node id="80000542" lat="45.428040" lon="-75.685351" version="1"/>
+	<node id="80000301" lat="45.432353" lon="-75.683224" version="1"/>
+	<node id="80000543" lat="45.429086" lon="-75.683740" version="1"/>
+	<node id="80000302" lat="45.432191" lon="-75.683608" version="1"/>
+	<node id="80000544" lat="45.429046" lon="-75.683731" version="1"/>
+	<node id="80000303" lat="45.432183" lon="-75.683627" version="1"/>
+	<node id="80000545" lat="45.429023" lon="-75.683684" version="1"/>
+	<node id="80000304" lat="45.432104" lon="-75.683816" version="1"/>
+	<node id="80000546" lat="45.425526" lon="-75.685465" version="1"/>
+	<node id="5791143895" lat="45.425848" lon="-75.683346" version="1"/>
+	<node id="80000536" lat="45.430801" lon="-75.687346" version="1"/>
+	<node id="5791143896" lat="45.424207" lon="-75.681966" version="1"/>
+	<node id="80000537" lat="45.431283" lon="-75.687749" version="1"/>
+	<node id="80000538" lat="45.431737" lon="-75.688150" version="1"/>
+	<node id="80000539" lat="45.431868" lon="-75.688265" version="1"/>
+	<node id="80000550" lat="45.426058" lon="-75.684214" version="1"/>
+	<node id="80000551" lat="45.426234" lon="-75.683801" version="1"/>
+	<node id="80000310" lat="45.431402" lon="-75.685486" version="1"/>
+	<node id="80000552" lat="45.430427" lon="-75.687302" version="1"/>
+	<node id="80000311" lat="45.426661" lon="-75.682638" version="1"/>
+	<node id="80000553" lat="45.428855" lon="-75.685923" version="1"/>
+	<node id="80000312" lat="45.426639" lon="-75.682619" version="1"/>
+	<node id="80000554" lat="45.426320" lon="-75.683597" version="1"/>
+	<node id="80000313" lat="45.422896" lon="-75.673028" version="1"/>
+	<node id="80000555" lat="45.426989" lon="-75.682000" version="1"/>
+	<node id="80000314" lat="45.422882" lon="-75.673016" version="1"/>
+	<node id="80000556" lat="45.430056" lon="-75.674697" version="1"/>
+	<node id="80000315" lat="45.421861" lon="-75.672156" version="1"/>
+	<node id="80000557" lat="45.430224" lon="-75.674297" version="1"/>
+	<node id="80000305" lat="45.432062" lon="-75.683916" version="1"/>
+	<node id="80000547" lat="45.425536" lon="-75.685442" version="1"/>
+	<node id="80000306" lat="45.432024" lon="-75.684005" version="1"/>
+	<node id="80000548" lat="45.425683" lon="-75.685097" version="1"/>
+	<node id="80000307" lat="45.431988" lon="-75.684092" version="1"/>
+	<node id="80000549" lat="45.425753" lon="-75.684931" version="1"/>
+	<node id="80000308" lat="45.431763" lon="-75.684626" version="1"/>
+	<node id="80000309" lat="45.431454" lon="-75.685360" version="1"/>
+	<node id="901213838" lat="45.426467" lon="-75.674883" version="1"/>
+	<node id="80000560" lat="45.425821" lon="-75.686726" version="1"/>
+	<node id="80000561" lat="45.425603" lon="-75.687233" version="1"/>
+	<node id="80000320" lat="45.424426" lon="-75.674338" version="1"/>
+	<node id="80000562" lat="45.425532" lon="-75.687399" version="1"/>
+	<node id="80000321" lat="45.423537" lon="-75.673574" version="1"/>
+	<node id="80000563" lat="45.425505" lon="-75.687474" version="1"/>
+	<node id="80000322" lat="45.423018" lon="-75.673128" version="1"/>
+	<node id="80000564" lat="45.429064" lon="-75.683602" version="1"/>
+	<node id="80000323" lat="45.422999" lon="-75.673113" version="1"/>
+	<node id="80000565" lat="45.429099" lon="-75.683612" version="1"/>
+	<node id="80000324" lat="45.426054" lon="-75.675721" version="1"/>
+	<node id="80000566" lat="45.429120" lon="-75.683653" version="1"/>
+	<node id="80000325" lat="45.426030" lon="-75.675700" version="1"/>
+	<node id="80000567" lat="45.428179" lon="-75.685284" version="1"/>
+	<node id="80000326" lat="45.424544" lon="-75.674440" version="1"/>
+	<node id="80000568" lat="45.430003" lon="-75.686927" version="1"/>
+	<node id="80000316" lat="45.421579" lon="-75.671924" version="1"/>
+	<node id="80000558" lat="45.430234" lon="-75.674273" version="1"/>
+	<node id="80000317" lat="45.421392" lon="-75.671769" version="1"/>
+	<node id="80000559" lat="45.426095" lon="-75.686086" version="1"/>
+	<node id="80000318" lat="45.421364" lon="-75.671745" version="1"/>
+	<node id="80000319" lat="45.424435" lon="-75.674346" version="1"/>
+	<node id="6858635506" lat="45.422892" lon="-75.686090" version="1"/>
+	<node id="6373350494" lat="45.422674" lon="-75.681923" version="1"/>
+	<node id="901211846" lat="45.429337" lon="-75.673462" version="1"/>
+	<node id="901210758" lat="45.423249" lon="-75.677351" version="1"/>
+	<node id="80000570" lat="45.430052" lon="-75.686725" version="1"/>
+	<node id="80000571" lat="45.429318" lon="-75.686103" version="1"/>
+	<node id="80000330" lat="45.426174" lon="-75.675807" version="1"/>
+	<node id="80000572" lat="45.429391" lon="-75.686162" version="1"/>
+	<node id="80000331" lat="45.426151" lon="-75.675787" version="1"/>
+	<node id="80000573" lat="45.428915" lon="-75.685774" version="1"/>
+	<node id="80000332" lat="45.430094" lon="-75.680333" version="1"/>
+	<node id="80000574" lat="45.429007" lon="-75.685850" version="1"/>
+	<node id="80000333" lat="45.430176" lon="-75.676208" version="1"/>
+	<node id="80000575" lat="45.427045" lon="-75.681868" version="1"/>
+	<node id="80000334" lat="45.430151" lon="-75.676192" version="1"/>
+	<node id="80000576" lat="45.427336" lon="-75.681187" version="1"/>
+	<node id="80000335" lat="45.429673" lon="-75.675786" version="1"/>
+	<node id="80000577" lat="45.427352" lon="-75.681148" version="1"/>
+	<node id="80000336" lat="45.429653" lon="-75.675769" version="1"/>
+	<node id="80000578" lat="45.427651" lon="-75.680449" version="1"/>
+	<node id="80000337" lat="45.428815" lon="-75.683538" version="1"/>
+	<node id="80000579" lat="45.427714" lon="-75.680300" version="1"/>
+	<node id="80000327" lat="45.424535" lon="-75.674427" version="1"/>
+	<node id="80000569" lat="45.429563" lon="-75.686303" version="1"/>
+	<node id="80000328" lat="45.427662" lon="-75.677101" version="1"/>
+	<node id="80000329" lat="45.427635" lon="-75.677078" version="1"/>
+	<node id="80000580" lat="45.428024" lon="-75.679558" version="1"/>
+	<node id="80000581" lat="45.428297" lon="-75.678897" version="1"/>
+	<node id="80000340" lat="45.428251" lon="-75.684897" version="1"/>
+	<node id="80000582" lat="45.428352" lon="-75.678767" version="1"/>
+	<node id="80000341" lat="45.430113" lon="-75.674057" version="1"/>
+	<node id="80000583" lat="45.428761" lon="-75.677793" version="1"/>
+	<node id="80000100" lat="45.425278" lon="-75.683037" version="1"/>
+	<node id="80000342" lat="45.429976" lon="-75.673943" version="1"/>
+	<node id="80000584" lat="45.428872" lon="-75.677529" version="1"/>
+	<node id="80000101" lat="45.428018" lon="-75.676474" version="1"/>
+	<node id="80000343" lat="45.429863" lon="-75.673850" version="1"/>
+	<node id="80000585" lat="45.428932" lon="-75.677387" version="1"/>
+	<node id="80000102" lat="45.427992" lon="-75.676536" version="1"/>
+	<node id="80000344" lat="45.429795" lon="-75.673788" version="1"/>
+	<node id="80000586" lat="45.428938" lon="-75.677372" version="1"/>
+	<node id="80000103" lat="45.427975" lon="-75.676577" version="1"/>
+	<node id="80000345" lat="45.429608" lon="-75.673633" version="1"/>
+	<node id="80000587" lat="45.429184" lon="-75.676783" version="1"/>
+	<node id="80000104" lat="45.428340" lon="-75.675709" version="1"/>
+	<node id="80000346" lat="45.429432" lon="-75.673483" version="1"/>
+	<node id="80000588" lat="45.429402" lon="-75.676260" version="1"/>
+	<node id="80000105" lat="45.428136" lon="-75.676196" version="1"/>
+	<node id="80000347" lat="45.429415" lon="-75.673472" version="1"/>
+	<node id="80000589" lat="45.427309" lon="-75.687125" version="1"/>
+	<node id="80000106" lat="45.428788" lon="-75.674644" version="1"/>
+	<node id="80000348" lat="45.429403" lon="-75.673464" version="1"/>
+	<node id="80000338" lat="45.428709" lon="-75.683813" version="1"/>
+	<node id="80000339" lat="45.428469" lon="-75.684382" version="1"/>
+	<node id="80000590" lat="45.428630" lon="-75.685724" version="1"/>
+	<node id="80000591" lat="45.428520" lon="-75.685641" version="1"/>
+	<node id="3659092687" lat="45.428976" lon="-75.683584" version="1"/>
+	<node id="80000350" lat="45.430822" lon="-75.674653" version="1"/>
+	<node id="80000592" lat="45.428440" lon="-75.685578" version="1"/>
+	<node id="80000351" lat="45.430707" lon="-75.674557" version="1"/>
+	<node id="80000593" lat="45.428375" lon="-75.685527" version="1"/>
+	<node id="80000110" lat="45.429216" lon="-75.673645" version="1"/>
+	<node id="80000352" lat="45.430840" lon="-75.674804" version="1"/>
+	<node id="80000594" lat="45.428149" lon="-75.685334" version="1"/>
+	<node id="80000111" lat="45.429070" lon="-75.673984" version="1"/>
+	<node id="80000353" lat="45.430266" lon="-75.676174" version="1"/>
+	<node id="80000595" lat="45.423420" lon="-75.682539" version="1"/>
+	<node id="80000112" lat="45.429007" lon="-75.674131" version="1"/>
+	<node id="80000354" lat="45.430922" lon="-75.674606" version="1"/>
+	<node id="80000596" lat="45.423503" lon="-75.682614" version="1"/>
+	<node id="80000113" lat="45.428987" lon="-75.674176" version="1"/>
+	<node id="80000355" lat="45.425388" lon="-75.682960" version="1"/>
+	<node id="80000597" lat="45.423842" lon="-75.682904" version="1"/>
+	<node id="80000114" lat="45.428935" lon="-75.674299" version="1"/>
+	<node id="80000356" lat="45.425415" lon="-75.682718" version="1"/>
+	<node id="80000598" lat="45.423863" lon="-75.682922" version="1"/>
+	<node id="80000115" lat="45.428876" lon="-75.674436" version="1"/>
+	<node id="80000357" lat="45.425388" lon="-75.682787" version="1"/>
+	<node id="80000599" lat="45.423962" lon="-75.683009" version="1"/>
+	<node id="80000116" lat="45.426640" lon="-75.679755" version="1"/>
+	<node id="80000358" lat="45.431342" lon="-75.679266" version="1"/>
+	<node id="80000117" lat="45.426552" lon="-75.679965" version="1"/>
+	<node id="80000359" lat="45.431314" lon="-75.679254" version="1"/>
+	<node id="80000107" lat="45.429310" lon="-75.673479" version="1"/>
+	<node id="80000349" lat="45.429370" lon="-75.673456" version="1"/>
+	<node id="5791143885" lat="45.422466" lon="-75.680506" version="1"/>
+	<node id="80000108" lat="45.429284" lon="-75.673507" version="1"/>
+	<node id="4883032322" lat="45.432451" lon="-75.672911" version="1"/>
+	<node id="80000109" lat="45.429261" lon="-75.673541" version="1"/>
+	<node id="4883032323" lat="45.433153" lon="-75.673167" version="1"/>
+	<node id="901210525" lat="45.430665" lon="-75.673175" version="1"/>
+	<node id="901206289" lat="45.422580" lon="-75.673985" version="1"/>
+	<node id="80000360" lat="45.431134" lon="-75.679106" version="1"/>
+	<node id="80000361" lat="45.431014" lon="-75.679007" version="1"/>
+	<node id="80000120" lat="45.427334" lon="-75.678091" version="1"/>
+	<node id="80000362" lat="45.430840" lon="-75.678864" version="1"/>
+	<node id="80000121" lat="45.427140" lon="-75.678559" version="1"/>
+	<node id="80000363" lat="45.428888" lon="-75.679325" version="1"/>
+	<node id="80000122" lat="45.427498" lon="-75.677703" version="1"/>
+	<node id="80000364" lat="45.428358" lon="-75.678874" version="1"/>
+	<node id="80000123" lat="45.427408" lon="-75.677916" version="1"/>
+	<node id="80000365" lat="45.431313" lon="-75.685510" version="1"/>
+	<node id="80000124" lat="45.427395" lon="-75.677946" version="1"/>
+	<node id="80000366" lat="45.431028" lon="-75.685271" version="1"/>
+	<node id="80000125" lat="45.431400" lon="-75.679412" version="1"/>
+	<node id="80000367" lat="45.430647" lon="-75.684944" version="1"/>
+	<node id="80000126" lat="45.431324" lon="-75.679591" version="1"/>
+	<node id="80000368" lat="45.430557" lon="-75.684867" version="1"/>
+	<node id="80000127" lat="45.431266" lon="-75.679734" version="1"/>
+	<node id="80000369" lat="45.430517" lon="-75.684832" version="1"/>
+	<node id="80000128" lat="45.431177" lon="-75.679947" version="1"/>
+	<node id="80000118" lat="45.426539" lon="-75.679997" version="1"/>
+	<node id="80000119" lat="45.426899" lon="-75.679137" version="1"/>
+	<node id="901206332" lat="45.427015" lon="-75.681937" version="1"/>
+	<node id="901209607" lat="45.428278" lon="-75.680905" version="1"/>
+	<node id="901208999" lat="45.430786" lon="-75.680879" version="1"/>
+	<node id="901215056" lat="45.421663" lon="-75.670842" version="1"/>
+	<node id="901222815" lat="45.420918" lon="-75.677979" version="1"/>
+	<node id="901206364" lat="45.430655" lon="-75.687216" version="1"/>
+	<node id="901210607" lat="45.423760" lon="-75.684077" version="1"/>
+	<node id="80000600" lat="45.424059" lon="-75.683092" version="1"/>
+	<node id="80000601" lat="45.428439" lon="-75.685443" version="1"/>
+	<node id="901058529" lat="45.430584" lon="-75.687440" version="1"/>
+	<node id="80000610" lat="45.424964" lon="-75.681398" version="1"/>
+	<node id="80000611" lat="45.424816" lon="-75.681268" version="1"/>
+	<node id="80000612" lat="45.424647" lon="-75.681122" version="1"/>
+	<node id="80000602" lat="45.428474" lon="-75.685467" version="1"/>
+	<node id="80000603" lat="45.428605" lon="-75.685558" version="1"/>
+	<node id="80000604" lat="45.428682" lon="-75.685612" version="1"/>
+	<node id="80000605" lat="45.427441" lon="-75.687110" version="1"/>
+	<node id="80000606" lat="45.425621" lon="-75.681978" version="1"/>
+	<node id="80000607" lat="45.425396" lon="-75.681780" version="1"/>
+	<node id="80000608" lat="45.425295" lon="-75.681690" version="1"/>
+	<node id="80000609" lat="45.425029" lon="-75.681455" version="1"/>
+	<node id="901206542" lat="45.425224" lon="-75.672658" version="1"/>
+	<node id="901209818" lat="45.426059" lon="-75.681143" version="1"/>
+	<node id="901207639" lat="45.429492" lon="-75.683997" version="1"/>
+	<node id="80000620" lat="45.428310" lon="-75.680829" version="1"/>
+	<node id="80000621" lat="45.428246" lon="-75.680982" version="1"/>
+	<node id="80000622" lat="45.428080" lon="-75.681382" version="1"/>
+	<node id="80000623" lat="45.427843" lon="-75.681954" version="1"/>
+	<node id="80000613" lat="45.424103" lon="-75.680667" version="1"/>
+	<node id="80000614" lat="45.430205" lon="-75.676320" version="1"/>
+	<node id="80000615" lat="45.429626" lon="-75.677701" version="1"/>
+	<node id="80000616" lat="45.429611" lon="-75.677737" version="1"/>
+	<node id="80000617" lat="45.429553" lon="-75.677875" version="1"/>
+	<node id="80000618" lat="45.428964" lon="-75.679287" version="1"/>
+	<node id="901214154" lat="45.426929" lon="-75.679060" version="1"/>
+	<node id="80000619" lat="45.428913" lon="-75.679407" version="1"/>
+	<node id="901208732" lat="45.422141" lon="-75.675016" version="1"/>
+	<node id="80000630" lat="45.426168" lon="-75.685917" version="1"/>
+	<node id="80000631" lat="45.426152" lon="-75.685953" version="1"/>
+	<node id="80000632" lat="45.424636" lon="-75.683590" version="1"/>
+	<node id="80000633" lat="45.424844" lon="-75.683742" version="1"/>
+	<node id="80000634" lat="45.424870" lon="-75.683761" version="1"/>
+	<node id="80000624" lat="45.427606" lon="-75.682524" version="1"/>
+	<node id="80000625" lat="45.427459" lon="-75.682875" version="1"/>
+	<node id="80000626" lat="45.427431" lon="-75.682944" version="1"/>
+	<node id="80000627" lat="45.427163" lon="-75.683587" version="1"/>
+	<node id="80000628" lat="45.426939" lon="-75.684122" version="1"/>
+	<node id="80000629" lat="45.426848" lon="-75.684337" version="1"/>
+	<node id="80000640" lat="45.422391" lon="-75.679225" version="1"/>
+	<node id="80000641" lat="45.422214" lon="-75.679074" version="1"/>
+	<node id="80000400" lat="45.424797" lon="-75.673480" version="1"/>
+	<node id="80000642" lat="45.422087" lon="-75.678966" version="1"/>
+	<node id="80000401" lat="45.424778" lon="-75.673462" version="1"/>
+	<node id="80000643" lat="45.421842" lon="-75.678758" version="1"/>
+	<node id="80000402" lat="45.423538" lon="-75.672437" version="1"/>
+	<node id="80000644" lat="45.421236" lon="-75.678248" version="1"/>
+	<node id="80000403" lat="45.423381" lon="-75.672298" version="1"/>
+	<node id="80000645" lat="45.420968" lon="-75.678021" version="1"/>
+	<node id="80000635" lat="45.424017" lon="-75.680594" version="1"/>
+	<node id="80000636" lat="45.423494" lon="-75.680169" version="1"/>
+	<node id="80000637" lat="45.422528" lon="-75.679340" version="1"/>
+	<node id="80000638" lat="45.422487" lon="-75.679307" version="1"/>
+	<node id="80000639" lat="45.422442" lon="-75.679269" version="1"/>
+	<node id="901207825" lat="45.424431" lon="-75.679749" version="1"/>
+	<node id="901208908" lat="45.423665" lon="-75.671362" version="1"/>
+	<node id="825271348" lat="45.426738" lon="-75.686535" version="1"/>
+	<node id="901205417" lat="45.430194" lon="-75.678320" version="1"/>
+	<node id="901213265" lat="45.427193" lon="-75.673163" version="1"/>
+	<node id="901051758" lat="45.428716" lon="-75.688082" version="1"/>
+	<node id="901219829" lat="45.420508" lon="-75.673595" version="1"/>
+	<node id="901211292" lat="45.427728" lon="-75.677158" version="1"/>
+	<node id="901213230" lat="45.430839" lon="-75.676763" version="1"/>
+	<node id="901213478" lat="45.423311" lon="-75.672236" version="1"/>
+	<node id="901061361" lat="45.426215" lon="-75.687743" version="1"/>
+	<node id="901212373" lat="45.431588" lon="-75.681597" version="1"/>
+	<node id="901214310" lat="45.430830" lon="-75.682893" version="1"/>
+	<node id="901052640" lat="45.427230" lon="-75.687289" version="1"/>
+	<node id="901214587" lat="45.423374" lon="-75.684995" version="1"/>
+	<node id="cluster_1419743461_901212492" lat="45.428103" lon="-75.685264" version="1"/>
+	<node id="1655122698" lat="45.429140" lon="-75.685962" version="1"/>
+	<node id="80000490" lat="45.423751" lon="-75.676397" version="1"/>
+	<node id="80000491" lat="45.423724" lon="-75.676375" version="1"/>
+	<node id="80000250" lat="45.426779" lon="-75.673987" version="1"/>
+	<node id="80000492" lat="45.426863" lon="-75.679005" version="1"/>
+	<node id="80000251" lat="45.426761" lon="-75.673973" version="1"/>
+	<node id="80000493" lat="45.426841" lon="-75.678986" version="1"/>
+	<node id="80000010" lat="45.423792" lon="-75.686510" version="1"/>
+	<node id="80000252" lat="45.425306" lon="-75.672728" version="1"/>
+	<node id="80000494" lat="45.426448" lon="-75.678657" version="1"/>
+	<node id="80000011" lat="45.423767" lon="-75.686563" version="1"/>
+	<node id="80000253" lat="45.425268" lon="-75.672696" version="1"/>
+	<node id="80000495" lat="45.425336" lon="-75.677723" version="1"/>
+	<node id="80000012" lat="45.429561" lon="-75.683834" version="1"/>
+	<node id="80000254" lat="45.428398" lon="-75.675361" version="1"/>
+	<node id="80000496" lat="45.420891" lon="-75.678042" version="1"/>
+	<node id="80000013" lat="45.429537" lon="-75.683883" version="1"/>
+	<node id="80000255" lat="45.428378" lon="-75.675340" version="1"/>
+	<node id="80000497" lat="45.420564" lon="-75.678780" version="1"/>
+	<node id="901223113" lat="45.420927" lon="-75.672568" version="1"/>
+	<node id="80000014" lat="45.429453" lon="-75.684093" version="1"/>
+	<node id="80000256" lat="45.427898" lon="-75.674918" version="1"/>
+	<node id="80000498" lat="45.421681" lon="-75.676121" version="1"/>
+	<node id="80000015" lat="45.429393" lon="-75.684238" version="1"/>
+	<node id="80000257" lat="45.427513" lon="-75.674615" version="1"/>
+	<node id="80000499" lat="45.421298" lon="-75.677047" version="1"/>
+	<node id="80000016" lat="45.429352" lon="-75.684338" version="1"/>
+	<node id="80000258" lat="45.426894" lon="-75.674057" version="1"/>
+	<node id="80000017" lat="45.429286" lon="-75.684495" version="1"/>
+	<node id="80000259" lat="45.426877" lon="-75.674050" version="1"/>
+	<node id="80000018" lat="45.429216" lon="-75.684665" version="1"/>
+	<node id="80000008" lat="45.423846" lon="-75.686396" version="1"/>
+	<node id="80000009" lat="45.423814" lon="-75.686464" version="1"/>
+	<node id="901205919" lat="45.423674" lon="-75.676332" version="1"/>
+	<node id="901213310" lat="45.428320" lon="-75.678842" version="1"/>
+	<node id="80000260" lat="45.424484" lon="-75.684691" version="1"/>
+	<node id="80000261" lat="45.424359" lon="-75.684583" version="1"/>
+	<node id="80000020" lat="45.424506" lon="-75.684844" version="1"/>
+	<node id="80000262" lat="45.424174" lon="-75.684426" version="1"/>
+	<node id="80000021" lat="45.424442" lon="-75.684994" version="1"/>
+	<node id="80000263" lat="45.424149" lon="-75.684404" version="1"/>
+	<node id="80000022" lat="45.424176" lon="-75.685628" version="1"/>
+	<node id="80000264" lat="45.424118" lon="-75.684377" version="1"/>
+	<node id="80000023" lat="45.424058" lon="-75.685915" version="1"/>
+	<node id="80000265" lat="45.429668" lon="-75.677857" version="1"/>
+	<node id="80000024" lat="45.428954" lon="-75.685298" version="1"/>
+	<node id="80000266" lat="45.429663" lon="-75.677852" version="1"/>
+	<node id="80000025" lat="45.428895" lon="-75.685441" version="1"/>
+	<node id="80000267" lat="45.429629" lon="-75.677830" version="1"/>
+	<node id="80000026" lat="45.428843" lon="-75.685565" version="1"/>
+	<node id="80000268" lat="45.426437" lon="-75.674956" version="1"/>
+	<node id="80000027" lat="45.428679" lon="-75.685958" version="1"/>
+	<node id="80000269" lat="45.426425" lon="-75.674986" version="1"/>
+	<node id="80000028" lat="45.428522" lon="-75.686333" version="1"/>
+	<node id="80000029" lat="45.428479" lon="-75.686436" version="1"/>
+	<node id="80000019" lat="45.425475" lon="-75.685579" version="1"/>
+	<node id="901214878" lat="45.424851" lon="-75.673531" version="1"/>
+	<node id="80000270" lat="45.426509" lon="-75.674781" version="1"/>
+	<node id="80000271" lat="45.426496" lon="-75.674812" version="1"/>
+	<node id="80000030" lat="45.428069" lon="-75.687412" version="1"/>
+	<node id="80000272" lat="45.427173" lon="-75.673211" version="1"/>
+	<node id="1419743453" lat="45.428220" lon="-75.684970" version="1"/>
+	<node id="80000031" lat="45.424841" lon="-75.684056" version="1"/>
+	<node id="80000273" lat="45.427152" lon="-75.673260" version="1"/>
+	<node id="80000032" lat="45.424711" lon="-75.684362" version="1"/>
+	<node id="80000274" lat="45.424033" lon="-75.680691" version="1"/>
+	<node id="901205946" lat="45.429548" lon="-75.679869" version="1"/>
+	<node id="80000033" lat="45.424692" lon="-75.684408" version="1"/>
+	<node id="80000275" lat="45.423848" lon="-75.681130" version="1"/>
+	<node id="80000034" lat="45.424610" lon="-75.684602" version="1"/>
+	<node id="80000276" lat="45.423841" lon="-75.681147" version="1"/>
+	<node id="80000035" lat="45.424592" lon="-75.684644" version="1"/>
+	<node id="80000277" lat="45.423725" lon="-75.681425" version="1"/>
+	<node id="80000036" lat="45.425239" lon="-75.682834" version="1"/>
+	<node id="80000278" lat="45.424406" lon="-75.679808" version="1"/>
+	<node id="80000037" lat="45.424844" lon="-75.682498" version="1"/>
+	<node id="80000279" lat="45.424085" lon="-75.680569" version="1"/>
+	<node id="5862508815" lat="45.425219" lon="-75.686193" version="1"/>
+	<node id="80000038" lat="45.424776" lon="-75.682441" version="1"/>
+	<node id="901205940" lat="45.425113" lon="-75.683422" version="1"/>
+	<node id="80000039" lat="45.424642" lon="-75.682329" version="1"/>
+	<node id="901213337" lat="45.430882" lon="-75.674704" version="1"/>
+	<node id="80000280" lat="45.424468" lon="-75.679673" version="1"/>
+	<node id="80000281" lat="45.425272" lon="-75.677743" version="1"/>
+	<node id="80000040" lat="45.424552" lon="-75.682254" version="1"/>
+	<node id="80000282" lat="45.425110" lon="-75.678128" version="1"/>
+	<node id="80000041" lat="45.430121" lon="-75.680464" version="1"/>
+	<node id="80000283" lat="45.425704" lon="-75.676696" version="1"/>
+	<node id="80000042" lat="45.429970" lon="-75.680828" version="1"/>
+	<node id="80000284" lat="45.425515" lon="-75.677154" version="1"/>
+	<node id="80000043" lat="45.429964" lon="-75.680843" version="1"/>
+	<node id="80000285" lat="45.425323" lon="-75.677621" version="1"/>
+	<node id="80000044" lat="45.429885" lon="-75.681032" version="1"/>
+	<node id="80000286" lat="45.426071" lon="-75.675836" version="1"/>
+	<node id="80000045" lat="45.429551" lon="-75.681823" version="1"/>
+	<node id="80000287" lat="45.425756" lon="-75.676572" version="1"/>
+	<node id="80000046" lat="45.429542" lon="-75.681846" version="1"/>
+	<node id="80000288" lat="45.427565" lon="-75.682400" version="1"/>
+	<node id="80000047" lat="45.430769" lon="-75.678900" version="1"/>
+	<node id="80000289" lat="45.427555" lon="-75.682391" version="1"/>
+	<node id="5274402828" lat="45.429033" lon="-75.683629" version="1"/>
+	<node id="80000048" lat="45.430187" lon="-75.680306" version="1"/>
+	<node id="80000049" lat="45.431414" lon="-75.677360" version="1"/>
+	<node id="5274402827" lat="45.429117" lon="-75.683704" version="1"/>
+	<node id="901212476" lat="45.428248" lon="-75.682982" version="1"/>
+	<node id="80000290" lat="45.427334" lon="-75.682205" version="1"/>
+	<node id="3575742702" lat="45.423537" lon="-75.681885" version="1"/>
+	<node id="80000291" lat="45.427054" lon="-75.681970" version="1"/>
+	<node id="80000050" lat="45.430830" lon="-75.678751" version="1"/>
+	<node id="80000292" lat="45.427708" lon="-75.682525" version="1"/>
+	<node id="80000051" lat="45.432054" lon="-75.675824" version="1"/>
+	<node id="80000293" lat="45.427694" lon="-75.682513" version="1"/>
+	<node id="80000052" lat="45.432045" lon="-75.675846" version="1"/>
+	<node id="80000294" lat="45.428794" lon="-75.683434" version="1"/>
+	<node id="80000053" lat="45.431927" lon="-75.676134" version="1"/>
+	<node id="80000295" lat="45.431339" lon="-75.685632" version="1"/>
+	<node id="80000054" lat="45.431911" lon="-75.676172" version="1"/>
+	<node id="80000296" lat="45.430936" lon="-75.686565" version="1"/>
+	<node id="80000055" lat="45.431814" lon="-75.676399" version="1"/>
+	<node id="80000297" lat="45.430920" lon="-75.686605" version="1"/>
+	<node id="80000056" lat="45.431472" lon="-75.677205" version="1"/>
+	<node id="80000298" lat="45.430701" lon="-75.687109" version="1"/>
+	<node id="80000057" lat="45.433010" lon="-75.673516" version="1"/>
+	<node id="80000299" lat="45.432464" lon="-75.682960" version="1"/>
+	<node id="80000058" lat="45.432683" lon="-75.674318" version="1"/>
+	<node id="80000059" lat="45.432651" lon="-75.674396" version="1"/>
+	<node id="4991466671" lat="45.424023" lon="-75.684296" version="1"/>
+	<node id="901213512" lat="45.428462" lon="-75.675417" version="1"/>
+	<node id="80000060" lat="45.432621" lon="-75.674468" version="1"/>
+	<node id="80000061" lat="45.432139" lon="-75.675621" version="1"/>
+	<node id="80000062" lat="45.432134" lon="-75.675633" version="1"/>
+	<node id="cluster_901206018_901214246" lat="45.428766" lon="-75.685752" version="1"/>
+	<node id="80000063" lat="45.430050" lon="-75.682396" version="1"/>
+	<node id="80000064" lat="45.429833" lon="-75.682219" version="1"/>
+	<node id="80000065" lat="45.429825" lon="-75.682212" version="1"/>
+	<node id="80000066" lat="45.429811" lon="-75.682201" version="1"/>
+	<node id="80000067" lat="45.429652" lon="-75.682064" version="1"/>
+	<node id="80000068" lat="45.429575" lon="-75.681998" version="1"/>
+	<node id="80000069" lat="45.429551" lon="-75.681977" version="1"/>
+	<node id="901207073" lat="45.431449" lon="-75.677274" version="1"/>
+	<node id="80000070" lat="45.426945" lon="-75.684280" version="1"/>
+	<node id="80000071" lat="45.428037" lon="-75.685212" version="1"/>
+	<node id="80000072" lat="45.427905" lon="-75.685103" version="1"/>
+	<node id="80000073" lat="45.428862" lon="-75.681498" version="1"/>
+	<node id="80000074" lat="45.428849" lon="-75.681531" version="1"/>
+	<node id="80000075" lat="45.428284" lon="-75.682897" version="1"/>
+	<node id="80000076" lat="45.428275" lon="-75.682918" version="1"/>
+	<node id="80000077" lat="45.429519" lon="-75.679937" version="1"/>
+	<node id="80000078" lat="45.429503" lon="-75.679976" version="1"/>
+	<node id="80000079" lat="45.428940" lon="-75.681309" version="1"/>
+	<node id="901207086" lat="45.425684" lon="-75.682032" version="1"/>
+	<node id="80000080" lat="45.428929" lon="-75.681336" version="1"/>
+	<node id="80000081" lat="45.430167" lon="-75.678384" version="1"/>
+	<node id="80000082" lat="45.430154" lon="-75.678415" version="1"/>
+	<node id="80000083" lat="45.429597" lon="-75.679751" version="1"/>
+	<node id="80000084" lat="45.429578" lon="-75.679797" version="1"/>
+	<node id="80000085" lat="45.430815" lon="-75.676821" version="1"/>
+	<node id="80000086" lat="45.430246" lon="-75.678194" version="1"/>
+	<node id="80000087" lat="45.430226" lon="-75.678242" version="1"/>
+	<node id="80000088" lat="45.431442" lon="-75.675313" version="1"/>
+	<node id="80000089" lat="45.431433" lon="-75.675336" version="1"/>
+	<node id="901213766" lat="45.431368" lon="-75.685564" version="1"/>
+	<node id="80000650" lat="45.423276" lon="-75.682418" version="1"/>
+	<node id="80000410" lat="45.428018" lon="-75.676195" version="1"/>
+	<node id="80000411" lat="45.426539" lon="-75.674944" version="1"/>
+	<node id="80000412" lat="45.426513" lon="-75.674923" version="1"/>
+	<node id="80000413" lat="45.431536" lon="-75.681497" version="1"/>
+	<node id="80000414" lat="45.431462" lon="-75.681418" version="1"/>
+	<node id="80000404" lat="45.423351" lon="-75.672271" version="1"/>
+	<node id="80000646" lat="45.428125" lon="-75.685140" version="1"/>
+	<node id="80000405" lat="45.426421" lon="-75.674845" version="1"/>
+	<node id="80000647" lat="45.422749" lon="-75.681981" version="1"/>
+	<node id="80000406" lat="45.426402" lon="-75.674829" version="1"/>
+	<node id="80000648" lat="45.422997" lon="-75.682188" version="1"/>
+	<node id="80000407" lat="45.424924" lon="-75.673595" version="1"/>
+	<node id="80000649" lat="45.423245" lon="-75.682394" version="1"/>
+	<node id="80000408" lat="45.424894" lon="-75.673573" version="1"/>
+	<node id="80000409" lat="45.428039" lon="-75.676210" version="1"/>
+	<node id="901210202" lat="45.427348" lon="-75.687033" version="1"/>
+	<node id="901212845" lat="45.426822" lon="-75.674025" version="1"/>
+	<node id="901209211" lat="45.431438" lon="-75.679322" version="1"/>
+	<node id="80000420" lat="45.430450" lon="-75.680645" version="1"/>
+	<node id="80000421" lat="45.430310" lon="-75.680522" version="1"/>
+	<node id="80000422" lat="45.430200" lon="-75.680425" version="1"/>
+	<node id="80000423" lat="45.423520" lon="-75.681926" version="1"/>
+	<node id="80000424" lat="45.423337" lon="-75.682373" version="1"/>
+	<node id="80000425" lat="45.430926" lon="-75.674741" version="1"/>
+	<node id="80000415" lat="45.431459" lon="-75.681414" version="1"/>
+	<node id="80000416" lat="45.431415" lon="-75.681376" version="1"/>
+	<node id="80000417" lat="45.430878" lon="-75.680916" version="1"/>
+	<node id="80000418" lat="45.430693" lon="-75.680838" version="1"/>
+	<node id="80000419" lat="45.430502" lon="-75.680687" version="1"/>
+	<node id="901211522" lat="45.422809" lon="-75.678376" version="1"/>
+	<node id="901207047" lat="45.424039" lon="-75.670480" version="1"/>
+	<node id="6374148813" lat="45.431394" lon="-75.673451" version="1"/>
+	<node id="80000430" lat="45.422868" lon="-75.677037" version="1"/>
+	<node id="80000431" lat="45.422692" lon="-75.676888" version="1"/>
+	<node id="80000432" lat="45.421845" lon="-75.676160" version="1"/>
+	<node id="80000433" lat="45.421787" lon="-75.676108" version="1"/>
+	<node id="80000434" lat="45.421747" lon="-75.676077" version="1"/>
+	<node id="80000435" lat="45.424812" lon="-75.678680" version="1"/>
+	<node id="80000436" lat="45.424793" lon="-75.678665" version="1"/>
+	<node id="901053247" lat="45.431948" lon="-75.688336" version="1"/>
+	<node id="80000426" lat="45.432012" lon="-75.675658" version="1"/>
+	<node id="80000427" lat="45.426969" lon="-75.681899" version="1"/>
+	<node id="80000428" lat="45.426125" lon="-75.681198" version="1"/>
+	<node id="80000429" lat="45.423197" lon="-75.677316" version="1"/>
+	<node id="11765611588" lat="45.429172" lon="-75.684771" version="1"/>
+	<node id="901220265" lat="45.421706" lon="-75.676058" version="1"/>
+	<node id="901213977" lat="45.424864" lon="-75.678714" version="1"/>
+	<node id="901211557" lat="45.426707" lon="-75.682679" version="1"/>
+	<node id="476099874" lat="45.426121" lon="-75.686027" version="1"/>
+	<node id="80000440" lat="45.425747" lon="-75.679463" version="1"/>
+	<node id="80000441" lat="45.424933" lon="-75.678766" version="1"/>
+	<node id="80000200" lat="45.424142" lon="-75.675197" version="1"/>
+	<node id="80000442" lat="45.424905" lon="-75.678746" version="1"/>
+	<node id="80000201" lat="45.425001" lon="-75.673181" version="1"/>
+	<node id="80000443" lat="45.429542" lon="-75.677775" version="1"/>
+	<node id="80000202" lat="45.425399" lon="-75.672235" version="1"/>
+	<node id="80000444" lat="45.429522" lon="-75.677764" version="1"/>
+	<node id="80000203" lat="45.424387" lon="-75.679711" version="1"/>
+	<node id="80000445" lat="45.429009" lon="-75.677323" version="1"/>
+	<node id="80000204" lat="45.423504" lon="-75.678955" version="1"/>
+	<node id="80000446" lat="45.424100" lon="-75.683226" version="1"/>
+	<node id="80000205" lat="45.423075" lon="-75.678597" version="1"/>
+	<node id="80000447" lat="45.423809" lon="-75.683953" version="1"/>
+	<node id="80000437" lat="45.423289" lon="-75.677384" version="1"/>
+	<node id="80000438" lat="45.426437" lon="-75.680042" version="1"/>
+	<node id="80000439" lat="45.426206" lon="-75.679848" version="1"/>
+	<node id="901211780" lat="45.429534" lon="-75.686278" version="1"/>
+	<node id="901213903" lat="45.429619" lon="-75.675740" version="1"/>
+	<node id="80000450" lat="45.430325" lon="-75.674055" version="1"/>
+	<node id="80000451" lat="45.430309" lon="-75.674092" version="1"/>
+	<node id="80000210" lat="45.428756" lon="-75.674477" version="1"/>
+	<node id="80000452" lat="45.429149" lon="-75.679516" version="1"/>
+	<node id="80000211" lat="45.428468" lon="-75.674235" version="1"/>
+	<node id="80000453" lat="45.428986" lon="-75.679382" version="1"/>
+	<node id="80000212" lat="45.427264" lon="-75.673217" version="1"/>
+	<node id="80000454" lat="45.426087" lon="-75.685999" version="1"/>
+	<node id="80000213" lat="45.427228" lon="-75.673187" version="1"/>
+	<node id="80000455" lat="45.426069" lon="-75.685984" version="1"/>
+	<node id="80000214" lat="45.429405" lon="-75.683930" version="1"/>
+	<node id="80000456" lat="45.426043" lon="-75.685963" version="1"/>
+	<node id="901209648" lat="45.427631" lon="-75.682463" version="1"/>
+	<node id="80000215" lat="45.429302" lon="-75.683849" version="1"/>
+	<node id="80000457" lat="45.425781" lon="-75.685747" version="1"/>
+	<node id="80000216" lat="45.429010" lon="-75.683611" version="1"/>
+	<node id="80000458" lat="45.425546" lon="-75.685552" version="1"/>
+	<node id="80000206" lat="45.422883" lon="-75.678438" version="1"/>
+	<node id="80000448" lat="45.430635" lon="-75.673318" version="1"/>
+	<node id="80000207" lat="45.422862" lon="-75.678420" version="1"/>
+	<node id="80000449" lat="45.430442" lon="-75.673778" version="1"/>
+	<node id="80000208" lat="45.428782" lon="-75.674498" version="1"/>
+	<node id="80000209" lat="45.428770" lon="-75.674488" version="1"/>
+	<node id="476099852" lat="45.424549" lon="-75.684747" version="1"/>
+	<node id="80000460" lat="45.422517" lon="-75.673915" version="1"/>
+	<node id="80000461" lat="45.421842" lon="-75.673382" version="1"/>
+	<node id="476099850" lat="45.425331" lon="-75.682912" version="1"/>
+	<node id="80000220" lat="45.424079" lon="-75.675346" version="1"/>
+	<node id="80000462" lat="45.421203" lon="-75.672813" version="1"/>
+	<node id="80000221" lat="45.423989" lon="-75.675567" version="1"/>
+	<node id="80000463" lat="45.421024" lon="-75.672654" version="1"/>
+	<node id="80000222" lat="45.423137" lon="-75.681062" version="1"/>
+	<node id="80000464" lat="45.421013" lon="-75.672644" version="1"/>
+	<node id="80000223" lat="45.422889" lon="-75.680856" version="1"/>
+	<node id="80000465" lat="45.420987" lon="-75.672621" version="1"/>
+	<node id="80000224" lat="45.422638" lon="-75.680647" version="1"/>
+	<node id="80000466" lat="45.424056" lon="-75.675235" version="1"/>
+	<node id="80000225" lat="45.426214" lon="-75.683657" version="1"/>
+	<node id="80000467" lat="45.423528" lon="-75.674788" version="1"/>
+	<node id="80000226" lat="45.425901" lon="-75.683390" version="1"/>
+	<node id="80000468" lat="45.422650" lon="-75.674044" version="1"/>
+	<node id="80000227" lat="45.423632" lon="-75.681471" version="1"/>
+	<node id="80000469" lat="45.422648" lon="-75.674043" version="1"/>
+	<node id="80000217" lat="45.423515" lon="-75.676718" version="1"/>
+	<node id="80000459" lat="45.422531" lon="-75.673926" version="1"/>
+	<node id="80000218" lat="45.423291" lon="-75.677255" version="1"/>
+	<node id="80000219" lat="45.423276" lon="-75.677293" version="1"/>
+	<node id="476099847" lat="45.423687" lon="-75.681517" version="1"/>
+	<node id="476099844" lat="45.420527" lon="-75.678866" version="1"/>
+	<node id="80000470" lat="45.422620" lon="-75.674019" version="1"/>
+	<node id="80000471" lat="45.423219" lon="-75.677408" version="1"/>
+	<node id="80000230" lat="45.423834" lon="-75.681643" version="1"/>
+	<node id="80000472" lat="45.423210" lon="-75.677427" version="1"/>
+	<node id="80000231" lat="45.423825" lon="-75.681636" version="1"/>
+	<node id="80000473" lat="45.423094" lon="-75.677696" version="1"/>
+	<node id="80000232" lat="45.423741" lon="-75.681565" version="1"/>
+	<node id="80000474" lat="45.422900" lon="-75.678155" version="1"/>
+	<node id="80000233" lat="45.423648" lon="-75.681616" version="1"/>
+	<node id="80000475" lat="45.422878" lon="-75.678207" version="1"/>
+	<node id="80000234" lat="45.429336" lon="-75.686459" version="1"/>
+	<node id="80000476" lat="45.422840" lon="-75.678299" version="1"/>
+	<node id="80000235" lat="45.429325" lon="-75.686486" version="1"/>
+	<node id="80000477" lat="45.422092" lon="-75.674987" version="1"/>
+	<node id="80000236" lat="45.429305" lon="-75.686533" version="1"/>
+	<node id="80000478" lat="45.421842" lon="-75.674781" version="1"/>
+	<node id="80000237" lat="45.429145" lon="-75.686919" version="1"/>
+	<node id="80000479" lat="45.421721" lon="-75.674675" version="1"/>
+	<node id="80000238" lat="45.429054" lon="-75.687127" version="1"/>
+	<node id="80000228" lat="45.423602" lon="-75.681446" version="1"/>
+	<node id="80000229" lat="45.424144" lon="-75.681912" version="1"/>
+	<node id="901221548" lat="45.421301" lon="-75.671690" version="1"/>
+	<node id="80000480" lat="45.420827" lon="-75.673896" version="1"/>
+	<node id="80000481" lat="45.420583" lon="-75.673683" version="1"/>
+	<node id="80000240" lat="45.428724" lon="-75.687953" version="1"/>
+	<node id="80000482" lat="45.420562" lon="-75.673658" version="1"/>
+	<node id="80000241" lat="45.423616" lon="-75.671322" version="1"/>
+	<node id="80000483" lat="45.423622" lon="-75.676290" version="1"/>
+	<node id="80000242" lat="45.423581" lon="-75.671290" version="1"/>
+	<node id="80000484" lat="45.423604" lon="-75.676276" version="1"/>
+	<node id="80000001" lat="45.423721" lon="-75.686660" version="1"/>
+	<node id="80000243" lat="45.423547" lon="-75.671261" version="1"/>
+	<node id="80000485" lat="45.423520" lon="-75.676207" version="1"/>
+	<node id="80000002" lat="45.423681" lon="-75.686744" version="1"/>
+	<node id="80000244" lat="45.422084" lon="-75.670036" version="1"/>
+	<node id="80000486" lat="45.422935" lon="-75.675693" version="1"/>
+	<node id="80000003" lat="45.423644" lon="-75.686819" version="1"/>
+	<node id="80000245" lat="45.422066" lon="-75.670021" version="1"/>
+	<node id="80000487" lat="45.422877" lon="-75.675641" version="1"/>
+	<node id="80000004" lat="45.423611" lon="-75.686889" version="1"/>
+	<node id="80000246" lat="45.425167" lon="-75.672610" version="1"/>
+	<node id="80000488" lat="45.422185" lon="-75.675046" version="1"/>
+	<node id="80000005" lat="45.423405" lon="-75.687311" version="1"/>
+	<node id="80000247" lat="45.425146" lon="-75.672592" version="1"/>
+	<node id="80000489" lat="45.425244" lon="-75.677647" version="1"/>
+	<node id="80000006" lat="45.423387" lon="-75.687350" version="1"/>
+	<node id="80000248" lat="45.423740" lon="-75.671425" version="1"/>
+	<node id="80000007" lat="45.423932" lon="-75.686207" version="1"/>
+	<node id="80000249" lat="45.423711" lon="-75.671400" version="1"/>
+	<node id="80000239" lat="45.428936" lon="-75.687426" version="1"/>
+	<node id="901211740" lat="45.424060" lon="-75.680629" version="1"/>
+	<way id="-465196763#1" version="1">
+		<nd ref="901214768" version="1"/>
+		<nd ref="80000140" version="1"/>
+		<nd ref="80000141" version="1"/>
+		<nd ref="476099852" version="1"/>
+	</way>
+	<way id="76419221#0" version="1">
+		<nd ref="cluster_901206018_901214246" version="1"/>
+		<nd ref="80000573" version="1"/>
+		<nd ref="80000574" version="1"/>
+		<nd ref="1655122698" version="1"/>
+	</way>
+	<way id="-367636038#9" version="1">
+		<nd ref="901211292" version="1"/>
+		<nd ref="80000122" version="1"/>
+		<nd ref="80000123" version="1"/>
+		<nd ref="80000124" version="1"/>
+		<nd ref="901207931" version="1"/>
+	</way>
+	<way id="-467460521#2" version="1">
+		<nd ref="901214310" version="1"/>
+		<nd ref="80000152" version="1"/>
+		<nd ref="80000153" version="1"/>
+		<nd ref="80000154" version="1"/>
+		<nd ref="80000155" version="1"/>
+		<nd ref="80000156" version="1"/>
+		<nd ref="901210139" version="1"/>
+	</way>
+	<way id="-367636038#2" version="1">
+		<nd ref="901212263" version="1"/>
+		<nd ref="80000116" version="1"/>
+		<nd ref="80000117" version="1"/>
+		<nd ref="80000118" version="1"/>
+		<nd ref="901210070" version="1"/>
+	</way>
+	<way id="-532269112" version="1">
+		<nd ref="901205564" version="1"/>
+		<nd ref="80000208" version="1"/>
+		<nd ref="80000209" version="1"/>
+		<nd ref="80000210" version="1"/>
+		<nd ref="80000211" version="1"/>
+		<nd ref="80000212" version="1"/>
+		<nd ref="80000213" version="1"/>
+		<nd ref="901213265" version="1"/>
+	</way>
+	<way id="-611697822" version="1">
+		<nd ref="5791143897" version="1"/>
+		<nd ref="80000222" version="1"/>
+		<nd ref="80000223" version="1"/>
+		<nd ref="80000224" version="1"/>
+		<nd ref="5791143885" version="1"/>
+	</way>
+	<way id="-367636038#7" version="1">
+		<nd ref="901207931" version="1"/>
+		<nd ref="80000120" version="1"/>
+		<nd ref="80000121" version="1"/>
+		<nd ref="901214154" version="1"/>
+	</way>
+	<way id="-367636038#4" version="1">
+		<nd ref="901214154" version="1"/>
+		<nd ref="80000119" version="1"/>
+		<nd ref="901212263" version="1"/>
+	</way>
+	<way id="-310453592" version="1">
+		<nd ref="901215392" version="1"/>
+		<nd ref="80000031" version="1"/>
+		<nd ref="80000032" version="1"/>
+		<nd ref="80000033" version="1"/>
+		<nd ref="80000034" version="1"/>
+		<nd ref="80000035" version="1"/>
+		<nd ref="476099852" version="1"/>
+	</way>
+	<way id="76422787#0" version="1">
+		<nd ref="901051758" version="1"/>
+		<nd ref="80000240" version="1"/>
+		<nd ref="80000239" version="1"/>
+		<nd ref="80000238" version="1"/>
+		<nd ref="80000237" version="1"/>
+		<nd ref="80000236" version="1"/>
+		<nd ref="80000235" version="1"/>
+		<nd ref="80000234" version="1"/>
+		<nd ref="901206475" version="1"/>
+	</way>
+	<way id="362066957#0" version="1">
+		<nd ref="901207086" version="1"/>
+		<nd ref="80000099" version="1"/>
+		<nd ref="901209818" version="1"/>
+	</way>
+	<way id="76441811#0" version="1">
+		<nd ref="901208823" version="1"/>
+		<nd ref="80000362" version="1"/>
+		<nd ref="80000361" version="1"/>
+		<nd ref="80000360" version="1"/>
+		<nd ref="80000359" version="1"/>
+		<nd ref="80000358" version="1"/>
+		<nd ref="901209211" version="1"/>
+	</way>
+	<way id="-367636030#1" version="1">
+		<nd ref="476099850" version="1"/>
+		<nd ref="80000100" version="1"/>
+		<nd ref="901205940" version="1"/>
+	</way>
+	<way id="-76441773#1" version="1">
+		<nd ref="5791143895" version="1"/>
+		<nd ref="80000355" version="1"/>
+		<nd ref="476099850" version="1"/>
+	</way>
+	<way id="467460524" version="1">
+		<nd ref="901058529" version="1"/>
+		<nd ref="80000552" version="1"/>
+		<nd ref="1655123258" version="1"/>
+	</way>
+	<way id="504127877#0" version="1">
+		<nd ref="476099874" version="1"/>
+		<nd ref="80000559" version="1"/>
+		<nd ref="80000560" version="1"/>
+		<nd ref="80000561" version="1"/>
+		<nd ref="80000562" version="1"/>
+		<nd ref="80000563" version="1"/>
+		<nd ref="901054929" version="1"/>
+	</way>
+	<way id="-76441127" version="1">
+		<nd ref="901205417" version="1"/>
+		<nd ref="80000265" version="1"/>
+		<nd ref="80000266" version="1"/>
+		<nd ref="80000267" version="1"/>
+		<nd ref="901205546" version="1"/>
+	</way>
+	<way id="611697839#0" version="1">
+		<nd ref="3575742702" version="1"/>
+		<nd ref="80000233" version="1"/>
+		<nd ref="476099847" version="1"/>
+	</way>
+	<way id="-76443312#1" version="1">
+		<nd ref="476099874" version="1"/>
+		<nd ref="80000454" version="1"/>
+		<nd ref="80000455" version="1"/>
+		<nd ref="80000456" version="1"/>
+		<nd ref="80000457" version="1"/>
+		<nd ref="80000458" version="1"/>
+		<nd ref="901214768" version="1"/>
+	</way>
+	<way id="-321748518#2" version="1">
+		<nd ref="476099850" version="1"/>
+		<nd ref="80000036" version="1"/>
+		<nd ref="80000037" version="1"/>
+		<nd ref="80000038" version="1"/>
+		<nd ref="80000039" version="1"/>
+		<nd ref="80000040" version="1"/>
+		<nd ref="5791143896" version="1"/>
+	</way>
+	<way id="-76441164#11" version="1">
+		<nd ref="901212845" version="1"/>
+		<nd ref="80000270" version="1"/>
+		<nd ref="80000271" version="1"/>
+		<nd ref="901213838" version="1"/>
+	</way>
+	<way id="-76441164#10" version="1">
+		<nd ref="901213838" version="1"/>
+		<nd ref="80000268" version="1"/>
+		<nd ref="80000269" version="1"/>
+		<nd ref="901211263" version="1"/>
+	</way>
+	<way id="545749095#0" version="1">
+		<nd ref="3659092687" version="1"/>
+		<nd ref="80000216" version="1"/>
+		<nd ref="5274402828" version="1"/>
+	</way>
+	<way id="-76441164#12" version="1">
+		<nd ref="901213265" version="1"/>
+		<nd ref="80000272" version="1"/>
+		<nd ref="80000273" version="1"/>
+		<nd ref="901212845" version="1"/>
+	</way>
+	<way id="76443747#3" version="1">
+		<nd ref="901205919" version="1"/>
+		<nd ref="80000491" version="1"/>
+		<nd ref="80000490" version="1"/>
+		<nd ref="80000489" version="1"/>
+		<nd ref="901206446" version="1"/>
+	</way>
+	<way id="76443747#4" version="1">
+		<nd ref="901206446" version="1"/>
+		<nd ref="80000495" version="1"/>
+		<nd ref="80000494" version="1"/>
+		<nd ref="80000493" version="1"/>
+		<nd ref="80000492" version="1"/>
+		<nd ref="901214154" version="1"/>
+	</way>
+	<way id="76443747#1" version="1">
+		<nd ref="901208732" version="1"/>
+		<nd ref="80000488" version="1"/>
+		<nd ref="80000487" version="1"/>
+		<nd ref="80000486" version="1"/>
+		<nd ref="80000485" version="1"/>
+		<nd ref="80000484" version="1"/>
+		<nd ref="80000483" version="1"/>
+		<nd ref="901205919" version="1"/>
+	</way>
+	<way id="76441107#0" version="1">
+		<nd ref="4991466671" version="1"/>
+		<nd ref="80000264" version="1"/>
+		<nd ref="80000263" version="1"/>
+		<nd ref="80000262" version="1"/>
+		<nd ref="80000261" version="1"/>
+		<nd ref="80000260" version="1"/>
+		<nd ref="476099852" version="1"/>
+	</way>
+	<way id="76443747#0" version="1">
+		<nd ref="901219829" version="1"/>
+		<nd ref="80000482" version="1"/>
+		<nd ref="80000481" version="1"/>
+		<nd ref="80000480" version="1"/>
+		<nd ref="80000479" version="1"/>
+		<nd ref="80000478" version="1"/>
+		<nd ref="80000477" version="1"/>
+		<nd ref="901208732" version="1"/>
+	</way>
+	<way id="532117653#0" version="1">
+		<nd ref="901211522" version="1"/>
+		<nd ref="80000207" version="1"/>
+		<nd ref="80000206" version="1"/>
+		<nd ref="80000205" version="1"/>
+		<nd ref="80000204" version="1"/>
+		<nd ref="80000203" version="1"/>
+		<nd ref="901207825" version="1"/>
+	</way>
+	<way id="789366469#0" version="1">
+		<nd ref="6373350494" version="1"/>
+		<nd ref="80000647" version="1"/>
+		<nd ref="80000648" version="1"/>
+		<nd ref="80000649" version="1"/>
+		<nd ref="80000650" version="1"/>
+		<nd ref="901210164" version="1"/>
+	</way>
+	<way id="1150048806#0" version="1">
+		<nd ref="3859505168" version="1"/>
+		<nd ref="80000006" version="1"/>
+		<nd ref="80000005" version="1"/>
+		<nd ref="80000004" version="1"/>
+		<nd ref="80000003" version="1"/>
+		<nd ref="80000002" version="1"/>
+		<nd ref="80000001" version="1"/>
+		<nd ref="10698447858" version="1"/>
+	</way>
+	<way id="-362066954#2" version="1">
+		<nd ref="cluster_1419743461_901212492" version="1"/>
+		<nd ref="80000071" version="1"/>
+		<nd ref="80000072" version="1"/>
+		<nd ref="901215145" version="1"/>
+	</way>
+	<way id="-76441811#2" version="1">
+		<nd ref="901209211" version="1"/>
+		<nd ref="80000358" version="1"/>
+		<nd ref="80000359" version="1"/>
+		<nd ref="80000360" version="1"/>
+		<nd ref="80000361" version="1"/>
+		<nd ref="80000362" version="1"/>
+		<nd ref="901208823" version="1"/>
+	</way>
+	<way id="1266710991#0" version="1">
+		<nd ref="11765611588" version="1"/>
+		<nd ref="80000018" version="1"/>
+		<nd ref="80000017" version="1"/>
+		<nd ref="80000016" version="1"/>
+		<nd ref="80000015" version="1"/>
+		<nd ref="80000014" version="1"/>
+		<nd ref="901207639" version="1"/>
+	</way>
+	<way id="76443035" version="1">
+		<nd ref="901211819" version="1"/>
+		<nd ref="80000451" version="1"/>
+		<nd ref="80000450" version="1"/>
+		<nd ref="80000449" version="1"/>
+		<nd ref="80000448" version="1"/>
+		<nd ref="901210525" version="1"/>
+	</way>
+	<way id="76441787#0" version="1">
+		<nd ref="476099850" version="1"/>
+		<nd ref="80000357" version="1"/>
+		<nd ref="80000356" version="1"/>
+		<nd ref="901207086" version="1"/>
+	</way>
+	<way id="367636024" version="1">
+		<nd ref="901215392" version="1"/>
+		<nd ref="901205940" version="1"/>
+	</way>
+	<way id="-228625780#2" version="1">
+		<nd ref="476099852" version="1"/>
+		<nd ref="80000020" version="1"/>
+		<nd ref="80000021" version="1"/>
+		<nd ref="80000022" version="1"/>
+		<nd ref="80000023" version="1"/>
+		<nd ref="10698447849" version="1"/>
+	</way>
+	<way id="362066956#0" version="1">
+		<nd ref="901212065" version="1"/>
+		<nd ref="80000098" version="1"/>
+		<nd ref="80000097" version="1"/>
+		<nd ref="901205379" version="1"/>
+	</way>
+	<way id="-611697837#1" version="1">
+		<nd ref="476099847" version="1"/>
+		<nd ref="80000227" version="1"/>
+		<nd ref="80000228" version="1"/>
+		<nd ref="5791143897" version="1"/>
+	</way>
+	<way id="76442180#0" version="1">
+		<nd ref="901208999" version="1"/>
+		<nd ref="80000417" version="1"/>
+		<nd ref="80000416" version="1"/>
+		<nd ref="80000415" version="1"/>
+		<nd ref="80000414" version="1"/>
+		<nd ref="80000413" version="1"/>
+		<nd ref="901212373" version="1"/>
+	</way>
+	<way id="504127876#0" version="1">
+		<nd ref="901213903" version="1"/>
+		<nd ref="80000556" version="1"/>
+		<nd ref="80000557" version="1"/>
+		<nd ref="80000558" version="1"/>
+		<nd ref="901211819" version="1"/>
+	</way>
+	<way id="258787159#0" version="1">
+		<nd ref="cluster_901206018_901214246" version="1"/>
+		<nd ref="80000026" version="1"/>
+		<nd ref="80000025" version="1"/>
+		<nd ref="80000024" version="1"/>
+		<nd ref="11765611588" version="1"/>
+	</way>
+	<way id="76423335" version="1">
+		<nd ref="901057158" version="1"/>
+		<nd ref="901051758" version="1"/>
+	</way>
+	<way id="-510043102" version="1">
+		<nd ref="4991466671" version="1"/>
+		<nd ref="80000183" version="1"/>
+		<nd ref="80000184" version="1"/>
+		<nd ref="901210607" version="1"/>
+	</way>
+	<way id="76441440" version="1">
+		<nd ref="901205946" version="1"/>
+		<nd ref="80000332" version="1"/>
+		<nd ref="901212774" version="1"/>
+	</way>
+	<way id="-258787159#2" version="1">
+		<nd ref="11765611588" version="1"/>
+		<nd ref="80000024" version="1"/>
+		<nd ref="80000025" version="1"/>
+		<nd ref="80000026" version="1"/>
+		<nd ref="cluster_901206018_901214246" version="1"/>
+	</way>
+	<way id="-76441495" version="1">
+		<nd ref="901211198" version="1"/>
+		<nd ref="80000333" version="1"/>
+		<nd ref="80000334" version="1"/>
+		<nd ref="80000335" version="1"/>
+		<nd ref="80000336" version="1"/>
+		<nd ref="901213903" version="1"/>
+	</way>
+	<way id="611697838#0" version="1">
+		<nd ref="476099847" version="1"/>
+		<nd ref="80000232" version="1"/>
+		<nd ref="80000231" version="1"/>
+		<nd ref="80000230" version="1"/>
+		<nd ref="80000229" version="1"/>
+		<nd ref="5791143896" version="1"/>
+	</way>
+	<way id="545749094#0" version="1">
+		<nd ref="5274402827" version="1"/>
+		<nd ref="80000215" version="1"/>
+		<nd ref="80000214" version="1"/>
+		<nd ref="901207639" version="1"/>
+	</way>
+	<way id="76441164#12" version="1">
+		<nd ref="901212845" version="1"/>
+		<nd ref="80000273" version="1"/>
+		<nd ref="80000272" version="1"/>
+		<nd ref="901213265" version="1"/>
+	</way>
+	<way id="76441164#11" version="1">
+		<nd ref="901213838" version="1"/>
+		<nd ref="80000271" version="1"/>
+		<nd ref="80000270" version="1"/>
+		<nd ref="901212845" version="1"/>
+	</way>
+	<way id="76441164#10" version="1">
+		<nd ref="901211263" version="1"/>
+		<nd ref="80000269" version="1"/>
+		<nd ref="80000268" version="1"/>
+		<nd ref="901213838" version="1"/>
+	</way>
+	<way id="596248946#0" version="1">
+		<nd ref="901210758" version="1"/>
+		<nd ref="80000219" version="1"/>
+		<nd ref="80000218" version="1"/>
+		<nd ref="80000217" version="1"/>
+		<nd ref="901205919" version="1"/>
+	</way>
+	<way id="596248946#1" version="1">
+		<nd ref="901205919" version="1"/>
+		<nd ref="80000221" version="1"/>
+		<nd ref="80000220" version="1"/>
+		<nd ref="901210958" version="1"/>
+	</way>
+	<way id="-611697838#2" version="1">
+		<nd ref="5791143896" version="1"/>
+		<nd ref="80000229" version="1"/>
+		<nd ref="80000230" version="1"/>
+		<nd ref="80000231" version="1"/>
+		<nd ref="80000232" version="1"/>
+		<nd ref="476099847" version="1"/>
+	</way>
+	<way id="-77699442" version="1">
+		<nd ref="901215145" version="1"/>
+		<nd ref="80000513" version="1"/>
+		<nd ref="80000514" version="1"/>
+		<nd ref="80000515" version="1"/>
+		<nd ref="80000516" version="1"/>
+		<nd ref="825271348" version="1"/>
+	</way>
+	<way id="482221266#0" version="1">
+		<nd ref="901214752" version="1"/>
+		<nd ref="80000171" version="1"/>
+		<nd ref="80000170" version="1"/>
+		<nd ref="80000169" version="1"/>
+		<nd ref="80000168" version="1"/>
+		<nd ref="80000167" version="1"/>
+		<nd ref="80000166" version="1"/>
+		<nd ref="901206925" version="1"/>
+	</way>
+	<way id="465129258#0" version="1">
+		<nd ref="901207825" version="1"/>
+		<nd ref="80000136" version="1"/>
+		<nd ref="80000135" version="1"/>
+		<nd ref="80000134" version="1"/>
+		<nd ref="80000133" version="1"/>
+		<nd ref="80000132" version="1"/>
+		<nd ref="901209818" version="1"/>
+	</way>
+	<way id="-362066955#5" version="1">
+		<nd ref="4883032322" version="1"/>
+		<nd ref="80000092" version="1"/>
+		<nd ref="80000093" version="1"/>
+		<nd ref="80000094" version="1"/>
+		<nd ref="80000095" version="1"/>
+		<nd ref="80000096" version="1"/>
+		<nd ref="901205346" version="1"/>
+	</way>
+	<way id="-362066955#4" version="1">
+		<nd ref="901205346" version="1"/>
+		<nd ref="80000088" version="1"/>
+		<nd ref="80000089" version="1"/>
+		<nd ref="80000090" version="1"/>
+		<nd ref="80000091" version="1"/>
+		<nd ref="901213230" version="1"/>
+	</way>
+	<way id="-362066955#3" version="1">
+		<nd ref="901213230" version="1"/>
+		<nd ref="80000085" version="1"/>
+		<nd ref="80000086" version="1"/>
+		<nd ref="80000087" version="1"/>
+		<nd ref="901205417" version="1"/>
+	</way>
+	<way id="-76441107#5" version="1">
+		<nd ref="476099852" version="1"/>
+		<nd ref="80000260" version="1"/>
+		<nd ref="80000261" version="1"/>
+		<nd ref="80000262" version="1"/>
+		<nd ref="80000263" version="1"/>
+		<nd ref="80000264" version="1"/>
+		<nd ref="4991466671" version="1"/>
+	</way>
+	<way id="-362066955#2" version="1">
+		<nd ref="901205417" version="1"/>
+		<nd ref="80000081" version="1"/>
+		<nd ref="80000082" version="1"/>
+		<nd ref="80000083" version="1"/>
+		<nd ref="80000084" version="1"/>
+		<nd ref="901205946" version="1"/>
+	</way>
+	<way id="367636030#0" version="1">
+		<nd ref="901205940" version="1"/>
+		<nd ref="80000100" version="1"/>
+		<nd ref="476099850" version="1"/>
+	</way>
+	<way id="-362066955#1" version="1">
+		<nd ref="901205946" version="1"/>
+		<nd ref="80000077" version="1"/>
+		<nd ref="80000078" version="1"/>
+		<nd ref="80000079" version="1"/>
+		<nd ref="80000080" version="1"/>
+		<nd ref="901214537" version="1"/>
+	</way>
+	<way id="-545749094#2" version="1">
+		<nd ref="901207639" version="1"/>
+		<nd ref="80000214" version="1"/>
+		<nd ref="80000215" version="1"/>
+		<nd ref="5274402827" version="1"/>
+	</way>
+	<way id="1379616945#0" version="1">
+		<nd ref="476099852" version="1"/>
+		<nd ref="80000035" version="1"/>
+		<nd ref="80000034" version="1"/>
+		<nd ref="80000033" version="1"/>
+		<nd ref="80000032" version="1"/>
+		<nd ref="80000031" version="1"/>
+		<nd ref="901215392" version="1"/>
+	</way>
+	<way id="-362066955#0" version="1">
+		<nd ref="901214537" version="1"/>
+		<nd ref="80000073" version="1"/>
+		<nd ref="80000074" version="1"/>
+		<nd ref="80000075" version="1"/>
+		<nd ref="80000076" version="1"/>
+		<nd ref="901212476" version="1"/>
+	</way>
+	<way id="-467470140" version="1">
+		<nd ref="901208823" version="1"/>
+		<nd ref="80000165" version="1"/>
+		<nd ref="901205417" version="1"/>
+	</way>
+	<way id="1266710990#0" version="1">
+		<nd ref="901207639" version="1"/>
+		<nd ref="80000013" version="1"/>
+		<nd ref="80000012" version="1"/>
+		<nd ref="1653163398" version="1"/>
+	</way>
+	<way id="367636038#0" version="1">
+		<nd ref="901210070" version="1"/>
+		<nd ref="80000118" version="1"/>
+		<nd ref="80000117" version="1"/>
+		<nd ref="80000116" version="1"/>
+		<nd ref="901212263" version="1"/>
+	</way>
+	<way id="76443434#0" version="1">
+		<nd ref="412678992" version="1"/>
+		<nd ref="80000632" version="1"/>
+		<nd ref="80000633" version="1"/>
+		<nd ref="80000634" version="1"/>
+		<nd ref="901215392" version="1"/>
+	</way>
+	<way id="-76441202#3" version="1">
+		<nd ref="901213766" version="1"/>
+		<nd ref="80000295" version="1"/>
+		<nd ref="80000296" version="1"/>
+		<nd ref="80000297" version="1"/>
+		<nd ref="80000298" version="1"/>
+		<nd ref="901206364" version="1"/>
+	</way>
+	<way id="367636038#3" version="1">
+		<nd ref="901212263" version="1"/>
+		<nd ref="80000119" version="1"/>
+		<nd ref="901214154" version="1"/>
+	</way>
+	<way id="-76423335" version="1">
+		<nd ref="901051758" version="1"/>
+		<nd ref="901057158" version="1"/>
+	</way>
+	<way id="367636038#5" version="1">
+		<nd ref="901214154" version="1"/>
+		<nd ref="80000121" version="1"/>
+		<nd ref="80000120" version="1"/>
+		<nd ref="901207931" version="1"/>
+	</way>
+	<way id="-76441440" version="1">
+		<nd ref="901212774" version="1"/>
+		<nd ref="80000332" version="1"/>
+		<nd ref="901205946" version="1"/>
+	</way>
+	<way id="367636038#8" version="1">
+		<nd ref="901207931" version="1"/>
+		<nd ref="80000124" version="1"/>
+		<nd ref="80000123" version="1"/>
+		<nd ref="80000122" version="1"/>
+		<nd ref="901211292" version="1"/>
+	</way>
+	<way id="76442960#0" version="1">
+		<nd ref="901210202" version="1"/>
+		<nd ref="80000605" version="1"/>
+		<nd ref="1243243170" version="1"/>
+	</way>
+	<way id="76442708" version="1">
+		<nd ref="901214224" version="1"/>
+		<nd ref="80000445" version="1"/>
+		<nd ref="80000444" version="1"/>
+		<nd ref="80000443" version="1"/>
+		<nd ref="901205546" version="1"/>
+	</way>
+	<way id="76441385#3" version="1">
+		<nd ref="901211263" version="1"/>
+		<nd ref="80000331" version="1"/>
+		<nd ref="80000330" version="1"/>
+		<nd ref="80000329" version="1"/>
+		<nd ref="80000328" version="1"/>
+		<nd ref="901211292" version="1"/>
+	</way>
+	<way id="-596248946#0" version="1">
+		<nd ref="901205919" version="1"/>
+		<nd ref="80000217" version="1"/>
+		<nd ref="80000218" version="1"/>
+		<nd ref="80000219" version="1"/>
+		<nd ref="901210758" version="1"/>
+	</way>
+	<way id="361923985#0" version="1">
+		<nd ref="901206925" version="1"/>
+		<nd ref="80000069" version="1"/>
+		<nd ref="80000068" version="1"/>
+		<nd ref="80000067" version="1"/>
+		<nd ref="80000066" version="1"/>
+		<nd ref="80000065" version="1"/>
+		<nd ref="80000064" version="1"/>
+		<nd ref="80000063" version="1"/>
+		<nd ref="901210139" version="1"/>
+	</way>
+	<way id="76441385#1" version="1">
+		<nd ref="901206682" version="1"/>
+		<nd ref="80000323" version="1"/>
+		<nd ref="80000322" version="1"/>
+		<nd ref="80000321" version="1"/>
+		<nd ref="80000320" version="1"/>
+		<nd ref="80000319" version="1"/>
+		<nd ref="901206818" version="1"/>
+	</way>
+	<way id="76441385#2" version="1">
+		<nd ref="901206818" version="1"/>
+		<nd ref="80000327" version="1"/>
+		<nd ref="80000326" version="1"/>
+		<nd ref="80000325" version="1"/>
+		<nd ref="80000324" version="1"/>
+		<nd ref="901211263" version="1"/>
+	</way>
+	<way id="76441813#0" version="1">
+		<nd ref="901052640" version="1"/>
+		<nd ref="80000589" version="1"/>
+		<nd ref="901210202" version="1"/>
+	</way>
+	<way id="76441385#0" version="1">
+		<nd ref="901221548" version="1"/>
+		<nd ref="80000318" version="1"/>
+		<nd ref="80000317" version="1"/>
+		<nd ref="80000316" version="1"/>
+		<nd ref="80000315" version="1"/>
+		<nd ref="80000314" version="1"/>
+		<nd ref="80000313" version="1"/>
+		<nd ref="901206682" version="1"/>
+	</way>
+	<way id="-76441067#3" version="1">
+		<nd ref="901213512" version="1"/>
+		<nd ref="80000254" version="1"/>
+		<nd ref="80000255" version="1"/>
+		<nd ref="80000256" version="1"/>
+		<nd ref="80000257" version="1"/>
+		<nd ref="80000258" version="1"/>
+		<nd ref="80000259" version="1"/>
+		<nd ref="901212845" version="1"/>
+	</way>
+	<way id="-76441067#1" version="1">
+		<nd ref="901206542" version="1"/>
+		<nd ref="80000246" version="1"/>
+		<nd ref="80000247" version="1"/>
+		<nd ref="80000248" version="1"/>
+		<nd ref="80000249" version="1"/>
+		<nd ref="901208908" version="1"/>
+	</way>
+	<way id="-76441067#2" version="1">
+		<nd ref="901212845" version="1"/>
+		<nd ref="80000250" version="1"/>
+		<nd ref="80000251" version="1"/>
+		<nd ref="80000252" version="1"/>
+		<nd ref="80000253" version="1"/>
+		<nd ref="901206542" version="1"/>
+	</way>
+	<way id="-596248946#1" version="1">
+		<nd ref="901210958" version="1"/>
+		<nd ref="80000220" version="1"/>
+		<nd ref="80000221" version="1"/>
+		<nd ref="901205919" version="1"/>
+	</way>
+	<way id="-76441067#0" version="1">
+		<nd ref="901208908" version="1"/>
+		<nd ref="80000241" version="1"/>
+		<nd ref="80000242" version="1"/>
+		<nd ref="80000243" version="1"/>
+		<nd ref="80000244" version="1"/>
+		<nd ref="80000245" version="1"/>
+		<nd ref="901210307" version="1"/>
+	</way>
+	<way id="-76442079#2" version="1">
+		<nd ref="901209607" version="1"/>
+		<nd ref="80000390" version="1"/>
+		<nd ref="80000391" version="1"/>
+		<nd ref="901205559" version="1"/>
+	</way>
+	<way id="-76442079#1" version="1">
+		<nd ref="901205559" version="1"/>
+		<nd ref="80000386" version="1"/>
+		<nd ref="80000387" version="1"/>
+		<nd ref="80000388" version="1"/>
+		<nd ref="80000389" version="1"/>
+		<nd ref="901212263" version="1"/>
+	</way>
+	<way id="611697837#0" version="1">
+		<nd ref="5791143897" version="1"/>
+		<nd ref="80000228" version="1"/>
+		<nd ref="80000227" version="1"/>
+		<nd ref="476099847" version="1"/>
+	</way>
+	<way id="76442079#0" version="1">
+		<nd ref="901212263" version="1"/>
+		<nd ref="80000389" version="1"/>
+		<nd ref="80000388" version="1"/>
+		<nd ref="80000387" version="1"/>
+		<nd ref="80000386" version="1"/>
+		<nd ref="901205559" version="1"/>
+	</way>
+	<way id="-76442079#4" version="1">
+		<nd ref="901206925" version="1"/>
+		<nd ref="80000393" version="1"/>
+		<nd ref="80000394" version="1"/>
+		<nd ref="901214537" version="1"/>
+	</way>
+	<way id="76442079#2" version="1">
+		<nd ref="901205559" version="1"/>
+		<nd ref="80000391" version="1"/>
+		<nd ref="80000390" version="1"/>
+		<nd ref="901209607" version="1"/>
+	</way>
+	<way id="-76442079#3" version="1">
+		<nd ref="901214537" version="1"/>
+		<nd ref="80000392" version="1"/>
+		<nd ref="901209607" version="1"/>
+	</way>
+	<way id="76442079#3" version="1">
+		<nd ref="901209607" version="1"/>
+		<nd ref="80000392" version="1"/>
+		<nd ref="901214537" version="1"/>
+	</way>
+	<way id="-779907272#4" version="1">
+		<nd ref="6858635506" version="1"/>
+		<nd ref="80000517" version="1"/>
+		<nd ref="80000518" version="1"/>
+		<nd ref="80000519" version="1"/>
+		<nd ref="80000520" version="1"/>
+		<nd ref="80000521" version="1"/>
+		<nd ref="80000522" version="1"/>
+		<nd ref="80000523" version="1"/>
+		<nd ref="10698447858" version="1"/>
+	</way>
+	<way id="-1150048807#2" version="1">
+		<nd ref="10698447849" version="1"/>
+		<nd ref="80000007" version="1"/>
+		<nd ref="80000008" version="1"/>
+		<nd ref="80000009" version="1"/>
+		<nd ref="80000010" version="1"/>
+		<nd ref="80000011" version="1"/>
+		<nd ref="10698447858" version="1"/>
+	</way>
+	<way id="-465369273" version="1">
+		<nd ref="901212476" version="1"/>
+		<nd ref="80000142" version="1"/>
+		<nd ref="80000143" version="1"/>
+		<nd ref="80000144" version="1"/>
+		<nd ref="80000145" version="1"/>
+		<nd ref="901215145" version="1"/>
+	</way>
+	<way id="76442203#0" version="1">
+		<nd ref="901212774" version="1"/>
+		<nd ref="80000422" version="1"/>
+		<nd ref="80000421" version="1"/>
+		<nd ref="80000420" version="1"/>
+		<nd ref="80000419" version="1"/>
+		<nd ref="80000418" version="1"/>
+		<nd ref="901208999" version="1"/>
+	</way>
+	<way id="-76422787#2" version="1">
+		<nd ref="901206475" version="1"/>
+		<nd ref="80000234" version="1"/>
+		<nd ref="80000235" version="1"/>
+		<nd ref="80000236" version="1"/>
+		<nd ref="80000237" version="1"/>
+		<nd ref="80000238" version="1"/>
+		<nd ref="80000239" version="1"/>
+		<nd ref="80000240" version="1"/>
+		<nd ref="901051758" version="1"/>
+	</way>
+	<way id="467460525#0" version="1">
+		<nd ref="901206475" version="1"/>
+		<nd ref="80000553" version="1"/>
+		<nd ref="cluster_901206018_901214246" version="1"/>
+	</way>
+	<way id="-362066956#2" version="1">
+		<nd ref="901205379" version="1"/>
+		<nd ref="80000097" version="1"/>
+		<nd ref="80000098" version="1"/>
+		<nd ref="901212065" version="1"/>
+	</way>
+	<way id="510043102" version="1">
+		<nd ref="901210607" version="1"/>
+		<nd ref="80000184" version="1"/>
+		<nd ref="80000183" version="1"/>
+		<nd ref="4991466671" version="1"/>
+	</way>
+	<way id="-76441787#1" version="1">
+		<nd ref="901207086" version="1"/>
+		<nd ref="80000356" version="1"/>
+		<nd ref="80000357" version="1"/>
+		<nd ref="476099850" version="1"/>
+	</way>
+	<way id="532269112" version="1">
+		<nd ref="901213265" version="1"/>
+		<nd ref="80000213" version="1"/>
+		<nd ref="80000212" version="1"/>
+		<nd ref="80000211" version="1"/>
+		<nd ref="80000210" version="1"/>
+		<nd ref="80000209" version="1"/>
+		<nd ref="80000208" version="1"/>
+		<nd ref="901205564" version="1"/>
+	</way>
+	<way id="-545749095#1" version="1">
+		<nd ref="5274402828" version="1"/>
+		<nd ref="80000216" version="1"/>
+		<nd ref="3659092687" version="1"/>
+	</way>
+	<way id="76441773#0" version="1">
+		<nd ref="476099850" version="1"/>
+		<nd ref="80000355" version="1"/>
+		<nd ref="5791143895" version="1"/>
+	</way>
+	<way id="76442079#4" version="1">
+		<nd ref="901214537" version="1"/>
+		<nd ref="80000394" version="1"/>
+		<nd ref="80000393" version="1"/>
+		<nd ref="901206925" version="1"/>
+	</way>
+	<way id="-532117653#1" version="1">
+		<nd ref="901207825" version="1"/>
+		<nd ref="80000203" version="1"/>
+		<nd ref="80000204" version="1"/>
+		<nd ref="80000205" version="1"/>
+		<nd ref="80000206" version="1"/>
+		<nd ref="80000207" version="1"/>
+		<nd ref="901211522" version="1"/>
+	</way>
+	<way id="-76441202#4" version="1">
+		<nd ref="901214496" version="1"/>
+		<nd ref="80000299" version="1"/>
+		<nd ref="80000300" version="1"/>
+		<nd ref="80000301" version="1"/>
+		<nd ref="80000302" version="1"/>
+		<nd ref="80000303" version="1"/>
+		<nd ref="80000304" version="1"/>
+		<nd ref="80000305" version="1"/>
+		<nd ref="80000306" version="1"/>
+		<nd ref="80000307" version="1"/>
+		<nd ref="80000308" version="1"/>
+		<nd ref="80000309" version="1"/>
+		<nd ref="80000310" version="1"/>
+		<nd ref="901213766" version="1"/>
+	</way>
+	<way id="228625780#0" version="1">
+		<nd ref="10698447849" version="1"/>
+		<nd ref="80000023" version="1"/>
+		<nd ref="80000022" version="1"/>
+		<nd ref="80000021" version="1"/>
+		<nd ref="80000020" version="1"/>
+		<nd ref="476099852" version="1"/>
+	</way>
+	<way id="76445041#0" version="1">
+		<nd ref="476099844" version="1"/>
+		<nd ref="80000497" version="1"/>
+		<nd ref="80000496" version="1"/>
+		<nd ref="901222815" version="1"/>
+	</way>
+	<way id="76445041#3" version="1">
+		<nd ref="901220265" version="1"/>
+		<nd ref="80000505" version="1"/>
+		<nd ref="80000504" version="1"/>
+		<nd ref="80000503" version="1"/>
+		<nd ref="901208732" version="1"/>
+	</way>
+	<way id="-76441220" version="1">
+		<nd ref="901211557" version="1"/>
+		<nd ref="80000311" version="1"/>
+		<nd ref="80000312" version="1"/>
+		<nd ref="901207157" version="1"/>
+	</way>
+	<way id="76441202#0" version="1">
+		<nd ref="901206364" version="1"/>
+		<nd ref="80000298" version="1"/>
+		<nd ref="80000297" version="1"/>
+		<nd ref="80000296" version="1"/>
+		<nd ref="80000295" version="1"/>
+		<nd ref="901213766" version="1"/>
+	</way>
+	<way id="76442583#2" version="1">
+		<nd ref="901205346" version="1"/>
+		<nd ref="80000426" version="1"/>
+		<nd ref="901211271" version="1"/>
+	</way>
+	<way id="76445041#2" version="1">
+		<nd ref="901222815" version="1"/>
+		<nd ref="80000502" version="1"/>
+		<nd ref="80000501" version="1"/>
+		<nd ref="80000500" version="1"/>
+		<nd ref="80000499" version="1"/>
+		<nd ref="80000498" version="1"/>
+		<nd ref="901220265" version="1"/>
+	</way>
+	<way id="76441876" version="1">
+		<nd ref="901213310" version="1"/>
+		<nd ref="80000364" version="1"/>
+		<nd ref="80000363" version="1"/>
+		<nd ref="901208428" version="1"/>
+	</way>
+	<way id="76442583#0" version="1">
+		<nd ref="901213337" version="1"/>
+		<nd ref="80000425" version="1"/>
+		<nd ref="901205346" version="1"/>
+	</way>
+	<way id="77699442" version="1">
+		<nd ref="825271348" version="1"/>
+		<nd ref="80000516" version="1"/>
+		<nd ref="80000515" version="1"/>
+		<nd ref="80000514" version="1"/>
+		<nd ref="80000513" version="1"/>
+		<nd ref="901215145" version="1"/>
+	</way>
+	<way id="76445041#8" version="1">
+		<nd ref="901208908" version="1"/>
+		<nd ref="80000512" version="1"/>
+		<nd ref="901207047" version="1"/>
+	</way>
+	<way id="76445041#5" version="1">
+		<nd ref="901206289" version="1"/>
+		<nd ref="80000510" version="1"/>
+		<nd ref="80000509" version="1"/>
+		<nd ref="901206682" version="1"/>
+	</way>
+	<way id="76445041#4" version="1">
+		<nd ref="901208732" version="1"/>
+		<nd ref="80000508" version="1"/>
+		<nd ref="80000507" version="1"/>
+		<nd ref="80000506" version="1"/>
+		<nd ref="901206289" version="1"/>
+	</way>
+	<way id="76445041#7" version="1">
+		<nd ref="901213478" version="1"/>
+		<nd ref="80000511" version="1"/>
+		<nd ref="901208908" version="1"/>
+	</way>
+	<way id="611713887#0" version="1">
+		<nd ref="901211780" version="1"/>
+		<nd ref="80000569" version="1"/>
+		<nd ref="80000570" version="1"/>
+		<nd ref="1419741876" version="1"/>
+	</way>
+	<way id="76445041#6" version="1">
+		<nd ref="901206682" version="1"/>
+		<nd ref="901213478" version="1"/>
+	</way>
+	<way id="-504508658" version="1">
+		<nd ref="901213265" version="1"/>
+		<nd ref="80000180" version="1"/>
+		<nd ref="80000181" version="1"/>
+		<nd ref="80000182" version="1"/>
+		<nd ref="12077380165" version="1"/>
+	</way>
+	<way id="-611697835#2" version="1">
+		<nd ref="901212065" version="1"/>
+		<nd ref="80000225" version="1"/>
+		<nd ref="80000226" version="1"/>
+		<nd ref="5791143895" version="1"/>
+	</way>
+	<way id="-76442325#1" version="1">
+		<nd ref="3575742702" version="1"/>
+		<nd ref="80000423" version="1"/>
+		<nd ref="80000424" version="1"/>
+		<nd ref="901210164" version="1"/>
+	</way>
+	<way id="516760954" version="1">
+		<nd ref="901214587" version="1"/>
+		<nd ref="80000187" version="1"/>
+		<nd ref="80000186" version="1"/>
+		<nd ref="80000185" version="1"/>
+		<nd ref="901210607" version="1"/>
+	</way>
+	<way id="76441202#4" version="1">
+		<nd ref="901213766" version="1"/>
+		<nd ref="80000310" version="1"/>
+		<nd ref="80000309" version="1"/>
+		<nd ref="80000308" version="1"/>
+		<nd ref="80000307" version="1"/>
+		<nd ref="80000306" version="1"/>
+		<nd ref="80000305" version="1"/>
+		<nd ref="80000304" version="1"/>
+		<nd ref="80000303" version="1"/>
+		<nd ref="80000302" version="1"/>
+		<nd ref="80000301" version="1"/>
+		<nd ref="80000300" version="1"/>
+		<nd ref="80000299" version="1"/>
+		<nd ref="901214496" version="1"/>
+	</way>
+	<way id="76443145" version="1">
+		<nd ref="901208428" version="1"/>
+		<nd ref="80000453" version="1"/>
+		<nd ref="80000452" version="1"/>
+		<nd ref="901205946" version="1"/>
+	</way>
+	<way id="76442325#0" version="1">
+		<nd ref="901210164" version="1"/>
+		<nd ref="80000424" version="1"/>
+		<nd ref="80000423" version="1"/>
+		<nd ref="3575742702" version="1"/>
+	</way>
+	<way id="611697836#0" version="1">
+		<nd ref="5791143896" version="1"/>
+		<nd ref="80000040" version="1"/>
+		<nd ref="80000039" version="1"/>
+		<nd ref="80000038" version="1"/>
+		<nd ref="80000037" version="1"/>
+		<nd ref="80000036" version="1"/>
+		<nd ref="476099850" version="1"/>
+	</way>
+	<way id="-76441385#1" version="1">
+		<nd ref="901206818" version="1"/>
+		<nd ref="80000319" version="1"/>
+		<nd ref="80000320" version="1"/>
+		<nd ref="80000321" version="1"/>
+		<nd ref="80000322" version="1"/>
+		<nd ref="80000323" version="1"/>
+		<nd ref="901206682" version="1"/>
+	</way>
+	<way id="-76441385#0" version="1">
+		<nd ref="901206682" version="1"/>
+		<nd ref="80000313" version="1"/>
+		<nd ref="80000314" version="1"/>
+		<nd ref="80000315" version="1"/>
+		<nd ref="80000316" version="1"/>
+		<nd ref="80000317" version="1"/>
+		<nd ref="80000318" version="1"/>
+		<nd ref="901221548" version="1"/>
+	</way>
+	<way id="-76441385#3" version="1">
+		<nd ref="901211292" version="1"/>
+		<nd ref="80000328" version="1"/>
+		<nd ref="80000329" version="1"/>
+		<nd ref="80000330" version="1"/>
+		<nd ref="80000331" version="1"/>
+		<nd ref="901211263" version="1"/>
+	</way>
+	<way id="-76441385#2" version="1">
+		<nd ref="901211263" version="1"/>
+		<nd ref="80000324" version="1"/>
+		<nd ref="80000325" version="1"/>
+		<nd ref="80000326" version="1"/>
+		<nd ref="80000327" version="1"/>
+		<nd ref="901206818" version="1"/>
+	</way>
+	<way id="-1150048806#4" version="1">
+		<nd ref="10698447858" version="1"/>
+		<nd ref="80000001" version="1"/>
+		<nd ref="80000002" version="1"/>
+		<nd ref="80000003" version="1"/>
+		<nd ref="80000004" version="1"/>
+		<nd ref="80000005" version="1"/>
+		<nd ref="80000006" version="1"/>
+		<nd ref="3859505168" version="1"/>
+	</way>
+	<way id="-367636024" version="1">
+		<nd ref="901205940" version="1"/>
+		<nd ref="901215392" version="1"/>
+	</way>
+	<way id="76442265#0" version="1">
+		<nd ref="cluster_901206018_901214246" version="1"/>
+		<nd ref="80000590" version="1"/>
+		<nd ref="80000591" version="1"/>
+		<nd ref="80000592" version="1"/>
+		<nd ref="80000593" version="1"/>
+		<nd ref="80000594" version="1"/>
+		<nd ref="cluster_1419743461_901212492" version="1"/>
+	</way>
+	<way id="-362066957#1" version="1">
+		<nd ref="901209818" version="1"/>
+		<nd ref="80000099" version="1"/>
+		<nd ref="901207086" version="1"/>
+	</way>
+	<way id="1150048807#0" version="1">
+		<nd ref="10698447858" version="1"/>
+		<nd ref="80000011" version="1"/>
+		<nd ref="80000010" version="1"/>
+		<nd ref="80000009" version="1"/>
+		<nd ref="80000008" version="1"/>
+		<nd ref="80000007" version="1"/>
+		<nd ref="10698447849" version="1"/>
+	</way>
+	<way id="76442281" version="1">
+		<nd ref="901210164" version="1"/>
+		<nd ref="80000595" version="1"/>
+		<nd ref="80000596" version="1"/>
+		<nd ref="80000597" version="1"/>
+		<nd ref="80000598" version="1"/>
+		<nd ref="80000599" version="1"/>
+		<nd ref="80000600" version="1"/>
+		<nd ref="412678992" version="1"/>
+	</way>
+	<way id="-76442583#1" version="1">
+		<nd ref="901205346" version="1"/>
+		<nd ref="80000425" version="1"/>
+		<nd ref="901213337" version="1"/>
+	</way>
+	<way id="-76442583#2" version="1">
+		<nd ref="901211271" version="1"/>
+		<nd ref="80000426" version="1"/>
+		<nd ref="901205346" version="1"/>
+	</way>
+	<way id="76441067#3" version="1">
+		<nd ref="901212845" version="1"/>
+		<nd ref="80000259" version="1"/>
+		<nd ref="80000258" version="1"/>
+		<nd ref="80000257" version="1"/>
+		<nd ref="80000256" version="1"/>
+		<nd ref="80000255" version="1"/>
+		<nd ref="80000254" version="1"/>
+		<nd ref="901213512" version="1"/>
+	</way>
+	<way id="76441067#2" version="1">
+		<nd ref="901206542" version="1"/>
+		<nd ref="80000253" version="1"/>
+		<nd ref="80000252" version="1"/>
+		<nd ref="80000251" version="1"/>
+		<nd ref="80000250" version="1"/>
+		<nd ref="901212845" version="1"/>
+	</way>
+	<way id="76441067#1" version="1">
+		<nd ref="901208908" version="1"/>
+		<nd ref="80000249" version="1"/>
+		<nd ref="80000248" version="1"/>
+		<nd ref="80000247" version="1"/>
+		<nd ref="80000246" version="1"/>
+		<nd ref="901206542" version="1"/>
+	</way>
+	<way id="76441067#0" version="1">
+		<nd ref="901210307" version="1"/>
+		<nd ref="80000245" version="1"/>
+		<nd ref="80000244" version="1"/>
+		<nd ref="80000243" version="1"/>
+		<nd ref="80000242" version="1"/>
+		<nd ref="80000241" version="1"/>
+		<nd ref="901208908" version="1"/>
+	</way>
+	<way id="76443644#0" version="1">
+		<nd ref="cluster_1419743461_901212492" version="1"/>
+		<nd ref="80000646" version="1"/>
+		<nd ref="1419743453" version="1"/>
+	</way>
+	<way id="-76445041#7" version="1">
+		<nd ref="901208908" version="1"/>
+		<nd ref="80000511" version="1"/>
+		<nd ref="901213478" version="1"/>
+	</way>
+	<way id="-76445041#8" version="1">
+		<nd ref="901207047" version="1"/>
+		<nd ref="80000512" version="1"/>
+		<nd ref="901208908" version="1"/>
+	</way>
+	<way id="-76441958#2" version="1">
+		<nd ref="901213310" version="1"/>
+		<nd ref="80000381" version="1"/>
+		<nd ref="80000382" version="1"/>
+		<nd ref="80000383" version="1"/>
+		<nd ref="901207931" version="1"/>
+	</way>
+	<way id="-76443145" version="1">
+		<nd ref="901205946" version="1"/>
+		<nd ref="80000452" version="1"/>
+		<nd ref="80000453" version="1"/>
+		<nd ref="901208428" version="1"/>
+	</way>
+	<way id="611713878" version="1">
+		<nd ref="1655123258" version="1"/>
+		<nd ref="80000568" version="1"/>
+		<nd ref="901206475" version="1"/>
+	</way>
+	<way id="76441141#0" version="1">
+		<nd ref="901206332" version="1"/>
+		<nd ref="80000575" version="1"/>
+		<nd ref="80000576" version="1"/>
+		<nd ref="80000577" version="1"/>
+		<nd ref="80000578" version="1"/>
+		<nd ref="901205559" version="1"/>
+	</way>
+	<way id="-76445041#1" version="1">
+		<nd ref="901222815" version="1"/>
+		<nd ref="80000496" version="1"/>
+		<nd ref="80000497" version="1"/>
+		<nd ref="476099844" version="1"/>
+	</way>
+	<way id="-76445041#2" version="1">
+		<nd ref="901220265" version="1"/>
+		<nd ref="80000498" version="1"/>
+		<nd ref="80000499" version="1"/>
+		<nd ref="80000500" version="1"/>
+		<nd ref="80000501" version="1"/>
+		<nd ref="80000502" version="1"/>
+		<nd ref="901222815" version="1"/>
+	</way>
+	<way id="76441141#2" version="1">
+		<nd ref="901205559" version="1"/>
+		<nd ref="80000579" version="1"/>
+		<nd ref="80000580" version="1"/>
+		<nd ref="80000581" version="1"/>
+		<nd ref="901213310" version="1"/>
+	</way>
+	<way id="76441164#0" version="1">
+		<nd ref="476099847" version="1"/>
+		<nd ref="80000277" version="1"/>
+		<nd ref="80000276" version="1"/>
+		<nd ref="80000275" version="1"/>
+		<nd ref="80000274" version="1"/>
+		<nd ref="901211740" version="1"/>
+	</way>
+	<way id="-76445041#3" version="1">
+		<nd ref="901208732" version="1"/>
+		<nd ref="80000503" version="1"/>
+		<nd ref="80000504" version="1"/>
+		<nd ref="80000505" version="1"/>
+		<nd ref="901220265" version="1"/>
+	</way>
+	<way id="76441141#3" version="1">
+		<nd ref="901213310" version="1"/>
+		<nd ref="80000582" version="1"/>
+		<nd ref="80000583" version="1"/>
+		<nd ref="80000584" version="1"/>
+		<nd ref="80000585" version="1"/>
+		<nd ref="80000586" version="1"/>
+		<nd ref="901214224" version="1"/>
+	</way>
+	<way id="76441164#3" version="1">
+		<nd ref="901211740" version="1"/>
+		<nd ref="80000279" version="1"/>
+		<nd ref="80000278" version="1"/>
+		<nd ref="901207825" version="1"/>
+	</way>
+	<way id="-76445041#4" version="1">
+		<nd ref="901206289" version="1"/>
+		<nd ref="80000506" version="1"/>
+		<nd ref="80000507" version="1"/>
+		<nd ref="80000508" version="1"/>
+		<nd ref="901208732" version="1"/>
+	</way>
+	<way id="-76445041#5" version="1">
+		<nd ref="901206682" version="1"/>
+		<nd ref="80000509" version="1"/>
+		<nd ref="80000510" version="1"/>
+		<nd ref="901206289" version="1"/>
+	</way>
+	<way id="76441164#5" version="1">
+		<nd ref="901213977" version="1"/>
+		<nd ref="80000282" version="1"/>
+		<nd ref="80000281" version="1"/>
+		<nd ref="901206446" version="1"/>
+	</way>
+	<way id="-76445041#6" version="1">
+		<nd ref="901213478" version="1"/>
+		<nd ref="901206682" version="1"/>
+	</way>
+	<way id="76441141#6" version="1">
+		<nd ref="901214224" version="1"/>
+		<nd ref="80000587" version="1"/>
+		<nd ref="80000588" version="1"/>
+		<nd ref="901213903" version="1"/>
+	</way>
+	<way id="76441164#4" version="1">
+		<nd ref="901207825" version="1"/>
+		<nd ref="80000280" version="1"/>
+		<nd ref="901213977" version="1"/>
+	</way>
+	<way id="76441164#7" version="1">
+		<nd ref="901206446" version="1"/>
+		<nd ref="80000285" version="1"/>
+		<nd ref="80000284" version="1"/>
+		<nd ref="80000283" version="1"/>
+		<nd ref="901209914" version="1"/>
+	</way>
+	<way id="300719826#0" version="1">
+		<nd ref="901210202" version="1"/>
+		<nd ref="80000540" version="1"/>
+		<nd ref="80000541" version="1"/>
+		<nd ref="80000542" version="1"/>
+		<nd ref="cluster_1419743461_901212492" version="1"/>
+	</way>
+	<way id="465369274#0" version="1">
+		<nd ref="901061361" version="1"/>
+		<nd ref="80000151" version="1"/>
+		<nd ref="80000150" version="1"/>
+		<nd ref="80000149" version="1"/>
+		<nd ref="80000148" version="1"/>
+		<nd ref="80000147" version="1"/>
+		<nd ref="80000146" version="1"/>
+		<nd ref="825271348" version="1"/>
+	</way>
+	<way id="76441669#2" version="1">
+		<nd ref="901213337" version="1"/>
+		<nd ref="80000354" version="1"/>
+		<nd ref="6374148813" version="1"/>
+	</way>
+	<way id="76441164#9" version="1">
+		<nd ref="901209914" version="1"/>
+		<nd ref="80000287" version="1"/>
+		<nd ref="80000286" version="1"/>
+		<nd ref="901211263" version="1"/>
+	</way>
+	<way id="76441669#0" version="1">
+		<nd ref="901211198" version="1"/>
+		<nd ref="80000353" version="1"/>
+		<nd ref="80000352" version="1"/>
+		<nd ref="901213337" version="1"/>
+	</way>
+	<way id="-520170916#0" version="1">
+		<nd ref="901206818" version="1"/>
+		<nd ref="80000199" version="1"/>
+		<nd ref="80000200" version="1"/>
+		<nd ref="901210958" version="1"/>
+	</way>
+	<way id="362066953#0" version="1">
+		<nd ref="901205379" version="1"/>
+		<nd ref="80000070" version="1"/>
+		<nd ref="901215145" version="1"/>
+	</way>
+	<way id="-520170916#4" version="1">
+		<nd ref="5680724790" version="1"/>
+		<nd ref="80000202" version="1"/>
+		<nd ref="901206542" version="1"/>
+	</way>
+	<way id="-520170916#2" version="1">
+		<nd ref="901206542" version="1"/>
+		<nd ref="80000201" version="1"/>
+		<nd ref="901214878" version="1"/>
+	</way>
+	<way id="-520170916#1" version="1">
+		<nd ref="901214878" version="1"/>
+		<nd ref="901206818" version="1"/>
+	</way>
+	<way id="619191181#0" version="1">
+		<nd ref="1655122698" version="1"/>
+		<nd ref="80000571" version="1"/>
+		<nd ref="80000572" version="1"/>
+		<nd ref="901211780" version="1"/>
+	</way>
+	<way id="434337684#0" version="1">
+		<nd ref="901208999" version="1"/>
+		<nd ref="80000131" version="1"/>
+		<nd ref="80000130" version="1"/>
+		<nd ref="80000129" version="1"/>
+		<nd ref="80000128" version="1"/>
+		<nd ref="80000127" version="1"/>
+		<nd ref="80000126" version="1"/>
+		<nd ref="80000125" version="1"/>
+		<nd ref="901209211" version="1"/>
+	</way>
+	<way id="504508658" version="1">
+		<nd ref="12077380165" version="1"/>
+		<nd ref="80000182" version="1"/>
+		<nd ref="80000181" version="1"/>
+		<nd ref="80000180" version="1"/>
+		<nd ref="901213265" version="1"/>
+	</way>
+	<way id="-504127878#1" version="1">
+		<nd ref="825271348" version="1"/>
+		<nd ref="80000172" version="1"/>
+		<nd ref="80000173" version="1"/>
+		<nd ref="80000174" version="1"/>
+		<nd ref="80000175" version="1"/>
+		<nd ref="80000176" version="1"/>
+		<nd ref="476099874" version="1"/>
+	</way>
+	<way id="76441127" version="1">
+		<nd ref="901205546" version="1"/>
+		<nd ref="80000267" version="1"/>
+		<nd ref="80000266" version="1"/>
+		<nd ref="80000265" version="1"/>
+		<nd ref="901205417" version="1"/>
+	</way>
+	<way id="-504127878#3" version="1">
+		<nd ref="901210202" version="1"/>
+		<nd ref="80000177" version="1"/>
+		<nd ref="80000178" version="1"/>
+		<nd ref="80000179" version="1"/>
+		<nd ref="825271348" version="1"/>
+	</way>
+	<way id="611697835#0" version="1">
+		<nd ref="5791143895" version="1"/>
+		<nd ref="80000226" version="1"/>
+		<nd ref="80000225" version="1"/>
+		<nd ref="901212065" version="1"/>
+	</way>
+	<way id="76441586#4" version="1">
+		<nd ref="901211819" version="1"/>
+		<nd ref="80000351" version="1"/>
+		<nd ref="80000350" version="1"/>
+		<nd ref="901213337" version="1"/>
+	</way>
+	<way id="-76442203#3" version="1">
+		<nd ref="901208999" version="1"/>
+		<nd ref="80000418" version="1"/>
+		<nd ref="80000419" version="1"/>
+		<nd ref="80000420" version="1"/>
+		<nd ref="80000421" version="1"/>
+		<nd ref="80000422" version="1"/>
+		<nd ref="901212774" version="1"/>
+	</way>
+	<way id="76441586#0" version="1">
+		<nd ref="901211846" version="1"/>
+		<nd ref="80000349" version="1"/>
+		<nd ref="80000348" version="1"/>
+		<nd ref="80000347" version="1"/>
+		<nd ref="80000346" version="1"/>
+		<nd ref="80000345" version="1"/>
+		<nd ref="80000344" version="1"/>
+		<nd ref="80000343" version="1"/>
+		<nd ref="80000342" version="1"/>
+		<nd ref="80000341" version="1"/>
+		<nd ref="901211819" version="1"/>
+	</way>
+	<way id="-465129259#2" version="1">
+		<nd ref="901210070" version="1"/>
+		<nd ref="80000137" version="1"/>
+		<nd ref="80000138" version="1"/>
+		<nd ref="80000139" version="1"/>
+		<nd ref="901209818" version="1"/>
+	</way>
+	<way id="152488091" version="1">
+		<nd ref="5862508815" version="1"/>
+		<nd ref="80000019" version="1"/>
+		<nd ref="901214768" version="1"/>
+	</way>
+	<way id="-367636038#15" version="1">
+		<nd ref="901211846" version="1"/>
+		<nd ref="80000107" version="1"/>
+		<nd ref="80000108" version="1"/>
+		<nd ref="80000109" version="1"/>
+		<nd ref="80000110" version="1"/>
+		<nd ref="80000111" version="1"/>
+		<nd ref="80000112" version="1"/>
+		<nd ref="80000113" version="1"/>
+		<nd ref="80000114" version="1"/>
+		<nd ref="80000115" version="1"/>
+		<nd ref="901205564" version="1"/>
+	</way>
+	<way id="-76441876" version="1">
+		<nd ref="901208428" version="1"/>
+		<nd ref="80000363" version="1"/>
+		<nd ref="80000364" version="1"/>
+		<nd ref="901213310" version="1"/>
+	</way>
+	<way id="779907272#0" version="1">
+		<nd ref="10698447858" version="1"/>
+		<nd ref="80000523" version="1"/>
+		<nd ref="80000522" version="1"/>
+		<nd ref="80000521" version="1"/>
+		<nd ref="80000520" version="1"/>
+		<nd ref="80000519" version="1"/>
+		<nd ref="80000518" version="1"/>
+		<nd ref="80000517" version="1"/>
+		<nd ref="6858635506" version="1"/>
+	</way>
+	<way id="-367636038#13" version="1">
+		<nd ref="901205564" version="1"/>
+		<nd ref="80000106" version="1"/>
+		<nd ref="901213512" version="1"/>
+	</way>
+	<way id="-367636038#11" version="1">
+		<nd ref="901207788" version="1"/>
+		<nd ref="80000101" version="1"/>
+		<nd ref="80000102" version="1"/>
+		<nd ref="80000103" version="1"/>
+		<nd ref="901211292" version="1"/>
+	</way>
+	<way id="76441495" version="1">
+		<nd ref="901213903" version="1"/>
+		<nd ref="80000336" version="1"/>
+		<nd ref="80000335" version="1"/>
+		<nd ref="80000334" version="1"/>
+		<nd ref="80000333" version="1"/>
+		<nd ref="901211198" version="1"/>
+	</way>
+	<way id="-367636038#12" version="1">
+		<nd ref="901213512" version="1"/>
+		<nd ref="80000104" version="1"/>
+		<nd ref="80000105" version="1"/>
+		<nd ref="901207788" version="1"/>
+	</way>
+	<way id="76441958#0" version="1">
+		<nd ref="901207931" version="1"/>
+		<nd ref="80000383" version="1"/>
+		<nd ref="80000382" version="1"/>
+		<nd ref="80000381" version="1"/>
+		<nd ref="901213310" version="1"/>
+	</way>
+	<way id="-76441164#6" version="1">
+		<nd ref="901206446" version="1"/>
+		<nd ref="80000281" version="1"/>
+		<nd ref="80000282" version="1"/>
+		<nd ref="901213977" version="1"/>
+	</way>
+	<way id="76442806" version="1">
+		<nd ref="901210607" version="1"/>
+		<nd ref="80000447" version="1"/>
+		<nd ref="80000446" version="1"/>
+		<nd ref="412678992" version="1"/>
+	</way>
+	<way id="-76441164#8" version="1">
+		<nd ref="901209914" version="1"/>
+		<nd ref="80000283" version="1"/>
+		<nd ref="80000284" version="1"/>
+		<nd ref="80000285" version="1"/>
+		<nd ref="901206446" version="1"/>
+	</way>
+	<way id="-76441164#2" version="1">
+		<nd ref="901211740" version="1"/>
+		<nd ref="80000274" version="1"/>
+		<nd ref="80000275" version="1"/>
+		<nd ref="80000276" version="1"/>
+		<nd ref="80000277" version="1"/>
+		<nd ref="476099847" version="1"/>
+	</way>
+	<way id="-76441164#3" version="1">
+		<nd ref="901207825" version="1"/>
+		<nd ref="80000278" version="1"/>
+		<nd ref="80000279" version="1"/>
+		<nd ref="901211740" version="1"/>
+	</way>
+	<way id="-76441164#4" version="1">
+		<nd ref="901213977" version="1"/>
+		<nd ref="80000280" version="1"/>
+		<nd ref="901207825" version="1"/>
+	</way>
+	<way id="-76443355#1" version="1">
+		<nd ref="901210958" version="1"/>
+		<nd ref="80000466" version="1"/>
+		<nd ref="80000467" version="1"/>
+		<nd ref="80000468" version="1"/>
+		<nd ref="80000469" version="1"/>
+		<nd ref="80000470" version="1"/>
+		<nd ref="901206289" version="1"/>
+	</way>
+	<way id="367636038#14" version="1">
+		<nd ref="901205564" version="1"/>
+		<nd ref="80000115" version="1"/>
+		<nd ref="80000114" version="1"/>
+		<nd ref="80000113" version="1"/>
+		<nd ref="80000112" version="1"/>
+		<nd ref="80000111" version="1"/>
+		<nd ref="80000110" version="1"/>
+		<nd ref="80000109" version="1"/>
+		<nd ref="80000108" version="1"/>
+		<nd ref="80000107" version="1"/>
+		<nd ref="901211846" version="1"/>
+	</way>
+	<way id="465369273" version="1">
+		<nd ref="901215145" version="1"/>
+		<nd ref="80000145" version="1"/>
+		<nd ref="80000144" version="1"/>
+		<nd ref="80000143" version="1"/>
+		<nd ref="80000142" version="1"/>
+		<nd ref="901212476" version="1"/>
+	</way>
+	<way id="-76443035" version="1">
+		<nd ref="901210525" version="1"/>
+		<nd ref="80000448" version="1"/>
+		<nd ref="80000449" version="1"/>
+		<nd ref="80000450" version="1"/>
+		<nd ref="80000451" version="1"/>
+		<nd ref="901211819" version="1"/>
+	</way>
+	<way id="367636038#12" version="1">
+		<nd ref="901207788" version="1"/>
+		<nd ref="80000105" version="1"/>
+		<nd ref="80000104" version="1"/>
+		<nd ref="901213512" version="1"/>
+	</way>
+	<way id="-76443355#0" version="1">
+		<nd ref="901206289" version="1"/>
+		<nd ref="80000459" version="1"/>
+		<nd ref="80000460" version="1"/>
+		<nd ref="80000461" version="1"/>
+		<nd ref="80000462" version="1"/>
+		<nd ref="80000463" version="1"/>
+		<nd ref="80000464" version="1"/>
+		<nd ref="80000465" version="1"/>
+		<nd ref="901223113" version="1"/>
+	</way>
+	<way id="367636038#13" version="1">
+		<nd ref="901213512" version="1"/>
+		<nd ref="80000106" version="1"/>
+		<nd ref="901205564" version="1"/>
+	</way>
+	<way id="76441526#0" version="1">
+		<nd ref="1419743453" version="1"/>
+		<nd ref="80000340" version="1"/>
+		<nd ref="80000339" version="1"/>
+		<nd ref="80000338" version="1"/>
+		<nd ref="80000337" version="1"/>
+		<nd ref="901214752" version="1"/>
+	</way>
+	<way id="367636038#10" version="1">
+		<nd ref="901211292" version="1"/>
+		<nd ref="80000103" version="1"/>
+		<nd ref="80000102" version="1"/>
+		<nd ref="80000101" version="1"/>
+		<nd ref="901207788" version="1"/>
+	</way>
+	<way id="611697834#0" version="1">
+		<nd ref="cluster_1419743461_901212492" version="1"/>
+		<nd ref="80000567" version="1"/>
+		<nd ref="901208097" version="1"/>
+	</way>
+	<way id="76443355#0" version="1">
+		<nd ref="901223113" version="1"/>
+		<nd ref="80000465" version="1"/>
+		<nd ref="80000464" version="1"/>
+		<nd ref="80000463" version="1"/>
+		<nd ref="80000462" version="1"/>
+		<nd ref="80000461" version="1"/>
+		<nd ref="80000460" version="1"/>
+		<nd ref="80000459" version="1"/>
+		<nd ref="901206289" version="1"/>
+	</way>
+	<way id="76443355#1" version="1">
+		<nd ref="901206289" version="1"/>
+		<nd ref="80000470" version="1"/>
+		<nd ref="80000469" version="1"/>
+		<nd ref="80000468" version="1"/>
+		<nd ref="80000467" version="1"/>
+		<nd ref="80000466" version="1"/>
+		<nd ref="901210958" version="1"/>
+	</way>
+	<way id="-76442074#2" version="1">
+		<nd ref="901210139" version="1"/>
+		<nd ref="80000384" version="1"/>
+		<nd ref="80000385" version="1"/>
+		<nd ref="1653163398" version="1"/>
+	</way>
+	<way id="76442074#0" version="1">
+		<nd ref="1653163398" version="1"/>
+		<nd ref="80000385" version="1"/>
+		<nd ref="80000384" version="1"/>
+		<nd ref="901210139" version="1"/>
+	</way>
+	<way id="-361923985#3" version="1">
+		<nd ref="901210139" version="1"/>
+		<nd ref="80000063" version="1"/>
+		<nd ref="80000064" version="1"/>
+		<nd ref="80000065" version="1"/>
+		<nd ref="80000066" version="1"/>
+		<nd ref="80000067" version="1"/>
+		<nd ref="80000068" version="1"/>
+		<nd ref="80000069" version="1"/>
+		<nd ref="901206925" version="1"/>
+	</way>
+	<way id="-465129258#4" version="1">
+		<nd ref="901209818" version="1"/>
+		<nd ref="80000132" version="1"/>
+		<nd ref="80000133" version="1"/>
+		<nd ref="80000134" version="1"/>
+		<nd ref="80000135" version="1"/>
+		<nd ref="80000136" version="1"/>
+		<nd ref="901207825" version="1"/>
+	</way>
+	<way id="-482221266#3" version="1">
+		<nd ref="901206925" version="1"/>
+		<nd ref="80000166" version="1"/>
+		<nd ref="80000167" version="1"/>
+		<nd ref="80000168" version="1"/>
+		<nd ref="80000169" version="1"/>
+		<nd ref="80000170" version="1"/>
+		<nd ref="80000171" version="1"/>
+		<nd ref="901214752" version="1"/>
+	</way>
+	<way id="-76441164#9" version="1">
+		<nd ref="901211263" version="1"/>
+		<nd ref="80000286" version="1"/>
+		<nd ref="80000287" version="1"/>
+		<nd ref="901209914" version="1"/>
+	</way>
+	<way id="-76442180#1" version="1">
+		<nd ref="901212373" version="1"/>
+		<nd ref="80000413" version="1"/>
+		<nd ref="80000414" version="1"/>
+		<nd ref="80000415" version="1"/>
+		<nd ref="80000416" version="1"/>
+		<nd ref="80000417" version="1"/>
+		<nd ref="901208999" version="1"/>
+	</way>
+	<way id="-516760954" version="1">
+		<nd ref="901210607" version="1"/>
+		<nd ref="80000185" version="1"/>
+		<nd ref="80000186" version="1"/>
+		<nd ref="80000187" version="1"/>
+		<nd ref="901214587" version="1"/>
+	</way>
+	<way id="-76441184#2" version="1">
+		<nd ref="901212476" version="1"/>
+		<nd ref="80000292" version="1"/>
+		<nd ref="80000293" version="1"/>
+		<nd ref="901209648" version="1"/>
+	</way>
+	<way id="-1266710991#4" version="1">
+		<nd ref="901207639" version="1"/>
+		<nd ref="80000014" version="1"/>
+		<nd ref="80000015" version="1"/>
+		<nd ref="80000016" version="1"/>
+		<nd ref="80000017" version="1"/>
+		<nd ref="80000018" version="1"/>
+		<nd ref="11765611588" version="1"/>
+	</way>
+	<way id="-76441184#1" version="1">
+		<nd ref="901209648" version="1"/>
+		<nd ref="80000288" version="1"/>
+		<nd ref="80000289" version="1"/>
+		<nd ref="80000290" version="1"/>
+		<nd ref="80000291" version="1"/>
+		<nd ref="901206332" version="1"/>
+	</way>
+	<way id="-788938927#0" version="1">
+		<nd ref="901213230" version="1"/>
+		<nd ref="80000524" version="1"/>
+		<nd ref="80000525" version="1"/>
+		<nd ref="901211198" version="1"/>
+	</way>
+	<way id="611697822" version="1">
+		<nd ref="5791143885" version="1"/>
+		<nd ref="80000224" version="1"/>
+		<nd ref="80000223" version="1"/>
+		<nd ref="80000222" version="1"/>
+		<nd ref="5791143897" version="1"/>
+	</way>
+	<way id="-788938927#1" version="1">
+		<nd ref="901207073" version="1"/>
+		<nd ref="80000526" version="1"/>
+		<nd ref="901213230" version="1"/>
+	</way>
+	<way id="-465369274#2" version="1">
+		<nd ref="825271348" version="1"/>
+		<nd ref="80000146" version="1"/>
+		<nd ref="80000147" version="1"/>
+		<nd ref="80000148" version="1"/>
+		<nd ref="80000149" version="1"/>
+		<nd ref="80000150" version="1"/>
+		<nd ref="80000151" version="1"/>
+		<nd ref="901061361" version="1"/>
+	</way>
+	<way id="520170916#1" version="1">
+		<nd ref="901206818" version="1"/>
+		<nd ref="901214878" version="1"/>
+	</way>
+	<way id="-76441184#3" version="1">
+		<nd ref="901214752" version="1"/>
+		<nd ref="80000294" version="1"/>
+		<nd ref="901212476" version="1"/>
+	</way>
+	<way id="520170916#0" version="1">
+		<nd ref="901210958" version="1"/>
+		<nd ref="80000200" version="1"/>
+		<nd ref="80000199" version="1"/>
+		<nd ref="901206818" version="1"/>
+	</way>
+	<way id="76442648#2" version="1">
+		<nd ref="901213977" version="1"/>
+		<nd ref="80000442" version="1"/>
+		<nd ref="80000441" version="1"/>
+		<nd ref="80000440" version="1"/>
+		<nd ref="80000439" version="1"/>
+		<nd ref="80000438" version="1"/>
+		<nd ref="901210070" version="1"/>
+	</way>
+	<way id="520170916#3" version="1">
+		<nd ref="901206542" version="1"/>
+		<nd ref="80000202" version="1"/>
+		<nd ref="5680724790" version="1"/>
+	</way>
+	<way id="76442648#1" version="1">
+		<nd ref="901210758" version="1"/>
+		<nd ref="80000437" version="1"/>
+		<nd ref="80000436" version="1"/>
+		<nd ref="80000435" version="1"/>
+		<nd ref="901213977" version="1"/>
+	</way>
+	<way id="520170916#2" version="1">
+		<nd ref="901214878" version="1"/>
+		<nd ref="80000201" version="1"/>
+		<nd ref="901206542" version="1"/>
+	</way>
+	<way id="76442648#0" version="1">
+		<nd ref="901220265" version="1"/>
+		<nd ref="80000434" version="1"/>
+		<nd ref="80000433" version="1"/>
+		<nd ref="80000432" version="1"/>
+		<nd ref="80000431" version="1"/>
+		<nd ref="80000430" version="1"/>
+		<nd ref="80000429" version="1"/>
+		<nd ref="901210758" version="1"/>
+	</way>
+	<way id="362066955#0" version="1">
+		<nd ref="901212476" version="1"/>
+		<nd ref="80000076" version="1"/>
+		<nd ref="80000075" version="1"/>
+		<nd ref="80000074" version="1"/>
+		<nd ref="80000073" version="1"/>
+		<nd ref="901214537" version="1"/>
+	</way>
+	<way id="76441878#0" version="1">
+		<nd ref="901207639" version="1"/>
+		<nd ref="80000374" version="1"/>
+		<nd ref="80000373" version="1"/>
+		<nd ref="80000372" version="1"/>
+		<nd ref="80000371" version="1"/>
+		<nd ref="80000370" version="1"/>
+		<nd ref="80000369" version="1"/>
+		<nd ref="80000368" version="1"/>
+		<nd ref="80000367" version="1"/>
+		<nd ref="80000366" version="1"/>
+		<nd ref="80000365" version="1"/>
+		<nd ref="901213766" version="1"/>
+	</way>
+	<way id="362066955#2" version="1">
+		<nd ref="901205946" version="1"/>
+		<nd ref="80000084" version="1"/>
+		<nd ref="80000083" version="1"/>
+		<nd ref="80000082" version="1"/>
+		<nd ref="80000081" version="1"/>
+		<nd ref="901205417" version="1"/>
+	</way>
+	<way id="76442870#0" version="1">
+		<nd ref="901208097" version="1"/>
+		<nd ref="80000601" version="1"/>
+		<nd ref="80000602" version="1"/>
+		<nd ref="80000603" version="1"/>
+		<nd ref="80000604" version="1"/>
+		<nd ref="cluster_901206018_901214246" version="1"/>
+	</way>
+	<way id="362066955#1" version="1">
+		<nd ref="901214537" version="1"/>
+		<nd ref="80000080" version="1"/>
+		<nd ref="80000079" version="1"/>
+		<nd ref="80000078" version="1"/>
+		<nd ref="80000077" version="1"/>
+		<nd ref="901205946" version="1"/>
+	</way>
+	<way id="-361431608#3" version="1">
+		<nd ref="901212774" version="1"/>
+		<nd ref="80000041" version="1"/>
+		<nd ref="80000042" version="1"/>
+		<nd ref="80000043" version="1"/>
+		<nd ref="80000044" version="1"/>
+		<nd ref="80000045" version="1"/>
+		<nd ref="80000046" version="1"/>
+		<nd ref="901206925" version="1"/>
+	</way>
+	<way id="-152488091" version="1">
+		<nd ref="901214768" version="1"/>
+		<nd ref="80000019" version="1"/>
+		<nd ref="5862508815" version="1"/>
+	</way>
+	<way id="-361431608#4" version="1">
+		<nd ref="901208823" version="1"/>
+		<nd ref="80000047" version="1"/>
+		<nd ref="80000048" version="1"/>
+		<nd ref="901212774" version="1"/>
+	</way>
+	<way id="-361431608#5" version="1">
+		<nd ref="901207073" version="1"/>
+		<nd ref="80000049" version="1"/>
+		<nd ref="80000050" version="1"/>
+		<nd ref="901208823" version="1"/>
+	</way>
+	<way id="362066955#4" version="1">
+		<nd ref="901213230" version="1"/>
+		<nd ref="80000091" version="1"/>
+		<nd ref="80000090" version="1"/>
+		<nd ref="80000089" version="1"/>
+		<nd ref="80000088" version="1"/>
+		<nd ref="901205346" version="1"/>
+	</way>
+	<way id="362066955#3" version="1">
+		<nd ref="901205417" version="1"/>
+		<nd ref="80000087" version="1"/>
+		<nd ref="80000086" version="1"/>
+		<nd ref="80000085" version="1"/>
+		<nd ref="901213230" version="1"/>
+	</way>
+	<way id="76441220" version="1">
+		<nd ref="901207157" version="1"/>
+		<nd ref="80000312" version="1"/>
+		<nd ref="80000311" version="1"/>
+		<nd ref="901211557" version="1"/>
+	</way>
+	<way id="362066955#5" version="1">
+		<nd ref="901205346" version="1"/>
+		<nd ref="80000096" version="1"/>
+		<nd ref="80000095" version="1"/>
+		<nd ref="80000094" version="1"/>
+		<nd ref="80000093" version="1"/>
+		<nd ref="80000092" version="1"/>
+		<nd ref="4883032322" version="1"/>
+	</way>
+	<way id="76441878#7" version="1">
+		<nd ref="901213766" version="1"/>
+		<nd ref="80000380" version="1"/>
+		<nd ref="80000379" version="1"/>
+		<nd ref="80000378" version="1"/>
+		<nd ref="80000377" version="1"/>
+		<nd ref="80000376" version="1"/>
+		<nd ref="80000375" version="1"/>
+		<nd ref="901206602" version="1"/>
+	</way>
+	<way id="152724876#1" version="1">
+		<nd ref="901206364" version="1"/>
+		<nd ref="80000535" version="1"/>
+		<nd ref="80000536" version="1"/>
+		<nd ref="80000537" version="1"/>
+		<nd ref="80000538" version="1"/>
+		<nd ref="80000539" version="1"/>
+		<nd ref="901053247" version="1"/>
+	</way>
+	<way id="152724876#0" version="1">
+		<nd ref="1419741876" version="1"/>
+		<nd ref="80000534" version="1"/>
+		<nd ref="901206364" version="1"/>
+	</way>
+	<way id="545749096" version="1">
+		<nd ref="5274402828" version="1"/>
+		<nd ref="80000564" version="1"/>
+		<nd ref="80000565" version="1"/>
+		<nd ref="80000566" version="1"/>
+		<nd ref="5274402827" version="1"/>
+	</way>
+	<way id="476949026#0" version="1">
+		<nd ref="901212065" version="1"/>
+		<nd ref="80000554" version="1"/>
+		<nd ref="901211557" version="1"/>
+	</way>
+	<way id="76442090#0" version="1">
+		<nd ref="901215056" version="1"/>
+		<nd ref="80000399" version="1"/>
+		<nd ref="80000398" version="1"/>
+		<nd ref="80000397" version="1"/>
+		<nd ref="80000396" version="1"/>
+		<nd ref="80000395" version="1"/>
+		<nd ref="901213478" version="1"/>
+	</way>
+	<way id="-434337684#4" version="1">
+		<nd ref="901209211" version="1"/>
+		<nd ref="80000125" version="1"/>
+		<nd ref="80000126" version="1"/>
+		<nd ref="80000127" version="1"/>
+		<nd ref="80000128" version="1"/>
+		<nd ref="80000129" version="1"/>
+		<nd ref="80000130" version="1"/>
+		<nd ref="80000131" version="1"/>
+		<nd ref="901208999" version="1"/>
+	</way>
+	<way id="-76441526#1" version="1">
+		<nd ref="901214752" version="1"/>
+		<nd ref="80000337" version="1"/>
+		<nd ref="80000338" version="1"/>
+		<nd ref="80000339" version="1"/>
+		<nd ref="80000340" version="1"/>
+		<nd ref="1419743453" version="1"/>
+	</way>
+	<way id="76443312#0" version="1">
+		<nd ref="901214768" version="1"/>
+		<nd ref="80000458" version="1"/>
+		<nd ref="80000457" version="1"/>
+		<nd ref="80000456" version="1"/>
+		<nd ref="80000455" version="1"/>
+		<nd ref="80000454" version="1"/>
+		<nd ref="476099874" version="1"/>
+	</way>
+	<way id="476949026#2" version="1">
+		<nd ref="901211557" version="1"/>
+		<nd ref="80000555" version="1"/>
+		<nd ref="901206332" version="1"/>
+	</way>
+	<way id="76442090#2" version="1">
+		<nd ref="901214878" version="1"/>
+		<nd ref="80000408" version="1"/>
+		<nd ref="80000407" version="1"/>
+		<nd ref="80000406" version="1"/>
+		<nd ref="80000405" version="1"/>
+		<nd ref="901213838" version="1"/>
+	</way>
+	<way id="-611697839#1" version="1">
+		<nd ref="476099847" version="1"/>
+		<nd ref="80000233" version="1"/>
+		<nd ref="3575742702" version="1"/>
+	</way>
+	<way id="76442090#1" version="1">
+		<nd ref="901213478" version="1"/>
+		<nd ref="80000404" version="1"/>
+		<nd ref="80000403" version="1"/>
+		<nd ref="80000402" version="1"/>
+		<nd ref="80000401" version="1"/>
+		<nd ref="80000400" version="1"/>
+		<nd ref="901214878" version="1"/>
+	</way>
+	<way id="-76442090#2" version="1">
+		<nd ref="901213838" version="1"/>
+		<nd ref="80000405" version="1"/>
+		<nd ref="80000406" version="1"/>
+		<nd ref="80000407" version="1"/>
+		<nd ref="80000408" version="1"/>
+		<nd ref="901214878" version="1"/>
+	</way>
+	<way id="-76442090#3" version="1">
+		<nd ref="901207788" version="1"/>
+		<nd ref="80000409" version="1"/>
+		<nd ref="80000410" version="1"/>
+		<nd ref="80000411" version="1"/>
+		<nd ref="80000412" version="1"/>
+		<nd ref="901213838" version="1"/>
+	</way>
+	<way id="76442090#3" version="1">
+		<nd ref="901213838" version="1"/>
+		<nd ref="80000412" version="1"/>
+		<nd ref="80000411" version="1"/>
+		<nd ref="80000410" version="1"/>
+		<nd ref="80000409" version="1"/>
+		<nd ref="901207788" version="1"/>
+	</way>
+	<way id="-76441878#6" version="1">
+		<nd ref="901213766" version="1"/>
+		<nd ref="80000365" version="1"/>
+		<nd ref="80000366" version="1"/>
+		<nd ref="80000367" version="1"/>
+		<nd ref="80000368" version="1"/>
+		<nd ref="80000369" version="1"/>
+		<nd ref="80000370" version="1"/>
+		<nd ref="80000371" version="1"/>
+		<nd ref="80000372" version="1"/>
+		<nd ref="80000373" version="1"/>
+		<nd ref="80000374" version="1"/>
+		<nd ref="901207639" version="1"/>
+	</way>
+	<way id="-76442806" version="1">
+		<nd ref="412678992" version="1"/>
+		<nd ref="80000446" version="1"/>
+		<nd ref="80000447" version="1"/>
+		<nd ref="901210607" version="1"/>
+	</way>
+	<way id="-76442090#0" version="1">
+		<nd ref="901213478" version="1"/>
+		<nd ref="80000395" version="1"/>
+		<nd ref="80000396" version="1"/>
+		<nd ref="80000397" version="1"/>
+		<nd ref="80000398" version="1"/>
+		<nd ref="80000399" version="1"/>
+		<nd ref="901215056" version="1"/>
+	</way>
+	<way id="465129259#0" version="1">
+		<nd ref="901209818" version="1"/>
+		<nd ref="80000139" version="1"/>
+		<nd ref="80000138" version="1"/>
+		<nd ref="80000137" version="1"/>
+		<nd ref="901210070" version="1"/>
+	</way>
+	<way id="-76442090#1" version="1">
+		<nd ref="901214878" version="1"/>
+		<nd ref="80000400" version="1"/>
+		<nd ref="80000401" version="1"/>
+		<nd ref="80000402" version="1"/>
+		<nd ref="80000403" version="1"/>
+		<nd ref="80000404" version="1"/>
+		<nd ref="901213478" version="1"/>
+	</way>
+	<way id="467460521#0" version="1">
+		<nd ref="901210139" version="1"/>
+		<nd ref="80000156" version="1"/>
+		<nd ref="80000155" version="1"/>
+		<nd ref="80000154" version="1"/>
+		<nd ref="80000153" version="1"/>
+		<nd ref="80000152" version="1"/>
+		<nd ref="901214310" version="1"/>
+	</way>
+	<way id="128476366#0" version="1">
+		<nd ref="1419743453" version="1"/>
+		<nd ref="80000533" version="1"/>
+		<nd ref="cluster_1419743461_901212492" version="1"/>
+	</way>
+	<way id="300720221#0" version="1">
+		<nd ref="901057158" version="1"/>
+		<nd ref="80000030" version="1"/>
+		<nd ref="80000029" version="1"/>
+		<nd ref="80000028" version="1"/>
+		<nd ref="80000027" version="1"/>
+		<nd ref="cluster_901206018_901214246" version="1"/>
+	</way>
+	<way id="-76441878#7" version="1">
+		<nd ref="901206602" version="1"/>
+		<nd ref="80000375" version="1"/>
+		<nd ref="80000376" version="1"/>
+		<nd ref="80000377" version="1"/>
+		<nd ref="80000378" version="1"/>
+		<nd ref="80000379" version="1"/>
+		<nd ref="80000380" version="1"/>
+		<nd ref="901213766" version="1"/>
+	</way>
+	<way id="76443176#2" version="1">
+		<nd ref="901208428" version="1"/>
+		<nd ref="80000619" version="1"/>
+		<nd ref="80000620" version="1"/>
+		<nd ref="901209607" version="1"/>
+	</way>
+	<way id="76443176#1" version="1">
+		<nd ref="901205546" version="1"/>
+		<nd ref="80000617" version="1"/>
+		<nd ref="80000618" version="1"/>
+		<nd ref="901208428" version="1"/>
+	</way>
+	<way id="76443176#0" version="1">
+		<nd ref="901211198" version="1"/>
+		<nd ref="80000614" version="1"/>
+		<nd ref="80000615" version="1"/>
+		<nd ref="80000616" version="1"/>
+		<nd ref="901205546" version="1"/>
+	</way>
+	<way id="76443535" version="1">
+		<nd ref="901211740" version="1"/>
+		<nd ref="80000635" version="1"/>
+		<nd ref="80000636" version="1"/>
+		<nd ref="80000637" version="1"/>
+		<nd ref="80000638" version="1"/>
+		<nd ref="80000639" version="1"/>
+		<nd ref="80000640" version="1"/>
+		<nd ref="80000641" version="1"/>
+		<nd ref="80000642" version="1"/>
+		<nd ref="80000643" version="1"/>
+		<nd ref="80000644" version="1"/>
+		<nd ref="80000645" version="1"/>
+		<nd ref="901222815" version="1"/>
+	</way>
+	<way id="467470140" version="1">
+		<nd ref="901205417" version="1"/>
+		<nd ref="80000165" version="1"/>
+		<nd ref="901208823" version="1"/>
+	</way>
+	<way id="76443176#4" version="1">
+		<nd ref="901209648" version="1"/>
+		<nd ref="80000624" version="1"/>
+		<nd ref="80000625" version="1"/>
+		<nd ref="80000626" version="1"/>
+		<nd ref="80000627" version="1"/>
+		<nd ref="80000628" version="1"/>
+		<nd ref="901205379" version="1"/>
+	</way>
+	<way id="76443176#3" version="1">
+		<nd ref="901209607" version="1"/>
+		<nd ref="80000621" version="1"/>
+		<nd ref="80000622" version="1"/>
+		<nd ref="80000623" version="1"/>
+		<nd ref="901209648" version="1"/>
+	</way>
+	<way id="76441184#2" version="1">
+		<nd ref="901209648" version="1"/>
+		<nd ref="80000293" version="1"/>
+		<nd ref="80000292" version="1"/>
+		<nd ref="901212476" version="1"/>
+	</way>
+	<way id="76442601#0" version="1">
+		<nd ref="901209818" version="1"/>
+		<nd ref="80000428" version="1"/>
+		<nd ref="80000427" version="1"/>
+		<nd ref="901206332" version="1"/>
+	</way>
+	<way id="76441184#3" version="1">
+		<nd ref="901212476" version="1"/>
+		<nd ref="80000294" version="1"/>
+		<nd ref="901214752" version="1"/>
+	</way>
+	<way id="-76442648#4" version="1">
+		<nd ref="901210070" version="1"/>
+		<nd ref="80000438" version="1"/>
+		<nd ref="80000439" version="1"/>
+		<nd ref="80000440" version="1"/>
+		<nd ref="80000441" version="1"/>
+		<nd ref="80000442" version="1"/>
+		<nd ref="901213977" version="1"/>
+	</way>
+	<way id="520170915#0" version="1">
+		<nd ref="901210958" version="1"/>
+		<nd ref="80000193" version="1"/>
+		<nd ref="80000192" version="1"/>
+		<nd ref="80000191" version="1"/>
+		<nd ref="80000190" version="1"/>
+		<nd ref="80000189" version="1"/>
+		<nd ref="80000188" version="1"/>
+		<nd ref="901209914" version="1"/>
+	</way>
+	<way id="76441184#0" version="1">
+		<nd ref="901206332" version="1"/>
+		<nd ref="80000291" version="1"/>
+		<nd ref="80000290" version="1"/>
+		<nd ref="80000289" version="1"/>
+		<nd ref="80000288" version="1"/>
+		<nd ref="901209648" version="1"/>
+	</way>
+	<way id="-76442648#1" version="1">
+		<nd ref="901213977" version="1"/>
+		<nd ref="80000435" version="1"/>
+		<nd ref="80000436" version="1"/>
+		<nd ref="80000437" version="1"/>
+		<nd ref="901210758" version="1"/>
+	</way>
+	<way id="-300720221#3" version="1">
+		<nd ref="cluster_901206018_901214246" version="1"/>
+		<nd ref="80000027" version="1"/>
+		<nd ref="80000028" version="1"/>
+		<nd ref="80000029" version="1"/>
+		<nd ref="80000030" version="1"/>
+		<nd ref="901057158" version="1"/>
+	</way>
+	<way id="-76442648#0" version="1">
+		<nd ref="901210758" version="1"/>
+		<nd ref="80000429" version="1"/>
+		<nd ref="80000430" version="1"/>
+		<nd ref="80000431" version="1"/>
+		<nd ref="80000432" version="1"/>
+		<nd ref="80000433" version="1"/>
+		<nd ref="80000434" version="1"/>
+		<nd ref="901220265" version="1"/>
+	</way>
+	<way id="520170915#4" version="1">
+		<nd ref="901209914" version="1"/>
+		<nd ref="80000198" version="1"/>
+		<nd ref="80000197" version="1"/>
+		<nd ref="80000196" version="1"/>
+		<nd ref="80000195" version="1"/>
+		<nd ref="80000194" version="1"/>
+		<nd ref="901207931" version="1"/>
+	</way>
+	<way id="-1266710990#1" version="1">
+		<nd ref="1653163398" version="1"/>
+		<nd ref="80000012" version="1"/>
+		<nd ref="80000013" version="1"/>
+		<nd ref="901207639" version="1"/>
+	</way>
+	<way id="362066954#0" version="1">
+		<nd ref="901215145" version="1"/>
+		<nd ref="80000072" version="1"/>
+		<nd ref="80000071" version="1"/>
+		<nd ref="cluster_1419743461_901212492" version="1"/>
+	</way>
+	<way id="-76441586#3" version="1">
+		<nd ref="901211819" version="1"/>
+		<nd ref="80000341" version="1"/>
+		<nd ref="80000342" version="1"/>
+		<nd ref="80000343" version="1"/>
+		<nd ref="80000344" version="1"/>
+		<nd ref="80000345" version="1"/>
+		<nd ref="80000346" version="1"/>
+		<nd ref="80000347" version="1"/>
+		<nd ref="80000348" version="1"/>
+		<nd ref="80000349" version="1"/>
+		<nd ref="901211846" version="1"/>
+	</way>
+	<way id="504127878#2" version="1">
+		<nd ref="825271348" version="1"/>
+		<nd ref="80000179" version="1"/>
+		<nd ref="80000178" version="1"/>
+		<nd ref="80000177" version="1"/>
+		<nd ref="901210202" version="1"/>
+	</way>
+	<way id="504127878#0" version="1">
+		<nd ref="476099874" version="1"/>
+		<nd ref="80000176" version="1"/>
+		<nd ref="80000175" version="1"/>
+		<nd ref="80000174" version="1"/>
+		<nd ref="80000173" version="1"/>
+		<nd ref="80000172" version="1"/>
+		<nd ref="825271348" version="1"/>
+	</way>
+	<way id="-520170915#3" version="1">
+		<nd ref="901209914" version="1"/>
+		<nd ref="80000188" version="1"/>
+		<nd ref="80000189" version="1"/>
+		<nd ref="80000190" version="1"/>
+		<nd ref="80000191" version="1"/>
+		<nd ref="80000192" version="1"/>
+		<nd ref="80000193" version="1"/>
+		<nd ref="901210958" version="1"/>
+	</way>
+	<way id="76443176#7" version="1">
+		<nd ref="901205379" version="1"/>
+		<nd ref="80000629" version="1"/>
+		<nd ref="80000630" version="1"/>
+		<nd ref="80000631" version="1"/>
+		<nd ref="476099874" version="1"/>
+	</way>
+	<way id="-520170915#7" version="1">
+		<nd ref="901207931" version="1"/>
+		<nd ref="80000194" version="1"/>
+		<nd ref="80000195" version="1"/>
+		<nd ref="80000196" version="1"/>
+		<nd ref="80000197" version="1"/>
+		<nd ref="80000198" version="1"/>
+		<nd ref="901209914" version="1"/>
+	</way>
+	<way id="361434078" version="1">
+		<nd ref="5274402827" version="1"/>
+		<nd ref="80000543" version="1"/>
+		<nd ref="80000544" version="1"/>
+		<nd ref="80000545" version="1"/>
+		<nd ref="5274402828" version="1"/>
+	</way>
+	<way id="361431608#7" version="1">
+		<nd ref="901211271" version="1"/>
+		<nd ref="80000062" version="1"/>
+		<nd ref="80000061" version="1"/>
+		<nd ref="80000060" version="1"/>
+		<nd ref="80000059" version="1"/>
+		<nd ref="80000058" version="1"/>
+		<nd ref="80000057" version="1"/>
+		<nd ref="4883032323" version="1"/>
+	</way>
+	<way id="435424678#0" version="1">
+		<nd ref="901214768" version="1"/>
+		<nd ref="80000546" version="1"/>
+		<nd ref="80000547" version="1"/>
+		<nd ref="80000548" version="1"/>
+		<nd ref="80000549" version="1"/>
+		<nd ref="80000550" version="1"/>
+		<nd ref="80000551" version="1"/>
+		<nd ref="901212065" version="1"/>
+	</way>
+	<way id="76443372#0" version="1">
+		<nd ref="901211522" version="1"/>
+		<nd ref="80000476" version="1"/>
+		<nd ref="80000475" version="1"/>
+		<nd ref="80000474" version="1"/>
+		<nd ref="80000473" version="1"/>
+		<nd ref="80000472" version="1"/>
+		<nd ref="80000471" version="1"/>
+		<nd ref="901210758" version="1"/>
+	</way>
+	<way id="361431608#5" version="1">
+		<nd ref="901208823" version="1"/>
+		<nd ref="80000050" version="1"/>
+		<nd ref="80000049" version="1"/>
+		<nd ref="901207073" version="1"/>
+	</way>
+	<way id="128476280" version="1">
+		<nd ref="1419741876" version="1"/>
+		<nd ref="80000527" version="1"/>
+		<nd ref="80000528" version="1"/>
+		<nd ref="80000529" version="1"/>
+		<nd ref="80000530" version="1"/>
+		<nd ref="80000531" version="1"/>
+		<nd ref="80000532" version="1"/>
+		<nd ref="901058529" version="1"/>
+	</way>
+	<way id="361431608#6" version="1">
+		<nd ref="901207073" version="1"/>
+		<nd ref="80000056" version="1"/>
+		<nd ref="80000055" version="1"/>
+		<nd ref="80000054" version="1"/>
+		<nd ref="80000053" version="1"/>
+		<nd ref="80000052" version="1"/>
+		<nd ref="80000051" version="1"/>
+		<nd ref="901211271" version="1"/>
+	</way>
+	<way id="361431608#4" version="1">
+		<nd ref="901212774" version="1"/>
+		<nd ref="80000048" version="1"/>
+		<nd ref="80000047" version="1"/>
+		<nd ref="901208823" version="1"/>
+	</way>
+	<way id="-361431608#6" version="1">
+		<nd ref="901211271" version="1"/>
+		<nd ref="80000051" version="1"/>
+		<nd ref="80000052" version="1"/>
+		<nd ref="80000053" version="1"/>
+		<nd ref="80000054" version="1"/>
+		<nd ref="80000055" version="1"/>
+		<nd ref="80000056" version="1"/>
+		<nd ref="901207073" version="1"/>
+	</way>
+	<way id="-361431608#7" version="1">
+		<nd ref="4883032323" version="1"/>
+		<nd ref="80000057" version="1"/>
+		<nd ref="80000058" version="1"/>
+		<nd ref="80000059" version="1"/>
+		<nd ref="80000060" version="1"/>
+		<nd ref="80000061" version="1"/>
+		<nd ref="80000062" version="1"/>
+		<nd ref="901211271" version="1"/>
+	</way>
+	<way id="361431608#0" version="1">
+		<nd ref="901206925" version="1"/>
+		<nd ref="80000046" version="1"/>
+		<nd ref="80000045" version="1"/>
+		<nd ref="80000044" version="1"/>
+		<nd ref="80000043" version="1"/>
+		<nd ref="80000042" version="1"/>
+		<nd ref="80000041" version="1"/>
+		<nd ref="901212774" version="1"/>
+	</way>
+	<way id="-76443372#2" version="1">
+		<nd ref="901210758" version="1"/>
+		<nd ref="80000471" version="1"/>
+		<nd ref="80000472" version="1"/>
+		<nd ref="80000473" version="1"/>
+		<nd ref="80000474" version="1"/>
+		<nd ref="80000475" version="1"/>
+		<nd ref="80000476" version="1"/>
+		<nd ref="901211522" version="1"/>
+	</way>
+	<way id="-76441586#5" version="1">
+		<nd ref="901213337" version="1"/>
+		<nd ref="80000350" version="1"/>
+		<nd ref="80000351" version="1"/>
+		<nd ref="901211819" version="1"/>
+	</way>
+	<way id="-76442708" version="1">
+		<nd ref="901205546" version="1"/>
+		<nd ref="80000443" version="1"/>
+		<nd ref="80000444" version="1"/>
+		<nd ref="80000445" version="1"/>
+		<nd ref="901214224" version="1"/>
+	</way>
+	<way id="-76443747#0" version="1">
+		<nd ref="901208732" version="1"/>
+		<nd ref="80000477" version="1"/>
+		<nd ref="80000478" version="1"/>
+		<nd ref="80000479" version="1"/>
+		<nd ref="80000480" version="1"/>
+		<nd ref="80000481" version="1"/>
+		<nd ref="80000482" version="1"/>
+		<nd ref="901219829" version="1"/>
+	</way>
+	<way id="-76442601#1" version="1">
+		<nd ref="901206332" version="1"/>
+		<nd ref="80000427" version="1"/>
+		<nd ref="80000428" version="1"/>
+		<nd ref="901209818" version="1"/>
+	</way>
+	<way id="-76443747#3" version="1">
+		<nd ref="901206446" version="1"/>
+		<nd ref="80000489" version="1"/>
+		<nd ref="80000490" version="1"/>
+		<nd ref="80000491" version="1"/>
+		<nd ref="901205919" version="1"/>
+	</way>
+	<way id="788938927#0" version="1">
+		<nd ref="901211198" version="1"/>
+		<nd ref="80000525" version="1"/>
+		<nd ref="80000524" version="1"/>
+		<nd ref="901213230" version="1"/>
+	</way>
+	<way id="-76443747#2" version="1">
+		<nd ref="901205919" version="1"/>
+		<nd ref="80000483" version="1"/>
+		<nd ref="80000484" version="1"/>
+		<nd ref="80000485" version="1"/>
+		<nd ref="80000486" version="1"/>
+		<nd ref="80000487" version="1"/>
+		<nd ref="80000488" version="1"/>
+		<nd ref="901208732" version="1"/>
+	</way>
+	<way id="788938927#1" version="1">
+		<nd ref="901213230" version="1"/>
+		<nd ref="80000526" version="1"/>
+		<nd ref="901207073" version="1"/>
+	</way>
+	<way id="-76443747#5" version="1">
+		<nd ref="901214154" version="1"/>
+		<nd ref="80000492" version="1"/>
+		<nd ref="80000493" version="1"/>
+		<nd ref="80000494" version="1"/>
+		<nd ref="80000495" version="1"/>
+		<nd ref="901206446" version="1"/>
+	</way>
+	<way id="467460522#0" version="1">
+		<nd ref="901210139" version="1"/>
+		<nd ref="80000164" version="1"/>
+		<nd ref="80000163" version="1"/>
+		<nd ref="80000162" version="1"/>
+		<nd ref="80000161" version="1"/>
+		<nd ref="80000160" version="1"/>
+		<nd ref="80000159" version="1"/>
+		<nd ref="80000158" version="1"/>
+		<nd ref="80000157" version="1"/>
+		<nd ref="901208999" version="1"/>
+	</way>
+	<way id="-362066953#1" version="1">
+		<nd ref="901215145" version="1"/>
+		<nd ref="80000070" version="1"/>
+		<nd ref="901205379" version="1"/>
+	</way>
+	<way id="-76441669#1" version="1">
+		<nd ref="901213337" version="1"/>
+		<nd ref="80000352" version="1"/>
+		<nd ref="80000353" version="1"/>
+		<nd ref="901211198" version="1"/>
+	</way>
+	<way id="465196763#0" version="1">
+		<nd ref="476099852" version="1"/>
+		<nd ref="80000141" version="1"/>
+		<nd ref="80000140" version="1"/>
+		<nd ref="901214768" version="1"/>
+	</way>
+	<way id="-467460522#6" version="1">
+		<nd ref="901208999" version="1"/>
+		<nd ref="80000157" version="1"/>
+		<nd ref="80000158" version="1"/>
+		<nd ref="80000159" version="1"/>
+		<nd ref="80000160" version="1"/>
+		<nd ref="80000161" version="1"/>
+		<nd ref="80000162" version="1"/>
+		<nd ref="80000163" version="1"/>
+		<nd ref="80000164" version="1"/>
+		<nd ref="901210139" version="1"/>
+	</way>
+	<way id="76443031#0" version="1">
+		<nd ref="901207086" version="1"/>
+		<nd ref="80000606" version="1"/>
+		<nd ref="80000607" version="1"/>
+		<nd ref="80000608" version="1"/>
+		<nd ref="80000609" version="1"/>
+		<nd ref="80000610" version="1"/>
+		<nd ref="80000611" version="1"/>
+		<nd ref="80000612" version="1"/>
+		<nd ref="80000613" version="1"/>
+		<nd ref="901211740" version="1"/>
+	</way>
+	<way id="-76441669#3" version="1">
+		<nd ref="6374148813" version="1"/>
+		<nd ref="80000354" version="1"/>
+		<nd ref="901213337" version="1"/>
+	</way>
+</osm>

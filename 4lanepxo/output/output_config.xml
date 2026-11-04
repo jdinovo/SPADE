@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="http://www.dcaiti.tu-berlin.de/research/simulation/download/get/scenarios/scenarioname/visualizer/visualizer_config.xsd">
+
+    <output id="fileoutput" enabled="true" update="1" loader="org.eclipse.mosaic.fed.output.generator.file.FileOutputLoader">
+        <filename>output.csv</filename>
+        <directory>.</directory>
+        <separator>;</separator>
+        <decimalSeparator>.</decimalSeparator>
+        
+        <subscriptions>
+            <!-- 1. VEHICLE UPDATES -->
+            <subscription id="VehicleUpdates" enabled="true">
+                <entries>
+                    <entry>"VEHICLE_UPDATE"</entry>
+                    <entry>Time</entry>
+                    <entry>Updated:Name</entry>
+                    <entry>Updated:Speed</entry>
+                    <entry>Updated:Heading</entry>
+                    <entry>Updated:RoadPosition.ConnectionId</entry>
+                    <entry>Updated:RoadPosition.LaneIndex</entry>
+                    <entry>Updated:RoadPosition.LateralLanePosition</entry>
+                    <entry>Updated:LongitudinalAcceleration</entry>
+                    <entry>Updated:Throttle</entry>
+                    <entry>Updated:Brake</entry>
+                    <entry>Updated:Position.Latitude</entry>
+                    <entry>Updated:Position.Longitude</entry>
+                </entries>
+            </subscription>
+
+            <!-- 2. VEHICLE REGISTRATION -->
+            <subscription id="VehicleRegistration" enabled="true">
+                <entries>
+                    <entry>"VEHICLE_REGISTRATION"</entry>
+                    <entry>Time</entry>
+                    <entry>Id</entry>
+                </entries>
+            </subscription>
+
+            <!-- 3. V2X TRANSMISSION -->
+            <subscription id="V2xMessageTransmission" enabled="true">
+                <entries>
+                    <entry>"V2X_TX"</entry>
+                    <entry>Time</entry>
+                    <entry>SourceName</entry>
+                    <entry>MessageId</entry>
+                    <entry>SourcePosition.Latitude</entry>
+                    <entry>SourcePosition.Longitude</entry>
+                    <entry>Message.Routing.Source.SourceAddress.IPv4Address</entry>
+                    <entry>Message.Routing.Destination.Address.IPv4Address</entry>
+                    <entry>Message.Routing.Destination.AdhocChannelId</entry>
+                    <entry>Message.Routing.Destination.ProtocolType</entry>
+                    <entry>Message.SequenceNumber</entry>
+                    <entry>Message.Payload</entry>
+                </entries>
+            </subscription>
+
+            <!-- 4. V2X RECEPTION -->
+            <subscription id="V2xMessageReception" enabled="true">
+                <entries>
+                    <entry>"V2X_RX"</entry>
+                    <entry>Time</entry>
+                    <entry>ReceiverName</entry>
+                    <entry>MessageId</entry>
+                    <entry>ReceiverInformation.ReceiveSignalStrength</entry>
+                    <entry>ReceiverInformation.NeededBandwidth</entry>
+                    <entry>ReceiverInformation.SendTime</entry>
+                    <entry>ReceiverInformation.ReceiveTime</entry>
+                </entries>
+            </subscription>
+
+            <!-- 5. CUSTOM TRAFFIC LIGHT -->
+            <!--<subscription id="org.example.PerceivedTrafficLightInteraction" enabled="true">
+                <entries>
+                    <entry>"PERCEIVED_TL"</entry>
+                    <entry>Time</entry>
+                    <entry>EgoId</entry>
+                    <entry>TrafficLightId</entry>
+                    <entry>PosX</entry>
+                    <entry>PosY</entry>
+                    <entry>SignalState</entry>
+                </entries>
+            </subscription>-->
+
+            <!-- 6. SCENARIO TRAFFIC LIGHT REGISTRATION -->
+            <subscription id="ScenarioTrafficLightRegistration" enabled="true">
+                <entries>
+                    <entry>"TL_REGISTRATION"</entry>
+                    <entry>Time</entry>
+                    <entry>Id</entry>
+                </entries>
+            </subscription>
+
+            <!-- 7. DETECTORS -->
+            <subscription id="TrafficDetectorUpdates" enabled="true">
+               <entries>
+                    <entry>"DETECTOR"</entry>
+                    <entry>Time</entry>
+                    <entry>Id</entry> 
+                </entries>
+            </subscription>
+        </subscriptions>
+    </output>
+
+    <!-- WEBSOCKET VISUALIZER -->
+    <output id="websocket" enabled="true" loader="org.eclipse.mosaic.fed.output.generator.websocket.WebsocketVisualizerLoader">
+        <synchronized>true</synchronized>
+        <port>46587</port>
+        <subscriptions>
+            <subscription id="VehicleUpdates" enabled="true"/>
+            <subscription id="VehicleRegistration" enabled="true"/>
+            <subscription id="RsuRegistration" enabled="true"/>
+            <subscription id="TrafficLightRegistration" enabled="true"/>
+            <subscription id="V2xMessageReception" enabled="true"/>
+            <subscription id="V2xMessageTransmission" enabled="true"/>
+        </subscriptions>
+    </output>
+</configuration>

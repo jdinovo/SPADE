@@ -1,0 +1,37 @@
+{
+    "simulation": {
+        "id": "4lanepxo",
+        "duration": "1000s",
+        "randomSeed": 268965854,
+        "projection": {
+            "centerCoordinates": {
+                "latitude": 45.35210995114652,
+                "longitude": -75.77782532393327
+            },
+            "cartesianOffset": {
+                "x": -434908.54,
+                "y": -5019803.57
+            }
+        },
+        "network": {
+            "netMask": "255.255.0.0",
+            "vehicleNet": "10.1.0.0",
+            "rsuNet": "10.2.0.0",
+            "tlNet": "10.3.0.0",
+            "csNet": "10.4.0.0",
+            "serverNet": "10.5.0.0",
+            "tmcNet": "10.6.0.0"
+        }
+    },
+    "federates": {
+        "application": true,
+        "environment": false,
+        "cell": true,
+        "ns3": false,
+        "omnetpp": false,
+        "output": true,
+        "sns": true,
+        "sumo": true,
+        "phabmacs": false
+    }
+}
