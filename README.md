@@ -29,5 +29,5 @@ MOSAIC scenarios are each within their respective folders. Java application code
 
 3. Run the dataset generation `./run_spade.sh`
 
-4. For run metadate file cleanup use `./run_spade.sh clean`
+4. For run metadata file cleanup use `./run_spade.sh clean`
 
