@@ -3,3 +3,4 @@ data/*
 .run_state/*
 run_logs/*
 *.orig
+*.jar
