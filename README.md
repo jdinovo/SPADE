@@ -25,9 +25,11 @@ MOSAIC scenarios are each within their respective folders. Java application code
 
 1. Execute permissions `chmod +x ./run_spade.sh`
 
-2. Generation script dry run `DRY_RUN=1 ./run_spade.sh`
+2. Build and distribute application jar `./run_spade.sh build`
 
-3. Run the dataset generation `./run_spade.sh`
+3. Generation script dry run `DRY_RUN=1 ./run_spade.sh`
 
-4. For run metadata file cleanup use `./run_spade.sh clean`
+4. Run the dataset generation `./run_spade.sh`
+
+5. Clean up script metadata files `./run_spade.sh clean`
 

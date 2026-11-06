@@ -7,9 +7,11 @@
 # Main scenarios run with SEEDS (4); "-test" scenarios run with TEST_SEEDS (1).
 # Total runs: 4*4*63 + 4*1*63 = 1,260
 #
-# Usage:  ./run_spade.sh            # run everything (skips completed runs)
-#         DRY_RUN=1 ./run_spade.sh  # generate configs to a temp file, print plan, run nothing
-#         ./run_spade.sh clean      # restore configs, delete all .orig files and meta files
+# Usage:  ./run_spade.sh                 # build the jar, then run everything (skips completed runs)
+#         DRY_RUN=1 ./run_spade.sh       # generate configs to a temp file, print plan, run nothing
+#         ./run_spade.sh build           # compile mosaic/ and copy the jar into every <scenario>/application/
+#         SKIP_BUILD=1 ./run_spade.sh    # run without rebuilding the jar first
+#         ./run_spade.sh clean           # restore configs, delete all .orig files and meta files
 
 set -uo pipefail
 
@@ -17,6 +19,8 @@ MODE="${1:-run}"
 REPO_ROOT="$(pwd)"
 MOSAIC="${MOSAIC:-../eclipse-mosaic-25.2/mosaic.sh}"
 DRY_RUN="${DRY_RUN:-0}"
+SKIP_BUILD="${SKIP_BUILD:-0}"
+MVN_DIR="mosaic"
 STATE_DIR=".run_state"
 LOG_DIR="run_logs"
 DATA_DIR="data"
@@ -79,6 +83,43 @@ if [[ "$MODE" == "clean" ]]; then
 fi
 
 # ---------------------------------------------------------------------------
+# jar build
+# ---------------------------------------------------------------------------
+# build_jar: compile the Java project and copy the jar into every scenario's application dir
+build_jar() {
+  command -v mvn >/dev/null || { echo "ERROR: mvn not found"; return 1; }
+  [[ -f "$REPO_ROOT/$MVN_DIR/pom.xml" ]] || { echo "ERROR: $MVN_DIR/pom.xml missing"; return 1; }
+
+  echo "Building $MVN_DIR ..."
+  ( cd "$REPO_ROOT/$MVN_DIR" && mvn clean package ) \
+    || { echo "ERROR: maven build failed"; return 1; }
+
+  local jars=() j
+  for j in "$REPO_ROOT/$MVN_DIR"/target/*.jar; do
+    [[ -f "$j" ]] || continue
+    [[ "$(basename "$j")" == original-* ]] && continue   # shade plugin's unshaded copy
+    jars+=("$j")
+  done
+  if [[ ${#jars[@]} -ne 1 ]]; then
+    echo "ERROR: expected exactly one jar in $MVN_DIR/target/, found ${#jars[@]}:"
+    printf '  %s\n' "${jars[@]}"
+    return 1
+  fi
+
+  local s
+  for s in "${SCENARIOS[@]}"; do
+    [[ -d "$REPO_ROOT/$s/application" ]] || { echo "ERROR: $s/application missing"; return 1; }
+    cp -f "${jars[0]}" "$REPO_ROOT/$s/application/"
+  done
+  echo "Copied $(basename "${jars[0]}") to ${#SCENARIOS[@]} scenario application directories."
+}
+
+if [[ "$MODE" == "build" ]]; then
+  build_jar
+  exit $?
+fi
+
+# ---------------------------------------------------------------------------
 # startup checks
 # ---------------------------------------------------------------------------
 command -v python3 >/dev/null || { echo "ERROR: python3 is required"; exit 1; }
@@ -90,6 +131,12 @@ MOSAIC_BIN="./$(basename "$MOSAIC")"
 LOG_SOURCES=("$MOSAIC_DIR/logs" "$REPO_ROOT/logs")
 
 mkdir -p "$STATE_DIR" "$LOG_DIR" "$DATA_DIR"
+
+if [[ "$DRY_RUN" == "1" ]]; then
+  echo "Dry run: skipping jar build."
+elif [[ "$SKIP_BUILD" != "1" ]]; then
+  build_jar || exit 1          # fail before any config is modified
+fi
 
 seeds_for() {
   if [[ "$1" == *-test ]]; then echo "${TEST_SEEDS[@]}"; else echo "${SEEDS[@]}"; fi
