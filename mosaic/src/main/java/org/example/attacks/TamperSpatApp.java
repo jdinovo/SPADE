@@ -31,11 +31,6 @@ import java.util.*;
 public class TamperSpatApp extends RsuAttackApp {
 
     @Override
-    public void onStartup() {
-        super.onStartup();
-    }
-
-    @Override
     protected void attack() {
         AttackLogger.getInstance().init(CsvOutputDirectory.forConfiguration(
                 getOs().getConfigurationPath().toPath()));
@@ -69,6 +64,7 @@ public class TamperSpatApp extends RsuAttackApp {
                 .build();
 
         FullSpatm message = new FullSpatm(routing, content);
+        AttackLogger.getInstance().markMessageMalicious(String.valueOf(message.getId()), "TAMPER");
         getOs().getAdHocModule().sendV2xMessage(message);
     }
 
@@ -77,16 +73,6 @@ public class TamperSpatApp extends RsuAttackApp {
         // Log transition back to benign behavior; keep scheduler running for future attacks.
         getLog().info("(TAMPER) attack ended at {}", getOs().getSimulationTime());
         AttackLogger.getInstance().stopAttack("TAMPER", getOs().getSimulationTime());
-    }
-
-    @Override
-    protected long getAttackStartTick() {
-        return 50;
-    }
-
-    @Override
-    protected long getAttackEndTick() {
-        return 100;
     }
 
     @Override

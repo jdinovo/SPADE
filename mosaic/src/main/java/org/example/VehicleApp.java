@@ -58,6 +58,7 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
 
     // Distance (m) from the stop line at which the app starts reacting to SPaT info.
     private static final double REACTION_DISTANCE_M = 100.0;
+    private static final double LOGGING_RADIUS_M = 200.0;
 
     // Speed (m/s) the vehicle will accelerate to if it believes it has a clear green.
     private static final double PROCEED_SPEED_MS = 13.9; // ~50 km/h
@@ -67,6 +68,10 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
 
     private final HashMap<String, IntersectionGeometry> intersectionGeometries = new HashMap<>();
     private PerceivedTrafficLight lastPerception;
+    private IntersectionGeometry loggingIntersection;
+    private boolean loggingWindowActive;
+    private boolean enteredLoggingIntersection;
+    private boolean passedLoggingIntersection;
 
     // Per-intersection approach state. Unlike a simple "passed forever" flag,
     // this can cycle: NOT_APPROACHING -> APPROACHING -> PASSED -> APPROACHING
@@ -187,7 +192,7 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
                     lastPerception.getConfVisWeighted()
             );
 //            }
-            if (logWriter != null) {
+            if (shouldLogVehicleData()) {
                 try {
                     logWriter.write(String.format("TL_PERCEPTION,%d,%s,%s,%f,%f,%d,%d,%d,%f,%f,%f%n",
                             getOs().getSimulationTime(),
@@ -234,7 +239,7 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
                     vehicleObject.getHeading(),
                     vehicleObject.getEdgeId() + ":" + vehicleObject.getLaneIndex(),
                     vehDistance);
-            if (logWriter != null) {
+            if (shouldLogVehicleData()) {
                 try {
                     logWriter.write(String.format("VEHICLE_PERCEPTION,%d,%s,%s,%f,%f,%f,%s%n",
                             getOs().getSimulationTime(),
@@ -249,8 +254,11 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
                     getLog().error("Failed writing Perception log entry", e);
                 }
 
-                if (vehDistance < 1.5) {
-                    getLog().infoSimTime(this, "COLLISION DETECTED with vehicle: {}", vehicleObject.getId());
+            }
+
+            if (vehDistance < 1.5) {
+                getLog().infoSimTime(this, "COLLISION DETECTED with vehicle: {}", vehicleObject.getId());
+                if (shouldLogVehicleData()) {
                     try {
                         logWriter.write(String.format("COLLISION,%d,%s,%s,%s,%f%n",
                                 getOs().getSimulationTime(),
@@ -262,8 +270,8 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
                     } catch (IOException e) {
                         getLog().error("Failed writing Collision log entry", e);
                     }
-                    // Trigger emergency braking or message broadcasting here
                 }
+                // Trigger emergency braking or message broadcasting here
             }
         }
 
@@ -291,7 +299,7 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
 
     private void logVehicleData() {
         VehicleData veh = getOs().getVehicleData();
-        if (logWriter != null && veh != null) {
+        if (shouldLogVehicleData() && veh != null) {
             try {
                 logWriter.write(String.format("VEHICLE_DATA,%d,%s,%s,%s,%b,%s,%f,%f,%f,%f,%f,%f%n",
                         getOs().getSimulationTime(),
@@ -316,16 +324,79 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
 
     @Override
     public void onVehicleUpdated(VehicleData previous, VehicleData updated) {
-        // route is set via mapping/route config — no manual driving logic needed
-        // here unless you want custom behavior on approach to the intersection
-
+        boolean passedLoggingIntersection = updateLoggingWindow(updated);
         processPerception();
         logVehicleData();
+        if (passedLoggingIntersection) {
+            loggingWindowActive = false;
+            getLog().info("Stopped vehicle data logging for {} after passing intersection {}",
+                    getOs().getId(), loggingIntersection.getId());
+        }
+    }
+
+    private boolean updateLoggingWindow(VehicleData vehicle) {
+        String currentLane = vehicle.getRoadPosition().getConnectionId() + "_"
+                + vehicle.getRoadPosition().getLaneIndex();
+
+        if (loggingIntersection == null) {
+            double nearestDistance = Double.POSITIVE_INFINITY;
+            for (IntersectionGeometry geometry : intersectionGeometries.values()) {
+                double distance = vehicle.getPosition().distanceTo(geometry.getRefPoint());
+                if (distance <= LOGGING_RADIUS_M && distance < nearestDistance) {
+                    loggingIntersection = geometry;
+                    nearestDistance = distance;
+                }
+            }
+            if (loggingIntersection != null) {
+                loggingWindowActive = true;
+                getLog().info("Started vehicle data logging for {} within {}m of intersection {}",
+                        getOs().getId(), LOGGING_RADIUS_M, loggingIntersection.getId());
+            }
+        }
+
+        if (!loggingWindowActive || loggingIntersection == null) {
+            return false;
+        }
+
+        Map<String, GenericLane> lanes = loggingIntersection.getLaneSet();
+        if (lanes.containsKey(currentLane)) {
+            enteredLoggingIntersection = true;
+        } else if (enteredLoggingIntersection && isOutgoingLane(lanes, currentLane)) {
+            passedLoggingIntersection = true;
+        }
+
+        return passedLoggingIntersection
+                && vehicle.getPosition().distanceTo(loggingIntersection.getRefPoint()) > LOGGING_RADIUS_M;
+    }
+
+    private boolean isOutgoingLane(Map<String, GenericLane> lanes, String currentLane) {
+        return lanes.values().stream()
+                .flatMap(lane -> lane.getConnectsTo().stream())
+                .anyMatch(connection -> currentLane.equals(connection.getConnectingLane()));
+    }
+
+    private boolean shouldLogVehicleData() {
+        return logWriter != null && loggingWindowActive;
     }
 
     @Override
     public void onMessageReceived(ReceivedV2xMessage receivedV2xMessage) {
         V2xMessage msg = receivedV2xMessage.getMessage();
+        String messageId = String.valueOf(msg.getId());
+        String messageAttack = AttackLogger.getInstance().getMessageAttack(messageId);
+        if (shouldLogVehicleData()) {
+            try {
+                logWriter.write(String.format("MESSAGE_RECEIVED,%d,%s,%s,%b,%s%n",
+                        getOs().getSimulationTime(),
+                        msg.getClass().getSimpleName(),
+                        messageId,
+                        messageAttack != null,
+                        messageAttack != null ? messageAttack : "BENIGN"));
+                logWriter.flush();
+            } catch (IOException e) {
+                getLog().error("Failed writing received-message label", e);
+            }
+        }
         if (msg instanceof CoopPercepMessage cpm) {
             CoopPercepData content = cpm.getContent();
             for (PerceivedTrafficLight tl : content.getPerceivedObjects()) {
@@ -345,7 +416,7 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
                         tl.getConfVisWeighted()
                 );
 //            }
-                if (logWriter != null) {
+                if (shouldLogVehicleData()) {
                     try {
                         logWriter.write(String.format("SHARED_TL_PERCEPTION,%d,%s,%s,%s,%s,%f,%f,%d,%d,%d,%f,%f,%f%n",
                                 getOs().getSimulationTime(),
@@ -387,7 +458,7 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
                         movementState.getSignalId(), content.getTime(),
                         movementState.getState(), movementState.getTime().getMinEndTime());
 
-                if (logWriter != null) {
+                if (shouldLogVehicleData()) {
                     try {
                         logWriter.write(String.format("SPAT_RECEIVED,%d,%s,%d,%s,%s,%s%n",
                                 getOs().getSimulationTime(),
@@ -423,7 +494,7 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
                     camMsg.getPosition(), camMsg.getPosition().distanceTo(getOs().getPosition()),
                     camMsg.getAwarenessData());
 
-            if (logWriter != null) {
+            if (shouldLogVehicleData()) {
                 try {
                     VehicleAwarenessData ad = (VehicleAwarenessData) camMsg.getAwarenessData();
                     logWriter.write(String.format("CAM_RECEIVED,%d,%s,%s,%s,%f,%s%n",
@@ -449,7 +520,7 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
                 this.intersectionGeometries.put(geometry.getId(), geometry);
                 getLog().info("Received Intersection MAP for {} at t={} position={}",
                         geometry.getId(), content.getTimeStamp(), geometry.getRefPoint());
-                if (logWriter != null) {
+                if (shouldLogVehicleData()) {
                     // log for each lane in the laneset might want to do for each connection as well unsure how to log cleanly
                     geometry.getLaneSet().values().forEach(l -> {
                         try {
@@ -830,17 +901,17 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
     }
 
     private void logDecision(String decision) {
-        if (logWriter != null) {
-                try {
-                    logWriter.write(String.format("PROCEED_DECISION,%d,%s%n",
-                            getOs().getSimulationTime(),
-                            decision
-                    ));
-                    logWriter.flush();
-                } catch (IOException e) {
-                    getLog().error("Failed writing DECISION log entry", e);
-                }
-
+        if (!shouldLogVehicleData()) {
+            return;
+        }
+        try {
+            logWriter.write(String.format("PROCEED_DECISION,%d,%s%n",
+                    getOs().getSimulationTime(),
+                    decision
+            ));
+            logWriter.flush();
+        } catch (IOException e) {
+            getLog().error("Failed writing DECISION log entry", e);
         }
     }
 }

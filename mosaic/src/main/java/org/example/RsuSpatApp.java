@@ -107,65 +107,7 @@ public class RsuSpatApp extends AbstractApplication<TrafficLightOperatingSystem>
     }
 
     protected void broadcastSpatMessage() {
-//        MessageRouting routing = getOs().getAdHocModule().createMessageRouting()
-//                .broadcast()
-//                .topological()
-//                .singlehop()
-//                .build();
-//
-//        TrafficLightProgramPhase currentPhase = getOs().getCurrentPhase();
-//        List<TrafficLightState> states = currentPhase.getStates();
-//
-//        TrafficLightState state = states.get(0);
-//
-//        boolean isRed = state.isRed();
-//        boolean isYellow = state.isYellow();
-//        boolean isGreen = state.isGreen();
-//
-//        long remainingPhaseTime = currentPhase.getRemainingDuration();   // ns
-//        long phaseDurationRed = isRed ? currentPhase.getConfiguredDuration() : 0L;
-//        long phaseDurationYellow = isYellow ? currentPhase.getConfiguredDuration() : 0L;
-//        long phaseDurationGreen = isGreen ? currentPhase.getConfiguredDuration() : 0L;
-//
-//        SpatmContent content = new SpatmContent(
-//                getOs().getSimulationTime(),
-//                getOs().getPosition(),
-//                isRed, isYellow, isGreen,
-//                phaseDurationRed, phaseDurationYellow, phaseDurationGreen,
-//                remainingPhaseTime
-//        );
-//
-//        Spatm spatm = new Spatm(routing, content, 200);
-//        getOs().getAdHocModule().sendV2xMessage(spatm);
-//
-//        getLog().info("Sent SPaT: red={} yellow={} green={} remaining={}ns",
-//                isRed, isYellow, isGreen, remainingPhaseTime);
-//
-//        getOs().getEventManager().addEvent(
-//                getOs().getSimulationTime() + SEND_INTERVAL, this
-//        );
-
-        Collection<TrafficLight> lights = getOs().getAllTrafficLights();
-        TrafficLightProgramPhase phase = getOs().getCurrentPhase();
-        long currentTime = getOs().getSimulationTime();
-        long nextSwitch = phase.getRemainingDuration();
-
-        // Map to Standard MovementState list (One entry per signal)
-        List<IntersectionMovement> movements = new ArrayList<>();
-        // temporary cheat to skip duplicate light states instead of outputting each lane for now
-        HashSet<String> dedup = new HashSet<>();
-        lights.forEach(light -> {
-            if (!dedup.contains(light.getIncomingLane())) {
-                getLog().info("Current states for lane {} on light {}: {}", light.getIncomingLane(), getOs().getTrafficLightGroup().getGroupId(), light.getCurrentState());
-                dedup.add(light.getIncomingLane());
-            }
-            movements.add(new IntersectionMovement(getOs().getTrafficLightGroup().getGroupId() + "_" + light.getIndex(), TrafficLightState.convertToState(light.getCurrentState()), TimeChangeDetails.convert(phase, getOs().getSimulationTime())));
-        });
-
-        // Create Custom Content and Message
-        List<IntersectionState> stateList = new ArrayList<>();
-        stateList.add(new IntersectionState(getOs().getTrafficLightGroup().getGroupId(), IntersectionStatus.FIXED_TIME_OPERATION, movements));
-        FullSpatContent content = new FullSpatContent(currentTime, stateList);
+        FullSpatContent content = createSpatContent();
         MessageRouting routing = getOs().getAdHocModule().createMessageRouting()
                 .broadcast()
                 .geographical(new GeoCircle(getOs().getPosition(), 300))
@@ -176,12 +118,41 @@ public class RsuSpatApp extends AbstractApplication<TrafficLightOperatingSystem>
 
         // Send
         getOs().getAdHocModule().sendV2xMessage(message);
+        onSpatMessageSent(message);
 
         if (isAutoSchedulingEnabled()) {
             getOs().getEventManager().addEvent(new Event(
                     getOs().getSimulationTime() + SPAT_SEND_INTERVAL, this, "SPAT"
             ));
         }
+    }
+
+    protected FullSpatContent createSpatContent() {
+        Collection<TrafficLight> lights = getOs().getAllTrafficLights();
+        TrafficLightProgramPhase phase = getOs().getCurrentPhase();
+        long currentTime = getOs().getSimulationTime();
+
+        List<IntersectionMovement> movements = new ArrayList<>();
+        HashSet<String> dedup = new HashSet<>();
+        lights.forEach(light -> {
+            if (!dedup.contains(light.getIncomingLane())) {
+                getLog().info("Current states for lane {} on light {}: {}",
+                        light.getIncomingLane(), getOs().getTrafficLightGroup().getGroupId(), light.getCurrentState());
+                dedup.add(light.getIncomingLane());
+            }
+            movements.add(new IntersectionMovement(
+                    getOs().getTrafficLightGroup().getGroupId() + "_" + light.getIndex(),
+                    TrafficLightState.convertToState(light.getCurrentState()),
+                    TimeChangeDetails.convert(phase, currentTime)));
+        });
+
+        List<IntersectionState> stateList = new ArrayList<>();
+        stateList.add(new IntersectionState(getOs().getTrafficLightGroup().getGroupId(),
+                IntersectionStatus.FIXED_TIME_OPERATION, movements));
+        return new FullSpatContent(currentTime, stateList);
+    }
+
+    protected void onSpatMessageSent(FullSpatm message) {
     }
 
     // Allow subclasses to opt-out of automatic SPAT/MAP rescheduling (RsuAttackApp disables it)

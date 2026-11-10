@@ -6,6 +6,7 @@
 - Maven 4.0.0
 - Eclipse MOSAIC 25.2
 - SUMO 1.28.0
+- Python 3 with `pyproj` (needed for standalone attack RSU placement)
 
 *Ensure Eclipse MOSAIC folder is placed next to the SPADE project folder as shown*
 ```
@@ -33,3 +34,21 @@ MOSAIC scenarios are each within their respective folders. Java application code
 
 5. Clean up script metadata files `./run_spade.sh clean`
 
+## Processing generated data
+
+After generating runs under `data/`, convert their raw MOSAIC logs into SPADE
+records with:
+
+```sh
+python3 process_spade.py
+```
+
+By default, the script reads `data/` and writes per-vehicle JSON files to
+`processed/spade_records/`. Use `--input` and `--output` to change these paths.
+
+- Records are generated at 10 Hz with vehicle, perception, and received-message data.
+- The latest CAM and shared-perception snapshot per transmitting vehicle is retained for 2 seconds; older snapshots are removed. Override this with `--message-ttl-seconds`.
+- Vehicle CSV logging starts within 200 m of the nearest MAP intersection and continues until the vehicle has passed it and is more than 200 m away.
+- Attack schedules emit one attack tick in every five-second block with a randomized run phase; the processor checks for a 20% attack split (default tolerance: 5 percentage points).
+- Replay, Sybil, and Impersonation use standalone RSUs; other attacks replace the traffic-light app.
+- Received attack messages are labeled individually; attack intervals are also recorded.

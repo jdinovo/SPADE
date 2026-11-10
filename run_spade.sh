@@ -30,7 +30,7 @@ SCENARIOS=(
   2lane3way 2lane4way 4lane4way 4lanepxo
   2lane3way-test 2lane4way-test 4lane4way-test 4lanepxo-test
 )
-SEEDS=(11111 22222 33333 44444)       # training/validation scenarios
+SEEDS=(11111)       # training/validation scenarios
 TEST_SEEDS=(55555)                    # "-test" scenarios (seed unseen in training)
 VISIBILITIES=(0.95 0.6 0.1)
 DENSITIES=(low medium high)
@@ -186,11 +186,18 @@ fi
 gen_mapping() {
   python3 - "$@" <<'PY'
 import sys, json, re, random
+import glob
+import xml.etree.ElementTree as ET
 scen, cls, vis, dens, seed, out = sys.argv[1:7]
 base = f"{scen}/mapping"
 
 with open(f"{base}/mapping_config.json.orig") as f:
     cfg = json.load(f)
+standalone_rsu = cls in {
+    "org.example.attacks.ReplaySpatApp",
+    "org.example.attacks.SybilSpatApp",
+    "org.example.attacks.ImpersonationSpatApp",
+}
 
 routes = []
 with open(f"{base}/routes.txt") as f:
@@ -208,7 +215,8 @@ for proto in cfg.get("prototypes", []):
     apps = proto.get("applications", [])
     for i, a in enumerate(apps):
         if re.fullmatch(r"org\.example\.(attacks\.)?\w+SpatApp", a):
-            apps[i] = cls
+            if not standalone_rsu:
+                apps[i] = cls
             n_rsu += 1
             continue
         m = re.fullmatch(r'(org\.example\.VehicleApp\(\s*"[^"]*")[^)]*\)', a)
@@ -217,6 +225,64 @@ for proto in cfg.get("prototypes", []):
             n_veh += 1
 if n_rsu != 1 or n_veh != 1:
     sys.exit(f"ERROR: expected 1 RSU app and 1 VehicleApp entry, found {n_rsu}/{n_veh} in {base}")
+
+if standalone_rsu:
+    traffic_lights = cfg.get("trafficLights", [])
+    if not traffic_lights:
+        sys.exit(f"ERROR: no traffic light is configured in {base}")
+    tl_id = str(traffic_lights[0].get("tlGroupId", ""))
+    net_files = glob.glob(f"{scen}/sumo/*.net.xml")
+    if len(net_files) != 1:
+        sys.exit(f"ERROR: expected one SUMO network in {scen}/sumo, found {len(net_files)}")
+    net = ET.parse(net_files[0]).getroot()
+    junction = next((node for node in net.findall("junction") if node.get("id") == tl_id), None)
+    if junction is None and tl_id.startswith("GS_"):
+        junction_id = tl_id.removeprefix("GS_")
+        junction = next(
+            (node for node in net.findall("junction") if node.get("id") == junction_id),
+            None,
+        )
+    location = net.find("location")
+    if location is None:
+        sys.exit(f"ERROR: missing SUMO projection metadata in {net_files[0]}")
+    if junction is None:
+        bounds = list(map(float, location.get("convBoundary", "").split(",")))
+        traffic_light_junctions = [
+            node for node in net.findall("junction")
+            if node.get("type") == "traffic_light"
+        ]
+        if len(bounds) != 4 or not traffic_light_junctions:
+            sys.exit(f"ERROR: cannot locate a traffic-light junction in {net_files[0]}")
+        center_x, center_y = (bounds[0] + bounds[2]) / 2.0, (bounds[1] + bounds[3]) / 2.0
+        junction = min(
+            traffic_light_junctions,
+            key=lambda node: (float(node.get("x")) - center_x) ** 2
+                             + (float(node.get("y")) - center_y) ** 2,
+        )
+    projection = location.get("projParameter", "")
+    offset_x, offset_y = map(float, location.get("netOffset", "0,0").split(","))
+    easting = float(junction.get("x")) - offset_x
+    northing = float(junction.get("y")) - offset_y
+
+    try:
+        from pyproj import Transformer
+    except ImportError:
+        sys.exit("ERROR: standalone attack RSUs require pyproj; install it with 'python3 -m pip install pyproj'")
+    longitude, latitude = Transformer.from_crs(
+        projection, "EPSG:4326", always_xy=True
+    ).transform(easting, northing)
+
+    cfg.setdefault("prototypes", []).append({
+        "name": "AttackRsu",
+        "applications": [cls],
+    })
+    cfg.setdefault("rsus", []).append({
+        "name": "AttackRsu",
+        "position": {
+            "latitude": latitude,
+            "longitude": longitude,
+        },
+    })
 
 # --- vehicles ---------------------------------------------------------------
 TARGET_FLOW = 60   # constant for every entry and density

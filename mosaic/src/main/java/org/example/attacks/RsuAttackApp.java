@@ -13,7 +13,7 @@ public abstract class RsuAttackApp extends RsuSpatApp {
 
     // Interval between attack scheduling (uses SPAT send interval by default)
     public static final long ATTACK_INTERVAL = SPAT_SEND_INTERVAL;
-    // Use block-randomized approach to guarantee exact 20% attacks per block
+    // Randomize the attack phase once per run, then keep one attack tick per block.
     public static final double ATTACK_PROBABILITY = 0.2;
     public static final int BLOCK_SIZE = (int) Math.round(1.0 / ATTACK_PROBABILITY); // 5
 
@@ -42,6 +42,9 @@ public abstract class RsuAttackApp extends RsuSpatApp {
         // disable the RSU's auto-scheduler from scheduling SPAT/MAP events; RsuAttackApp controls schedule
         // by overriding isAutoSchedulingEnabled() we prevent RsuSpatApp from re-adding events.
         // initialize and start scheduler
+        getOs().getEventManager().addEvent(new Event(
+                getOs().getSimulationTime() + MAP_SEND_INTERVAL, this, "MAP"
+        ));
         scheduler = new Scheduler(this, ATTACK_INTERVAL, BLOCK_SIZE,
                 getAttackStartTick(), getAttackEndTick(), this::onScheduledTick, getRandom());
         scheduler.start();
@@ -59,6 +62,16 @@ public abstract class RsuAttackApp extends RsuSpatApp {
         // If scheduler posted this event, forward to it
         if (resource instanceof Scheduler s && s == scheduler) {
             scheduler.handleEvent(event);
+            return;
+        }
+
+        if ("MAP".equals(resource)) {
+            if (!attackInProgress) {
+                super.broadcastMapMessage();
+            }
+            getOs().getEventManager().addEvent(new Event(
+                    getOs().getSimulationTime() + MAP_SEND_INTERVAL, this, "MAP"
+            ));
             return;
         }
 
@@ -107,7 +120,6 @@ public abstract class RsuAttackApp extends RsuSpatApp {
             }
 
             getLog().debug("Scheduler triggered benign tick at {}", now);
-            super.broadcastMapMessage();
             super.broadcastSpatMessage();
         }
     }
@@ -122,6 +134,16 @@ public abstract class RsuAttackApp extends RsuSpatApp {
                     getAttackStartTick(), getAttackEndTick(), this::onScheduledTick, getRandom());
         }
         scheduler.start();
+    }
+
+    @Override
+    public void onShutdown() {
+        stopAttackSchedule();
+        if (attackInProgress) {
+            attackEnd();
+            attackInProgress = false;
+        }
+        super.onShutdown();
     }
 
     // Implemented by subclasses to perform the actual attack actions
@@ -211,8 +233,6 @@ public abstract class RsuAttackApp extends RsuSpatApp {
             tickNumber++;
             if (currentTickInBlock >= blockSize) {
                 currentTickInBlock = 0;
-                attackIndexInBlock = random.nextInt(blockSize);
-                owner.getLog().info("New attack index for next block: {}", attackIndexInBlock);
             }
 
             // schedule next at the exact interval

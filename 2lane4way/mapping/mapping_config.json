@@ -26,7 +26,7 @@
   "trafficLights": [
     {
       "name": "TrafficLight",
-      "tlGroupId": "cluster_901775651_901781590_901788486_901793058"
+      "tlGroupId": "901056255"
     }
   ],
   "vehicles": [
@@ -34,7 +34,7 @@
       "startingTime": 0.5,
       "targetFlow": 60,
       "maxNumberVehicles": 3,
-      "route": "10449",
+      "route": "128777",
       "types": [
         { "name": "Car" }
       ]
@@ -43,7 +43,7 @@
       "startingTime": 0.0,
       "targetFlow": 60,
       "maxNumberVehicles": 4,
-      "route": "10455",
+      "route": "36349",
       "types": [
         { "name": "Car" }
       ]
@@ -52,7 +52,7 @@
       "startingTime": 0.0,
       "targetFlow": 60,
       "maxNumberVehicles": 4,
-      "route": "10465",
+      "route": "128605",
       "types": [
         { "name": "Car" }
       ]
@@ -61,7 +61,7 @@
       "startingTime": 0.0,
       "targetFlow": 60,
       "maxNumberVehicles": 4,
-      "route": "10470",
+      "route": "128583",
       "types": [
         { "name": "Car" }
       ]

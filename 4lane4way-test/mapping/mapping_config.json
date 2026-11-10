@@ -26,7 +26,7 @@
   "trafficLights": [
     {
       "name": "TrafficLight",
-      "tlGroupId": "cluster_4701100015_4701100016_899856526_899859210"
+      "tlGroupId": "GS_cluster_4701100015_4701100016_899856526_899859210"
     }
   ],
   "vehicles": [

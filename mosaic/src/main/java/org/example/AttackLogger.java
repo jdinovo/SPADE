@@ -6,7 +6,9 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Collections;
 import java.util.LinkedHashSet;
+import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 public final class AttackLogger {
 
@@ -14,6 +16,7 @@ public final class AttackLogger {
 
     private BufferedWriter writer;
     private final Set<String> activeAttacks = Collections.synchronizedSet(new LinkedHashSet<>());
+    private final Map<String, String> maliciousMessages = new ConcurrentHashMap<>();
 
 //    private AttackLogger() {
 //        try {
@@ -41,6 +44,14 @@ public final class AttackLogger {
 
     public static AttackLogger getInstance() {
         return INSTANCE;
+    }
+
+    public void markMessageMalicious(String messageId, String attackType) {
+        maliciousMessages.put(messageId, attackType);
+    }
+
+    public String getMessageAttack(String messageId) {
+        return maliciousMessages.get(messageId);
     }
 
     public void startAttack(String attackType, long simTimeNs) {
