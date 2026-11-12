@@ -58,7 +58,7 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
 
     // Distance (m) from the stop line at which the app starts reacting to SPaT info.
     private static final double REACTION_DISTANCE_M = 100.0;
-    private static final double LOGGING_RADIUS_M = 200.0;
+    private static final double LOGGING_RADIUS_M = 100.0;
 
     // Speed (m/s) the vehicle will accelerate to if it believes it has a clear green.
     private static final double PROCEED_SPEED_MS = 13.9; // ~50 km/h

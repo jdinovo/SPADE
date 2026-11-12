@@ -4,11 +4,12 @@
 #   data/<scenario>/<class>/<seed>/<density>-den_<visibility>-vis/
 # Run from the repo root (the directory containing 2lane3way/, 2lane4way/, ...).
 #
-# Main scenarios run with SEEDS (4); "-test" scenarios run with TEST_SEEDS (1).
-# Total runs: 4*4*63 + 4*1*63 = 1,260
+# Main scenarios run with four SEEDS; "-test" scenarios run with TEST_SEEDS.
+# Total runs: 4*4*7*3*3 + 4*1*7*3*3 = 1,260
 #
 # Usage:  ./run_spade.sh                 # build the jar, then run everything (skips completed runs)
 #         DRY_RUN=1 ./run_spade.sh       # generate configs to a temp file, print plan, run nothing
+#         ./run_spade.sh test            # run every scenario/class once at high density and first seed
 #         ./run_spade.sh build           # compile mosaic/ and copy the jar into every <scenario>/application/
 #         SKIP_BUILD=1 ./run_spade.sh    # run without rebuilding the jar first
 #         ./run_spade.sh clean           # restore configs, delete all .orig files and meta files
@@ -30,7 +31,7 @@ SCENARIOS=(
   2lane3way 2lane4way 4lane4way 4lanepxo
   2lane3way-test 2lane4way-test 4lane4way-test 4lanepxo-test
 )
-SEEDS=(11111)       # training/validation scenarios
+SEEDS=(11111 22222 33333 44444)       # training/validation scenarios
 TEST_SEEDS=(55555)                    # "-test" scenarios (seed unseen in training)
 VISIBILITIES=(0.95 0.6 0.1)
 DENSITIES=(low medium high)
@@ -46,6 +47,15 @@ declare -A CLASSES=(
   [IMPERSONATION]="org.example.attacks.ImpersonationSpatApp"
 )
 ORDER=(BENIGN FALSE_STATE REPLAY TIMING_MANIP SYBIL DOS IMPERSONATION)
+
+# Smoke-test one run for every scenario/class combination, using the first
+# seed for each scenario type and the first configured visibility.
+if [[ "$MODE" == "test" ]]; then
+  SEEDS=("${SEEDS[0]}")
+  TEST_SEEDS=("${TEST_SEEDS[0]}")
+  VISIBILITIES=("${VISIBILITIES[0]}")
+  DENSITIES=(high)
+fi
 
 # ---------------------------------------------------------------------------
 # restore / cleanup helpers

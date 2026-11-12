@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import bisect
 import csv
+import hashlib
 import json
 import math
 import sys
@@ -30,6 +31,22 @@ FEATURES = [
     "map_lane_connections", "map_position", "spat_signal_id", "spat_message_time",
     "spat_signal_state", "spat_max_end_time", "spat_min_end_time",
 ]
+
+
+class RunIdRemapper:
+    """Create stable, run-scoped pseudonyms for entity identifiers."""
+
+    def __init__(self, run_id: str) -> None:
+        self.run_id = run_id.encode("utf-8")
+
+    def map(self, entity_type: str, identifier: str) -> str:
+        digest = hashlib.blake2b(digest_size=16, person=b"spade-id-v1")
+        digest.update(self.run_id)
+        digest.update(b"\0")
+        digest.update(entity_type.encode("utf-8"))
+        digest.update(b"\0")
+        digest.update(identifier.encode("utf-8"))
+        return f"{entity_type}_{digest.hexdigest()}"
 
 
 def position(raw: str, longitude_first: bool = False) -> list[float]:
@@ -188,6 +205,16 @@ def shared_features(
     return list(peers), list(peers.values()), perceptions, len(peers)
 
 
+def remap_lane_connections(raw: str, identifiers: RunIdRemapper) -> str:
+    connections = []
+    for connection in raw.split(";"):
+        signal_id, separator, lane_id = connection.partition(":")
+        if separator:
+            connection = f"{identifiers.map('light', signal_id)}:{lane_id}"
+        connections.append(connection)
+    return ";".join(connections)
+
+
 def build_record(
     run_id: str,
     timestamp: int,
@@ -195,6 +222,7 @@ def build_record(
     current: dict[str, Any],
     label: str,
     map_snapshot: list[dict[str, Any]],
+    identifiers: RunIdRemapper,
 ) -> dict[str, Any]:
     row: dict[str, Any] = {
         "run_id": run_id,
@@ -203,10 +231,11 @@ def build_record(
         "received_messages": current["received_messages"],
         **{key: value for key, value in vehicle.items() if key != "time"},
     }
+    row["vehicle_id"] = identifiers.map("vehicle", vehicle["vehicle_id"])
 
     cams = current["cams"]
     row.update({
-        "cam_vehicle_id": [item["vehicle_id"] for item in cams],
+        "cam_vehicle_id": [identifiers.map("vehicle", item["vehicle_id"]) for item in cams],
         "cam_message_time": [item["message_time"] for item in cams],
         "cam_position": [item["position"] for item in cams],
         "cam_distance": [item["distance"] for item in cams],
@@ -220,8 +249,13 @@ def build_record(
         "conf_vis_weighted",
     )):
         row[column] = tl[field] if tl else ""
+    if tl:
+        row["tl_signal_id"] = identifiers.map("light", tl["signal_id"])
 
     peer_ids, peer_positions, perceptions, peer_count = shared_features(current["shared"])
+    peer_ids = [identifiers.map("vehicle", peer_id) for peer_id in peer_ids]
+    for perception in perceptions:
+        perception["signal_id"] = identifiers.map("light", perception["signal_id"])
     row.update({
         "peer_count": peer_count,
         "shared_vehicle_id": peer_ids if peer_count else 0,
@@ -233,11 +267,19 @@ def build_record(
         "message_time", "intersection_id", "lane_id", "lane_attributes",
         "lane_connections", "position",
     )):
-        row[column] = [item[field] for item in map_snapshot]
+        if field == "intersection_id":
+            row[column] = [identifiers.map("rsu", item[field]) for item in map_snapshot]
+        elif field == "lane_connections":
+            row[column] = [remap_lane_connections(item[field], identifiers) for item in map_snapshot]
+        else:
+            row[column] = [item[field] for item in map_snapshot]
     for column, field in zip(FEATURES[35:40], (
         "signal_id", "message_time", "signal_state", "max_end_time", "min_end_time",
     )):
         row[column] = [item[field] for item in current["spats"]]
+    row["spat_signal_id"] = [
+        identifiers.map("light", item["signal_id"]) for item in current["spats"]
+    ]
     return row
 
 
@@ -248,6 +290,7 @@ def process_scenario(
     attack_class = scenario.parent.parent.parent.name
     label_times, label_values = load_labels(scenario / "attack_labels.csv", attack_class)
     run_id = scenario.relative_to(input_root).parent.as_posix()
+    identifiers = RunIdRemapper(run_id)
     logs = sorted(scenario.glob("*_veh_output.csv"))
     if not logs:
         raise ValueError(f"no vehicle output CSV files found in {scenario}")
@@ -348,11 +391,13 @@ def process_scenario(
                 "received_messages": tick_messages,
             }
             map_snapshot = [map_latest[key] for key in sorted(map_latest)]
-            records.append(build_record(run_id, time, current_vehicle, current, label, map_snapshot))
+            records.append(build_record(
+                run_id, time, current_vehicle, current, label, map_snapshot, identifiers,
+            ))
             count += 1
             tick += INTERVAL_NS
 
-        output_file = run_output / f"{vehicle_id}.json"
+        output_file = run_output / f"{identifiers.map('vehicle', vehicle_id)}.json"
         with output_file.open("w", encoding="utf-8") as destination:
             json.dump(records, destination, separators=(",", ":"), ensure_ascii=True)
             destination.write("\n")
