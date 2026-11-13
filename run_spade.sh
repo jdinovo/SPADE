@@ -24,7 +24,7 @@ DRY_RUN="${DRY_RUN:-0}"
 SKIP_BUILD="${SKIP_BUILD:-0}"
 MVN_DIR="application"
 STATE_DIR=".run_state"
-LOG_DIR="run_logs"
+LOG_DIR="spade_mosaic_logs"
 DATA_DIR="data"
 MARKER="$STATE_DIR/start.marker"
 

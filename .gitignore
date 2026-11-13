@@ -2,6 +2,7 @@ logs_*
 data/*
 .run_state/*
 run_logs/*
+spade_mosaic_logs/*
 *.orig
 *.jar
 processed/*
