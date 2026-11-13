@@ -4,8 +4,8 @@
 
 - Java 17
 - Maven 4.0.0
-- Eclipse MOSAIC 25.2
-- SUMO 1.28.0
+- [Eclipse MOSAIC 25.2](https://eclipse.dev/mosaic/docs/getting_started/)
+- [SUMO 1.28.0](https://eclipse.dev/sumo/)
 - Python 3 with `pyproj`
 
 *Ensure Eclipse MOSAIC folder is placed next to the SPADE project folder as shown*
