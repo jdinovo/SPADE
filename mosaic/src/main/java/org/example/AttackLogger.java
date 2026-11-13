@@ -37,6 +37,7 @@ public final class AttackLogger {
         try {
             writer = new BufferedWriter(new FileWriter(csvPath.toFile()));
             writer.write("simTimeNs,activeAttacks\n");
+            logTransition(0);
         } catch (IOException e) {
             throw new RuntimeException("Could not open attack log CSV at " + csvPath, e);
         }

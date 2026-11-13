@@ -2,10 +2,10 @@
 # run_spade.sh - run every SPADE scenario x class x seed x visibility x density
 # through Eclipse MOSAIC, then collect each run's output into
 #   data/<scenario>/<class>/<seed>/<density>-den_<visibility>-vis/
-# Run from the repo root (the directory containing 2lane3way/, 2lane4way/, ...).
+# Run from the repo root (the directory containing the scenario folders).
 #
-# Main scenarios run with four SEEDS; "-test" scenarios run with TEST_SEEDS.
-# Total runs: 4*4*7*3*3 + 4*1*7*3*3 = 1,260
+# Scenario folders are discovered automatically. Folders ending in "-test"
+# use TEST_SEEDS; all other scenario folders use SEEDS.
 #
 # Usage:  ./run_spade.sh                 # build the jar, then run everything (skips completed runs)
 #         DRY_RUN=1 ./run_spade.sh       # generate configs to a temp file, print plan, run nothing
@@ -18,6 +18,7 @@ set -uo pipefail
 
 MODE="${1:-run}"
 REPO_ROOT="$(pwd)"
+SCENARIO_ROOT="$REPO_ROOT/scenarios"
 MOSAIC="${MOSAIC:-../eclipse-mosaic-25.2/mosaic.sh}"
 DRY_RUN="${DRY_RUN:-0}"
 SKIP_BUILD="${SKIP_BUILD:-0}"
@@ -27,10 +28,19 @@ LOG_DIR="run_logs"
 DATA_DIR="data"
 MARKER="$STATE_DIR/start.marker"
 
-SCENARIOS=(
-  2lane3way 2lane4way 4lane4way 4lanepxo
-  2lane3way-test 2lane4way-test 4lane4way-test 4lanepxo-test
-)
+SCENARIOS=()
+shopt -s nullglob
+for config in "$SCENARIO_ROOT"/*/scenario_config.json; do
+  scenario_dir="${config%/scenario_config.json}"
+  [[ -f "$scenario_dir/mapping/mapping_config.json" ]] || continue
+  SCENARIOS+=("${scenario_dir##*/}")
+done
+shopt -u nullglob
+if [[ ${#SCENARIOS[@]} -eq 0 ]]; then
+  echo "ERROR: no scenario folders found under $SCENARIO_ROOT" >&2
+  exit 1
+fi
+
 SEEDS=(11111 22222 33333 44444)       # training/validation scenarios
 TEST_SEEDS=(55555)                    # "-test" scenarios (seed unseen in training)
 VISIBILITIES=(0.95 0.6 0.1)
@@ -64,17 +74,17 @@ fi
 restore_configs() {
   for s in "${SCENARIOS[@]}"; do
     for f in mapping/mapping_config.json scenario_config.json; do
-      [[ -f "$REPO_ROOT/$s/$f.orig" ]] && cp "$REPO_ROOT/$s/$f.orig" "$REPO_ROOT/$s/$f"
+      [[ -f "$SCENARIO_ROOT/$s/$f.orig" ]] && cp "$SCENARIO_ROOT/$s/$f.orig" "$SCENARIO_ROOT/$s/$f"
     done
-    [[ -f "$REPO_ROOT/$s/sumo/sumo_config.json.disabled" ]] && \
-      mv -f "$REPO_ROOT/$s/sumo/sumo_config.json.disabled" "$REPO_ROOT/$s/sumo/sumo_config.json"
+    [[ -f "$SCENARIO_ROOT/$s/sumo/sumo_config.json.disabled" ]] && \
+      mv -f "$SCENARIO_ROOT/$s/sumo/sumo_config.json.disabled" "$SCENARIO_ROOT/$s/sumo/sumo_config.json"
   done
 }
 
 # Delete the .orig backups (only call after restore_configs).
 remove_orig() {
   for s in "${SCENARIOS[@]}"; do
-    rm -f "$REPO_ROOT/$s/mapping/mapping_config.json.orig" "$REPO_ROOT/$s/scenario_config.json.orig"
+    rm -f "$SCENARIO_ROOT/$s/mapping/mapping_config.json.orig" "$SCENARIO_ROOT/$s/scenario_config.json.orig"
   done
 }
 
@@ -118,8 +128,8 @@ build_jar() {
 
   local s
   for s in "${SCENARIOS[@]}"; do
-    [[ -d "$REPO_ROOT/$s/application" ]] || { echo "ERROR: $s/application missing"; return 1; }
-    cp -f "${jars[0]}" "$REPO_ROOT/$s/application/"
+    [[ -d "$SCENARIO_ROOT/$s/application" ]] || { echo "ERROR: $SCENARIO_ROOT/$s/application missing"; return 1; }
+    cp -f "${jars[0]}" "$SCENARIO_ROOT/$s/application/"
   done
   echo "Copied $(basename "${jars[0]}") to ${#SCENARIOS[@]} scenario application directories."
 }
@@ -158,11 +168,12 @@ restore_configs
 
 # Back up the original configs once
 for s in "${SCENARIOS[@]}"; do
+  scenario_path="$SCENARIO_ROOT/$s"
   for f in mapping/mapping_config.json scenario_config.json; do
-    [[ -f "$s/$f" ]] || { echo "ERROR: $s/$f missing"; exit 1; }
-    [[ -f "$s/$f.orig" ]] || cp "$s/$f" "$s/$f.orig"
+    [[ -f "$scenario_path/$f" ]] || { echo "ERROR: $scenario_path/$f missing"; exit 1; }
+    [[ -f "$scenario_path/$f.orig" ]] || cp "$scenario_path/$f" "$scenario_path/$f.orig"
   done
-  [[ -f "$s/mapping/routes.txt" ]] || { echo "ERROR: $s/mapping/routes.txt missing"; exit 1; }
+  [[ -f "$scenario_path/mapping/routes.txt" ]] || { echo "ERROR: $scenario_path/mapping/routes.txt missing"; exit 1; }
 done
 
 FINISHED=0
@@ -182,7 +193,8 @@ trap on_exit EXIT
 # Disable visualization for the duration of the batch (restored in on_exit)
 if [[ "$DRY_RUN" != "1" ]]; then
   for s in "${SCENARIOS[@]}"; do
-    [[ -f "$s/sumo/sumo_config.json" ]] && mv -f "$s/sumo/sumo_config.json" "$s/sumo/sumo_config.json.disabled"
+    [[ -f "$SCENARIO_ROOT/$s/sumo/sumo_config.json" ]] && \
+      mv -f "$SCENARIO_ROOT/$s/sumo/sumo_config.json" "$SCENARIO_ROOT/$s/sumo/sumo_config.json.disabled"
   done
 fi
 
@@ -396,6 +408,7 @@ done
 n=0
 
 for scen in "${SCENARIOS[@]}"; do
+  scenario_path="$SCENARIO_ROOT/$scen"
   read -r -a scen_seeds <<< "$(seeds_for "$scen")"
   for label in "${ORDER[@]}"; do
     for seed in "${scen_seeds[@]}"; do
@@ -410,18 +423,18 @@ for scen in "${SCENARIOS[@]}"; do
           if [[ -f "$STATE_DIR/$tag.done" ]]; then echo "  already done, skipping"; continue; fi
 
           if [[ "$DRY_RUN" == "1" ]]; then
-            summary=$(gen_mapping "$scen" "${CLASSES[$label]}" "$vis" "$dens" "$seed" "$STATE_DIR/dryrun_mapping.json") \
+            summary=$(gen_mapping "$scenario_path" "${CLASSES[$label]}" "$vis" "$dens" "$seed" "$STATE_DIR/dryrun_mapping.json") \
               || { echo "  GENERATION FAILED"; echo "$summary"; exit 1; }
             echo "  would run: $summary (visibility $vis) -> $dest"
             continue
           fi
 
-          summary=$(gen_mapping "$scen" "${CLASSES[$label]}" "$vis" "$dens" "$seed" "$scen/mapping/mapping_config.json") \
+          summary=$(gen_mapping "$scenario_path" "${CLASSES[$label]}" "$vis" "$dens" "$seed" "$scenario_path/mapping/mapping_config.json") \
             || { echo "$summary"; exit 1; }
-          set_seed "$scen" "$seed" || exit 1
+          set_seed "$scenario_path" "$seed" || exit 1
           echo "  $summary (visibility $vis)"
 
-          stale="$scen/application/logs_${seed}"
+          stale="$scenario_path/application/logs_${seed}"
           if [[ -d "$stale" ]]; then
             echo "  WARNING: stale $stale found, moving to $DATA_DIR/_stale/"
             mkdir -p "$DATA_DIR/_stale/$tag"
@@ -429,13 +442,13 @@ for scen in "${SCENARIOS[@]}"; do
           fi
 
           sleep 1; touch "$MARKER"; sleep 1
-          ( cd "$MOSAIC_DIR" && "$MOSAIC_BIN" -c "$REPO_ROOT/$scen/scenario_config.json" ) \
+          ( cd "$MOSAIC_DIR" && "$MOSAIC_BIN" -c "$scenario_path/scenario_config.json" ) \
             > "$LOG_DIR/$tag.log" 2>&1
           rc=$?
 
-          moved=$(collect_outputs "$scen" "$seed" "$dest")
+          moved=$(collect_outputs "$scenario_path" "$seed" "$dest")
           cp "$LOG_DIR/$tag.log" "$dest/console.log"
-          cp "$scen/mapping/mapping_config.json" "$dest/mapping_config.used.json"
+          cp "$scenario_path/mapping/mapping_config.json" "$dest/mapping_config.used.json"
 
           if [[ $rc -ne 0 ]]; then
             echo "  FAILED rc=$rc (partial output in $dest, console in $LOG_DIR/$tag.log)"

@@ -12,6 +12,10 @@
 ```
 ├── SPADE
 │   ...
+│   ├── scenarios
+│   │   ├── 2lane3way
+│   │   ├── 2lane3way-test
+│   │   └── ...
 │   ├── mosaic
 │   ├── README.md
 │   └── run_spade.sh
@@ -20,7 +24,11 @@
 │   └── mosaic.sh
 ```
 
-MOSAIC scenarios are each within their respective folders. Java application code is contained within the `mosaic` folder.
+MOSAIC scenarios are each within their respective folders under `scenarios/`.
+Java application code is contained within the `mosaic` folder.
+`run_spade.sh` discovers scenario folders in `scenarios/` by their
+`scenario_config.json` and `mapping/mapping_config.json` files. Folders whose
+names end in `-test` use `TEST_SEEDS`; other folders use `SEEDS`.
 
 ## Execution
 
