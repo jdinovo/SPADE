@@ -6,17 +6,17 @@
 - Maven 4.0.0
 - Eclipse MOSAIC 25.2
 - SUMO 1.28.0
-- Python 3 with `pyproj` (needed for standalone attack RSU placement)
+- Python 3 with `pyproj`
 
 *Ensure Eclipse MOSAIC folder is placed next to the SPADE project folder as shown*
 ```
 ├── SPADE
 │   ...
+│   ├── application
 │   ├── scenarios
 │   │   ├── 2lane3way
 │   │   ├── 2lane3way-test
 │   │   └── ...
-│   ├── mosaic
 │   ├── README.md
 │   └── run_spade.sh
 ├── eclipse-mosaic-25.2
@@ -25,7 +25,7 @@
 ```
 
 MOSAIC scenarios are each within their respective folders under `scenarios/`.
-Java application code is contained within the `mosaic` folder.
+Java application code is contained within the `application` folder.
 `run_spade.sh` discovers scenario folders in `scenarios/` by their
 `scenario_config.json` and `mapping/mapping_config.json` files. Folders whose
 names end in `-test` use `TEST_SEEDS`; other folders use `SEEDS`.

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e968ce7e-0184-413d-9ebe-4a13755076b2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AttackLogger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CsvOutputDirectory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/PerceivedTrafficLight.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/RsuSpatApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/VehicleApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/attacks/DosSpatApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/attacks/ImpersonationSpatApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/attacks/ReplaySpatApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/attacks/RsuAttackApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/attacks/StandaloneRsuAttackApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/attacks/SybilSpatApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/attacks/TamperSpatApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/attacks/TimingSpatApp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cpm/CoopPercepData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/cpm/CoopPercepMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/intersection/GenericLane.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/intersection/IntersectionGeometry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/intersection/LaneAttributes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/intersection/LaneConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/intersection/MapData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/intersection/MapDataMessage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/intersection/enums/IntersectionStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/intersection/enums/LaneDirection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/intersection/enums/LaneSharing.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/intersection/enums/LaneTypeAttribute.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/spat/FullSpatContent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/spat/FullSpatm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/spat/IntersectionMovement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/spat/IntersectionState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/spat/TimeChangeDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/spat/enums/TrafficLightState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../run_spade.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../run_spade.sh" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="41" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.7021775691008187" />
+      <entry key="MS500" value="4.889159819824169" />
+      <entry key="S2" value="12.629202427785334" />
+      <entry key="S5" value="25.066984490724185" />
+      <entry key="S10" value="35.953526920085636" />
+      <entry key="S30" value="47.86181739279837" />
+      <entry key="S60" value="51.71118416893159" />
+      <entry key="M2" value="53.79735850085304" />
+      <entry key="M5" value="55.58703813533347" />
+      <entry key="M10" value="67.79510464282747" />
+      <entry key="M15" value="93.66796289059225" />
+      <entry key="M30" value="185.10560084503976" />
+      <entry key="H1" value="326.84488546859467" />
+      <entry key="H2" value="633.4834243949628" />
+      <entry key="H4" value="1414.607762598774" />
+      <entry key="D1" value="4489.477877061684" />
+      <entry key="W1" value="5784.134276147745" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="8.03100935475934E-309" />
+      <entry key="S10" value="8.961589900658942E-155" />
+      <entry key="S30" value="4.475020425929132E-52" />
+      <entry key="S60" value="2.1154244079921716E-26" />
+      <entry key="M2" value="1.4544498643790316E-13" />
+      <entry key="M5" value="7.32958696697048E-6" />
+      <entry key="M10" value="0.002707320994446416" />
+      <entry key="M15" value="0.01942494662168368" />
+      <entry key="M30" value="0.1393734076653515" />
+      <entry key="H1" value="0.3733521730502574" />
+      <entry key="H2" value="0.6178185351296491" />
+      <entry key="H4" value="0.9148235060534637" />
+      <entry key="D1" value="2.727681488809051" />
+      <entry key="W1" value="3.7752428065121273" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.6754907672230164" />
+      <entry key="MS500" value="4.8729630330196265" />
+      <entry key="S2" value="12.618427249507805" />
+      <entry key="S5" value="25.058247628115346" />
+      <entry key="S10" value="35.94719412167435" />
+      <entry key="S30" value="47.858985216884484" />
+      <entry key="S60" value="51.70965111641477" />
+      <entry key="M2" value="53.79656024669684" />
+      <entry key="M5" value="55.58671452158458" />
+      <entry key="M10" value="67.79759381590603" />
+      <entry key="M15" value="93.68715147305078" />
+      <entry key="M30" value="185.24465204654726" />
+      <entry key="H1" value="327.2179001709567" />
+      <entry key="H2" value="634.1009263338177" />
+      <entry key="H4" value="1415.5222631053225" />
+      <entry key="D1" value="4492.205373301066" />
+      <entry key="W1" value="5787.909483316403" />
+    </decayedShown>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7,
+  &quot;fromUser&quot;: false
+}</component>
+  <component name="ProjectId" id="3FbbwFBEy9kw5qfFCKdioFIxKSj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/application",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/home/j/IdeaProjects/mosaic/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "settings.sync",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.example.attacks" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="mosaic" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e968ce7e-0184-413d-9ebe-4a13755076b2" name="Changes" comment="" />
+      <created>1782346953791</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1782346953791</updated>
+      <workItem from="1782346954838" duration="5607000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

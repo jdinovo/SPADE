@@ -9,8 +9,8 @@
 #
 # Usage:  ./run_spade.sh                 # build the jar, then run everything (skips completed runs)
 #         DRY_RUN=1 ./run_spade.sh       # generate configs to a temp file, print plan, run nothing
-#         ./run_spade.sh test            # run every scenario/class once at high density and first seed
-#         ./run_spade.sh build           # compile mosaic/ and copy the jar into every <scenario>/application/
+#         ./run_spade.sh test            # run every scenario/class once at low density and first seed
+#         ./run_spade.sh build           # compile application/ and copy the jar into every <scenario>/application/
 #         SKIP_BUILD=1 ./run_spade.sh    # run without rebuilding the jar first
 #         ./run_spade.sh clean           # restore configs, delete all .orig files and meta files
 
@@ -22,7 +22,7 @@ SCENARIO_ROOT="$REPO_ROOT/scenarios"
 MOSAIC="${MOSAIC:-../eclipse-mosaic-25.2/mosaic.sh}"
 DRY_RUN="${DRY_RUN:-0}"
 SKIP_BUILD="${SKIP_BUILD:-0}"
-MVN_DIR="mosaic"
+MVN_DIR="application"
 STATE_DIR=".run_state"
 LOG_DIR="run_logs"
 DATA_DIR="data"
@@ -41,8 +41,8 @@ if [[ ${#SCENARIOS[@]} -eq 0 ]]; then
   exit 1
 fi
 
-SEEDS=(11111 22222 33333 44444)       # training/validation scenarios
-TEST_SEEDS=(55555)                    # "-test" scenarios (seed unseen in training)
+SEEDS=(956060311 441439018 326601683 950894839) # training/validation scenarios
+TEST_SEEDS=(561603393)                # "-test" scenarios (seed unseen in training)
 VISIBILITIES=(0.95 0.6 0.1)
 DENSITIES=(low medium high)
 declare -A VIS_LABEL=( [0.95]=high [0.6]=medium [0.1]=low )
@@ -64,7 +64,7 @@ if [[ "$MODE" == "test" ]]; then
   SEEDS=("${SEEDS[0]}")
   TEST_SEEDS=("${TEST_SEEDS[0]}")
   VISIBILITIES=("${VISIBILITIES[0]}")
-  DENSITIES=(high)
+  DENSITIES=(low)
 fi
 
 # ---------------------------------------------------------------------------
