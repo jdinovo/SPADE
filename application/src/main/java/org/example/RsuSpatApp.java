@@ -8,6 +8,7 @@ import org.eclipse.mosaic.lib.objects.trafficlight.TrafficLight;
 import org.eclipse.mosaic.lib.objects.trafficlight.TrafficLightProgramPhase;
 import org.eclipse.mosaic.lib.objects.v2x.MessageRouting;
 import org.eclipse.mosaic.lib.util.scheduling.Event;
+import org.eclipse.mosaic.rti.TIME;
 import org.example.intersection.*;
 import org.example.intersection.enums.*;
 import org.example.spat.*;
@@ -21,8 +22,8 @@ import java.util.*;
 
 public class RsuSpatApp extends AbstractApplication<TrafficLightOperatingSystem> {
 
-    protected static final long SPAT_SEND_INTERVAL = org.eclipse.mosaic.rti.TIME.SECOND;
-    protected static final long MAP_SEND_INTERVAL = 5 * SPAT_SEND_INTERVAL;
+    protected static final long SPAT_SEND_INTERVAL = 100 * TIME.MILLI_SECOND;
+    protected static final long MAP_SEND_INTERVAL = 10 * SPAT_SEND_INTERVAL;
 
     private BufferedWriter logWriter;
 

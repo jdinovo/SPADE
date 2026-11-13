@@ -26,7 +26,6 @@ MVN_DIR="application"
 STATE_DIR=".run_state"
 LOG_DIR="spade_mosaic_logs"
 DATA_DIR="data"
-MARKER="$STATE_DIR/start.marker"
 
 SCENARIOS=()
 shopt -s nullglob
@@ -365,19 +364,18 @@ move_file() {
   mv -f "$f" "$dest/$rel"
 }
 
-# Like move_file, but drops the first directory level under source_root
-# (MOSAIC's timestamped run folder).
-move_file_flat() {
-  local f="$1" root="$2" dest="$3" rel
-  rel="${f#"$root"/}"
-  [[ "$rel" == */* ]] && rel="${rel#*/}"
-  mkdir -p "$dest/$(dirname "$rel")"
-  mv -f "$f" "$dest/$rel"
+# Remove all contents while preserving each MOSAIC log root directory.
+clear_mosaic_logs() {
+  local src
+  for src in "${LOG_SOURCES[@]}"; do
+    [[ -d "$src" ]] || continue
+    find "$src" -mindepth 1 -delete || return 1
+  done
 }
 
 # collect_outputs <scenario> <seed> <dest_dir>  -> prints number of files moved
 collect_outputs() {
-  local scen="$1" seed="$2" dest="$3" count=0 f src i=0
+  local scen="$1" seed="$2" dest="$3" count=0 f
   local csvsrc="$scen/application/logs_${seed}"
   mkdir -p "$dest"
 
@@ -387,15 +385,6 @@ collect_outputs() {
     done < <(find "$csvsrc" -type f -print0)
     find "$csvsrc" -depth -type d -empty -delete 2>/dev/null
   fi
-
-  for src in "${LOG_SOURCES[@]}"; do
-    i=$((i+1))
-    [[ -d "$src" ]] || continue
-    while IFS= read -r -d '' f; do
-      move_file_flat "$f" "$src" "$dest/mosaic_logs_$i"; count=$((count+1))
-    done < <(find "$src" -type f -newer "$MARKER" -print0)
-    find "$src" -mindepth 1 -type d -empty -delete 2>/dev/null
-  done
 
   echo "$count"
 }
@@ -441,10 +430,19 @@ for scen in "${SCENARIOS[@]}"; do
             mv "$stale" "$DATA_DIR/_stale/$tag/"
           fi
 
-          sleep 1; touch "$MARKER"; sleep 1
+          if ! clear_mosaic_logs; then
+            echo "  ERROR: could not clear MOSAIC logs before run" >&2
+            exit 1
+          fi
+
           ( cd "$MOSAIC_DIR" && "$MOSAIC_BIN" -c "$scenario_path/scenario_config.json" ) \
             > "$LOG_DIR/$tag.log" 2>&1
           rc=$?
+
+          if ! clear_mosaic_logs; then
+            echo "  ERROR: could not clear MOSAIC logs after run" >&2
+            rc=1
+          fi
 
           moved=$(collect_outputs "$scenario_path" "$seed" "$dest")
           cp "$LOG_DIR/$tag.log" "$dest/console.log"

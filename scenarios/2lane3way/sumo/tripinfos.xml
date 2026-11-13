@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-11-03T16:35:33.935460-05:00 by Eclipse SUMO GUI 1.28.0
+<!-- generated on 2026-11-13T15:31:48.176451-05:00 by Eclipse SUMO GUI 1.28.0
 <sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <net-file value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane3way/sumo/2lane3way.net.xml"/>
-        <route-files value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane3way/sumo/2lane3way.passenger.trips.xml"/>
-        <additional-files value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane3way/sumo/2lane3way.poly.xml.gz,/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane3way/sumo/output.add.xml,/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane3way/sumo/2lane3way.dat.add.xml"/>
+        <net-file value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/scenarios/2lane3way/sumo/2lane3way.net.xml"/>
+        <route-files value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/scenarios/2lane3way/sumo/2lane3way.passenger.trips.xml"/>
+        <additional-files value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/scenarios/2lane3way/sumo/2lane3way.poly.xml.gz,/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/scenarios/2lane3way/sumo/output.add.xml,/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/scenarios/2lane3way/sumo/2lane3way.dat.add.xml"/>
     </input>
 
     <output>
-        <tripinfo-output value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane3way/sumo/tripinfos.xml"/>
-        <statistic-output value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane3way/sumo/stats.xml"/>
+        <tripinfo-output value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/scenarios/2lane3way/sumo/tripinfos.xml"/>
+        <statistic-output value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/scenarios/2lane3way/sumo/stats.xml"/>
     </output>
 
     <processing>
@@ -31,7 +31,7 @@
     </report>
 
     <gui_only>
-        <gui-settings-file value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/2lane3way/sumo/2lane3way.view.xml"/>
+        <gui-settings-file value="/home/j/Documents/MASc/Thesis/mosaic_scenario_gen/dataset/scenarios/2lane3way/sumo/2lane3way.view.xml"/>
     </gui_only>
 
 </sumoConfiguration>

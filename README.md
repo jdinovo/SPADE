@@ -1,5 +1,7 @@
 # SPADE
 
+***SP**aT **A**ttack **D**etection and **E**valuation dataset*
+
 ## Requirements
 
 - Java 17
@@ -38,16 +40,16 @@ names end in `-test` use `TEST_SEEDS`; other folders use `SEEDS`.
 
 3. Generation script dry run `DRY_RUN=1 ./run_spade.sh`
 
-4. Run a smoke test with one high-density run per scenario and attack/benign class, using the first seed: `./run_spade.sh test`
+4. Run a smoke test with one low-density run per scenario and attack/benign class, using the first seed: `./run_spade.sh test`
 
 5. Run the full dataset generation `./run_spade.sh`
 
 6. Clean up script metadata files `./run_spade.sh clean`
 
-## Processing generated data
+## Processing Generated Data
 
-After generating runs under `data/`, convert their raw MOSAIC logs into SPADE
-records with:
+After generating runs under `data/`, convert their application CSV logs into
+SPADE records with:
 
 ```sh
 python3 process_spade.py
