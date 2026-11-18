@@ -10,6 +10,8 @@
 # Usage:  ./run_spade.sh                 # build the jar, then run everything (skips completed runs)
 #         DRY_RUN=1 ./run_spade.sh       # generate configs to a temp file, print plan, run nothing
 #         ./run_spade.sh test            # run every scenario/class once at low density and first seed
+#         ./run_spade.sh density-test [scenario] # compare all densities across scenarios or one selected scenario
+#         python3 prepare_route_schedules.py   # precompute scenario route schedules
 #         ./run_spade.sh build           # compile application/ and copy the jar into every <scenario>/application/
 #         SKIP_BUILD=1 ./run_spade.sh    # run without rebuilding the jar first
 #         ./run_spade.sh clean           # restore configs, delete all .orig files and meta files
@@ -26,6 +28,14 @@ MVN_DIR="application"
 STATE_DIR=".run_state"
 LOG_DIR="spade_mosaic_logs"
 DATA_DIR="data"
+declare -A ARRIVAL_WINDOWS=( [low]=30 [medium]=30 [high]=30 )
+LOGGING_RADIUS_M=100
+ESTIMATED_SPEED_MPS=13.9
+SIMULATION_CLEARANCE_SECONDS=180
+OUTPUT_DATA_DIR="$DATA_DIR"
+if [[ "$MODE" == "density-test" ]]; then
+  OUTPUT_DATA_DIR="$DATA_DIR/density-test"
+fi
 
 SCENARIOS=()
 shopt -s nullglob
@@ -39,6 +49,17 @@ if [[ ${#SCENARIOS[@]} -eq 0 ]]; then
   echo "ERROR: no scenario folders found under $SCENARIO_ROOT" >&2
   exit 1
 fi
+if [[ "$MODE" == "density-test" ]]; then
+  density_scenario="${2:-}"
+  if [[ -n "$density_scenario" ]]; then
+    if [[ ! " ${SCENARIOS[*]} " =~ " ${density_scenario} " ]]; then
+      echo "ERROR: scenario '$density_scenario' not found under $SCENARIO_ROOT" >&2
+      exit 1
+    fi
+    SCENARIOS=("$density_scenario")
+  fi
+fi
+python3 "$REPO_ROOT/prepare_route_schedules.py" --check "${SCENARIOS[@]}" || exit 1
 
 SEEDS=(956060311 441439018 326601683 950894839) # training/validation scenarios
 TEST_SEEDS=(561603393)                # "-test" scenarios (seed unseen in training)
@@ -64,6 +85,11 @@ if [[ "$MODE" == "test" ]]; then
   TEST_SEEDS=("${TEST_SEEDS[0]}")
   VISIBILITIES=("${VISIBILITIES[0]}")
   DENSITIES=(low)
+elif [[ "$MODE" == "density-test" ]]; then
+  SEEDS=("${SEEDS[0]}")
+  TEST_SEEDS=("${TEST_SEEDS[0]}")
+  VISIBILITIES=("${VISIBILITIES[0]}")
+  ORDER=(BENIGN)
 fi
 
 # ---------------------------------------------------------------------------
@@ -197,164 +223,25 @@ if [[ "$DRY_RUN" != "1" ]]; then
   done
 fi
 
-# gen_mapping <scenario> <class> <visibility> <density> <seed> <out_file>
+# gen_mapping <scenario> <class> <visibility> <density> <out_file>
 # Builds mapping_config.json from <scenario>/mapping/mapping_config.json.orig:
 #   - sets the RSU application class
 #   - sets VehicleApp("<orig first arg>", <visibility>)
 #   - replaces the vehicles array using route ids from mapping/routes.txt
-# Traffic is seeded by scenario+density only (no shuffling), so each density's
-# vehicle list is identical across attack classes, seeds and visibilities.
-gen_mapping() {
-  python3 - "$@" <<'PY'
-import sys, json, re, random
-import glob
-import xml.etree.ElementTree as ET
-scen, cls, vis, dens, seed, out = sys.argv[1:7]
-base = f"{scen}/mapping"
-
-with open(f"{base}/mapping_config.json.orig") as f:
-    cfg = json.load(f)
-standalone_rsu = cls in {
-    "org.example.attacks.ReplaySpatApp",
-    "org.example.attacks.SybilSpatApp",
-    "org.example.attacks.ImpersonationSpatApp",
-}
-
-routes = []
-with open(f"{base}/routes.txt") as f:
-    for line in f:
-        line = line.strip()
-        if re.fullmatch(r"\d+", line):      # a route id is a line containing only digits
-            routes.append(line)
-routes = list(dict.fromkeys(routes))
-if not routes:
-    sys.exit(f"ERROR: no route ids found in {base}/routes.txt")
-
-# --- applications -----------------------------------------------------------
-n_rsu = n_veh = 0
-for proto in cfg.get("prototypes", []):
-    apps = proto.get("applications", [])
-    for i, a in enumerate(apps):
-        if re.fullmatch(r"org\.example\.(attacks\.)?\w+SpatApp", a):
-            if not standalone_rsu:
-                apps[i] = cls
-            n_rsu += 1
-            continue
-        m = re.fullmatch(r'(org\.example\.VehicleApp\(\s*"[^"]*")[^)]*\)', a)
-        if m:
-            apps[i] = f"{m.group(1)}, {vis})"
-            n_veh += 1
-if n_rsu != 1 or n_veh != 1:
-    sys.exit(f"ERROR: expected 1 RSU app and 1 VehicleApp entry, found {n_rsu}/{n_veh} in {base}")
-
-if standalone_rsu:
-    traffic_lights = cfg.get("trafficLights", [])
-    if not traffic_lights:
-        sys.exit(f"ERROR: no traffic light is configured in {base}")
-    tl_id = str(traffic_lights[0].get("tlGroupId", ""))
-    net_files = glob.glob(f"{scen}/sumo/*.net.xml")
-    if len(net_files) != 1:
-        sys.exit(f"ERROR: expected one SUMO network in {scen}/sumo, found {len(net_files)}")
-    net = ET.parse(net_files[0]).getroot()
-    junction = next((node for node in net.findall("junction") if node.get("id") == tl_id), None)
-    if junction is None and tl_id.startswith("GS_"):
-        junction_id = tl_id.removeprefix("GS_")
-        junction = next(
-            (node for node in net.findall("junction") if node.get("id") == junction_id),
-            None,
-        )
-    location = net.find("location")
-    if location is None:
-        sys.exit(f"ERROR: missing SUMO projection metadata in {net_files[0]}")
-    if junction is None:
-        bounds = list(map(float, location.get("convBoundary", "").split(",")))
-        traffic_light_junctions = [
-            node for node in net.findall("junction")
-            if node.get("type") == "traffic_light"
-        ]
-        if len(bounds) != 4 or not traffic_light_junctions:
-            sys.exit(f"ERROR: cannot locate a traffic-light junction in {net_files[0]}")
-        center_x, center_y = (bounds[0] + bounds[2]) / 2.0, (bounds[1] + bounds[3]) / 2.0
-        junction = min(
-            traffic_light_junctions,
-            key=lambda node: (float(node.get("x")) - center_x) ** 2
-                             + (float(node.get("y")) - center_y) ** 2,
-        )
-    projection = location.get("projParameter", "")
-    offset_x, offset_y = map(float, location.get("netOffset", "0,0").split(","))
-    easting = float(junction.get("x")) - offset_x
-    northing = float(junction.get("y")) - offset_y
-
-    try:
-        from pyproj import Transformer
-    except ImportError:
-        sys.exit("ERROR: standalone attack RSUs require pyproj; install it with 'python3 -m pip install pyproj'")
-    longitude, latitude = Transformer.from_crs(
-        projection, "EPSG:4326", always_xy=True
-    ).transform(easting, northing)
-
-    cfg.setdefault("prototypes", []).append({
-        "name": "AttackRsu",
-        "applications": [cls],
-    })
-    cfg.setdefault("rsus", []).append({
-        "name": "AttackRsu",
-        "position": {
-            "latitude": latitude,
-            "longitude": longitude,
-        },
-    })
-
-# --- vehicles ---------------------------------------------------------------
-TARGET_FLOW = 60   # constant for every entry and density
-PARAMS = {  # total vehicles per run
-    "low":    {"total": (6, 8)},
-    "medium": {"total": (13, 17)},
-    "high":   {"total": (27, 33)},
-}
-PER_ENTRY = (2, 5)   # vehicles per route entry (maxNumberVehicles)
-p = PARAMS[dens]
-rng = random.Random(f"{scen}|{dens}")
-
-total = rng.randint(*p["total"])
-start = rng.randrange(len(routes))      # fixed starting point in routes.txt
-
-chosen, counts, remaining, k = [], [], total, 0
-while remaining > 0 and k < len(routes):   # consecutive routes, wrapping, until total is met
-    c = min(remaining, rng.randint(*PER_ENTRY))
-    chosen.append(routes[(start + k) % len(routes)])
-    counts.append(c)
-    remaining -= c
-    k += 1
-
-i = 0
-while remaining > 0:                    # only if routes ran out: spread the rest
-    counts[i % len(counts)] += 1
-    remaining -= 1
-    i += 1
-
-vehicles = []
-for k, (route, cnt) in enumerate(zip(chosen, counts)):
-    vehicles.append({
-        "startingTime": 0.0 if k == 0 else round(rng.uniform(0.0, 10.0), 1),
-        "targetFlow": TARGET_FLOW,
-        "maxNumberVehicles": cnt,
-        "route": route,
-        "types": [{"name": "Car"}],
-    })
-cfg["vehicles"] = vehicles
-
-with open(out, "w") as f:
-    json.dump(cfg, f, indent=4)
-print(f"vehicles={total} entries={len(chosen)} routes_available={len(routes)}")
-PY
-}
-
+# Traffic counts and routes are deterministic per scenario and density, so
+# attack classes, seeds, and visibilities use matching density schedules.
 set_seed() {    # $1=scenario $2=seed
   local file="$1/scenario_config.json"
   sed -E -i "s/(\"randomSeed\"[[:space:]]*:[[:space:]]*)-?[0-9]+/\1$2/" "$file"
   grep -Eq "\"randomSeed\"[[:space:]]*:[[:space:]]*$2" "$file" || {
     echo "ERROR: could not set randomSeed in $file"; return 1; }
+}
+
+set_duration() {    # $1=scenario $2=duration in seconds
+  local file="$1/scenario_config.json"
+  sed -E -i "s/(\"duration\"[[:space:]]*:[[:space:]]*\")[0-9]+s/\1${2}s/" "$file"
+  grep -Eq "\"duration\"[[:space:]]*:[[:space:]]*\"${2}s\"" "$file" || {
+    echo "ERROR: could not set simulation duration in $file"; return 1; }
 }
 
 move_file() {
@@ -405,22 +292,35 @@ for scen in "${SCENARIOS[@]}"; do
         for dens in "${DENSITIES[@]}"; do
           n=$((n+1))
           vlabel="${VIS_LABEL[$vis]}"
+          arrival_window="${ARRIVAL_WINDOWS[$dens]}"
           tag="${scen}_${label}_${seed}_${dens}-den_${vlabel}-vis"
-          dest="$DATA_DIR/$scen/$label/$seed/${dens}-den_${vlabel}-vis"
+          if [[ "$MODE" == "density-test" ]]; then
+            tag="density-test_${tag}"
+          fi
+          dest="$OUTPUT_DATA_DIR/$scen/$label/$seed/${dens}-den_${vlabel}-vis"
+          calibration_dir="$dest"
+          low_calibration_dir="$OUTPUT_DATA_DIR/$scen/$label/$seed/low-den_${vlabel}-vis"
           echo "[$n/$total] $tag"
 
           if [[ -f "$STATE_DIR/$tag.done" ]]; then echo "  already done, skipping"; continue; fi
 
           if [[ "$DRY_RUN" == "1" ]]; then
-            summary=$(gen_mapping "$scenario_path" "${CLASSES[$label]}" "$vis" "$dens" "$seed" "$STATE_DIR/dryrun_mapping.json") \
+            summary=$(python3 "$REPO_ROOT/run_spade_helpers.py" generate-mapping "$scenario_path" "${CLASSES[$label]}" "$vis" "$dens" "$STATE_DIR/dryrun_mapping.json" "$arrival_window" "$LOGGING_RADIUS_M" "$ESTIMATED_SPEED_MPS" "$SIMULATION_CLEARANCE_SECONDS" "$calibration_dir" "$low_calibration_dir") \
               || { echo "  GENERATION FAILED"; echo "$summary"; exit 1; }
             echo "  would run: $summary (visibility $vis) -> $dest"
             continue
           fi
 
-          summary=$(gen_mapping "$scenario_path" "${CLASSES[$label]}" "$vis" "$dens" "$seed" "$scenario_path/mapping/mapping_config.json") \
+          summary=$(python3 "$REPO_ROOT/run_spade_helpers.py" generate-mapping "$scenario_path" "${CLASSES[$label]}" "$vis" "$dens" "$scenario_path/mapping/mapping_config.json" "$arrival_window" "$LOGGING_RADIUS_M" "$ESTIMATED_SPEED_MPS" "$SIMULATION_CLEARANCE_SECONDS" "$calibration_dir" "$low_calibration_dir") \
             || { echo "$summary"; exit 1; }
+          run_duration="${summary##*duration=}"
+          run_duration="${run_duration%%s*}"
+          if [[ ! "$run_duration" =~ ^[0-9]+$ ]]; then
+            echo "ERROR: could not determine run duration from mapping generation: $summary" >&2
+            exit 1
+          fi
           set_seed "$scenario_path" "$seed" || exit 1
+          set_duration "$scenario_path" "$run_duration" || exit 1
           echo "  $summary (visibility $vis)"
 
           stale="$scenario_path/application/logs_${seed}"
@@ -429,6 +329,9 @@ for scen in "${SCENARIOS[@]}"; do
             mkdir -p "$DATA_DIR/_stale/$tag"
             mv "$stale" "$DATA_DIR/_stale/$tag/"
           fi
+          rm -rf "$dest/csv"
+          rm -rf "$dest/unselected_vehicle_logs"
+          rm -f "$dest/record_balance.json"
 
           if ! clear_mosaic_logs; then
             echo "  ERROR: could not clear MOSAIC logs before run" >&2
@@ -455,6 +358,15 @@ for scen in "${SCENARIOS[@]}"; do
             echo "  WARNING: run succeeded but no output files were found to collect"
             empty+=("$tag")
           else
+            if [[ "$dens" != "low" ]]; then
+              if ! balance_summary=$(python3 "$REPO_ROOT/run_spade_helpers.py" balance-vehicle-logs "$dest/csv" "$low_calibration_dir/csv" "$dest" "$seed" "$dens"); then
+                echo "  ERROR: could not balance vehicle logs for $tag"
+                echo "$balance_summary"
+                failed+=("$tag")
+                continue
+              fi
+              echo "  $balance_summary"
+            fi
             echo "  collected $moved file(s) -> $dest"
             touch "$STATE_DIR/$tag.done"
           fi
@@ -468,3 +380,7 @@ FINISHED=1
 echo "Finished. ${#failed[@]} failed, ${#empty[@]} produced no collectable output."
 printf '  failed: %s\n' "${failed[@]}"
 printf '  empty:  %s\n' "${empty[@]}"
+if [[ "$MODE" == "density-test" && ${#failed[@]} -eq 0 && ${#empty[@]} -eq 0 ]]; then
+  echo "Density test outputs: $OUTPUT_DATA_DIR/<scenario>/BENIGN/"
+  echo "Process for record totals: python3 process_spade.py --input $OUTPUT_DATA_DIR --output processed/density-test_records"
+fi

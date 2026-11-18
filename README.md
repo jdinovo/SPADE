@@ -34,17 +34,21 @@ names end in `-test` use `TEST_SEEDS`; other folders use `SEEDS`.
 
 ## Execution
 
-1. Execute permissions `chmod +x ./run_spade.sh`
-
-2. Build and distribute application jar `./run_spade.sh build`
-
-3. Generation script dry run `DRY_RUN=1 ./run_spade.sh`
-
-4. Run a smoke test with one low-density run per scenario and attack/benign class, using the first seed: `./run_spade.sh test`
-
-5. Run the full dataset generation `./run_spade.sh`
-
-6. Clean up script metadata files `./run_spade.sh clean`
+1. Make the runner executable: `chmod +x ./run_spade.sh`
+2. Precompute route schedules for all scenarios: `python3 prepare_route_schedules.py`.
+   This writes deterministic density-specific route lists to each scenario's
+   `mapping/route_schedule.json`, balancing vehicles across available incoming
+   approaches and distinct starting points. Rerun it if a scenario's routes or
+   application database changes.
+3. Build and distribute the application jar: `./run_spade.sh build`
+4. Preview the generated run plan: `DRY_RUN=1 ./run_spade.sh`
+5. Run a smoke test with one low-density run per scenario and attack/benign class,
+   using the first seed: `./run_spade.sh test`
+6. Generate the full dataset: `./run_spade.sh`
+7. Optionally compare density levels across scenarios with
+   `./run_spade.sh density-test` or one scenario with
+   `./run_spade.sh density-test 4lane4way`.
+8. Clean up script metadata files: `./run_spade.sh clean`
 
 ## Processing Generated Data
 
