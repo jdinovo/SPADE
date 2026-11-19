@@ -342,8 +342,7 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
             double nearestDistance = Double.POSITIVE_INFINITY;
             for (IntersectionGeometry geometry : intersectionGeometries.values()) {
                 double distance = vehicle.getPosition().distanceTo(geometry.getRefPoint());
-                boolean onApproachLane = geometry.getLaneSet().containsKey(currentLane);
-                if (onApproachLane && distance <= LOGGING_RADIUS_M && distance < nearestDistance) {
+                if (distance <= LOGGING_RADIUS_M && distance < nearestDistance) {
                     loggingIntersection = geometry;
                     nearestDistance = distance;
                 }
@@ -351,7 +350,7 @@ public class VehicleApp extends AbstractApplication<VehicleOperatingSystem>
             if (loggingIntersection != null) {
                 loggingWindowActive = true;
                 enteredLoggingIntersection = true;
-                getLog().info("Started vehicle data logging for {} on an approach lane within {}m of intersection {}",
+                getLog().info("Started vehicle data logging for {} within {}m of intersection {}",
                         getOs().getId(), LOGGING_RADIUS_M, loggingIntersection.getId());
             }
         }

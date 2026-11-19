@@ -302,7 +302,16 @@ for scen in "${SCENARIOS[@]}"; do
           low_calibration_dir="$OUTPUT_DATA_DIR/$scen/$label/$seed/low-den_${vlabel}-vis"
           echo "[$n/$total] $tag"
 
-          if [[ -f "$STATE_DIR/$tag.done" ]]; then echo "  already done, skipping"; continue; fi
+          if [[ -f "$STATE_DIR/$tag.done" ]]; then
+            if [[ "$dens" == "low" && "$DRY_RUN" != "1" ]] \
+                && ! python3 "$REPO_ROOT/run_spade_helpers.py" validate-vehicle-logs "$dest/csv"; then
+              echo "  completed low-density run has no usable vehicle logs; rerunning"
+              rm -f "$STATE_DIR/$tag.done"
+            else
+              echo "  already done, skipping"
+              continue
+            fi
+          fi
 
           if [[ "$DRY_RUN" == "1" ]]; then
             summary=$(python3 "$REPO_ROOT/run_spade_helpers.py" generate-mapping "$scenario_path" "${CLASSES[$label]}" "$vis" "$dens" "$STATE_DIR/dryrun_mapping.json" "$arrival_window" "$LOGGING_RADIUS_M" "$ESTIMATED_SPEED_MPS" "$SIMULATION_CLEARANCE_SECONDS" "$calibration_dir" "$low_calibration_dir") \
@@ -358,6 +367,12 @@ for scen in "${SCENARIOS[@]}"; do
             echo "  WARNING: run succeeded but no output files were found to collect"
             empty+=("$tag")
           else
+            if ! vehicle_summary=$(python3 "$REPO_ROOT/run_spade_helpers.py" validate-vehicle-logs "$dest/csv"); then
+              echo "  ERROR: no usable vehicle logs for $tag"
+              echo "  $vehicle_summary"
+              failed+=("$tag")
+              continue
+            fi
             if [[ "$dens" != "low" ]]; then
               if ! balance_summary=$(python3 "$REPO_ROOT/run_spade_helpers.py" balance-vehicle-logs "$dest/csv" "$low_calibration_dir/csv" "$dest" "$seed" "$dens"); then
                 echo "  ERROR: could not balance vehicle logs for $tag"
@@ -367,6 +382,7 @@ for scen in "${SCENARIOS[@]}"; do
               fi
               echo "  $balance_summary"
             fi
+            [[ "$dens" == "low" ]] && echo "  $vehicle_summary"
             echo "  collected $moved file(s) -> $dest"
             touch "$STATE_DIR/$tag.done"
           fi

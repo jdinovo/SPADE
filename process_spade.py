@@ -297,6 +297,8 @@ def process_scenario(
 
     run_output = output_root.joinpath(*scenario.relative_to(input_root).parent.parts)
     run_output.mkdir(parents=True, exist_ok=True)
+    for output_file in run_output.glob("vehicle_*.json"):
+        output_file.unlink()
     count = 0
     benign_count = 0
     attack_count = 0
@@ -404,6 +406,112 @@ def process_scenario(
     return count, benign_count, attack_count
 
 
+def scenario_signature(scenario: Path, message_ttl_ns: int) -> dict[str, Any]:
+    sources = [scenario / "attack_labels.csv", *sorted(scenario.glob("*_veh_output.csv"))]
+    return {
+        "message_ttl_ns": message_ttl_ns,
+        "sources": [
+            {
+                "name": path.name,
+                "size": path.stat().st_size,
+                "mtime_ns": path.stat().st_mtime_ns,
+            }
+            for path in sources
+        ],
+    }
+
+
+def completed_scenario(
+    run_output: Path, signature: dict[str, Any],
+) -> tuple[int, int, int] | None:
+    marker = run_output / ".process_spade.json"
+    try:
+        state = json.loads(marker.read_text(encoding="utf-8"))
+        counts = state["counts"]
+        outputs = state["outputs"]
+        if state["signature"] != signature or not outputs:
+            return None
+        if not all((run_output / name).is_file() for name in outputs):
+            return None
+        return counts["records"], counts["benign"], counts["attack"]
+    except (OSError, ValueError, KeyError, TypeError):
+        return None
+
+
+def existing_scenario_outputs(
+    scenario: Path,
+    input_root: Path,
+    run_output: Path,
+    signature: dict[str, Any],
+) -> tuple[int, int, int] | None:
+    identifiers = RunIdRemapper(scenario.relative_to(input_root).parent.as_posix())
+    expected_outputs: set[str] = set()
+    try:
+        for log in sorted(scenario.glob("*_veh_output.csv")):
+            with log.open(newline="", encoding="utf-8-sig") as source:
+                for line, row in enumerate(csv.reader(source), 1):
+                    if row and row[0] == "VEHICLE_DATA":
+                        if len(row) != 13:
+                            return None
+                        vehicle_id = row[2]
+                        expected_outputs.add(
+                            f"{identifiers.map('vehicle', vehicle_id)}.json"
+                        )
+        if not expected_outputs:
+            return None
+
+        outputs = [run_output / name for name in sorted(expected_outputs)]
+        if any(not path.is_file() for path in outputs):
+            return None
+        newest_input = max(
+            item["mtime_ns"] for item in signature["sources"]
+        )
+        if any(path.stat().st_mtime_ns < newest_input for path in outputs):
+            return None
+
+        records = benign = attack = 0
+        for path in outputs:
+            with path.open(encoding="utf-8") as source:
+                vehicle_records = json.load(source)
+            if not isinstance(vehicle_records, list) or not vehicle_records:
+                return None
+            for record in vehicle_records:
+                if not isinstance(record, dict) or "label" not in record:
+                    return None
+                records += 1
+                if record["label"] == "BENIGN":
+                    benign += 1
+                else:
+                    attack += 1
+        return records, benign, attack
+    except (OSError, ValueError, TypeError, KeyError):
+        return None
+
+
+def mark_scenario_complete(
+    run_output: Path,
+    signature: dict[str, Any],
+    counts: tuple[int, int, int],
+    outputs: list[str] | None = None,
+) -> None:
+    outputs = outputs or sorted(path.name for path in run_output.glob("vehicle_*.json"))
+    if not outputs or counts[0] == 0:
+        return
+    state = {
+        "signature": signature,
+        "counts": {
+            "records": counts[0],
+            "benign": counts[1],
+            "attack": counts[2],
+        },
+        "outputs": outputs,
+    }
+    marker = run_output / ".process_spade.json"
+    temporary_marker = marker.with_suffix(".json.tmp")
+    temporary_marker.write_text(json.dumps(state, indent=2) + "\n", encoding="utf-8")
+    temporary_marker.replace(marker)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Build 10 Hz, vehicle-centered SPADE JSON records from MOSAIC CSV logs."
@@ -429,7 +537,12 @@ def main() -> int:
     output = args.output.expanduser().resolve()
     if not input_root.is_dir():
         parser.error(f"input directory does not exist: {input_root}")
-    scenarios = sorted(path.parent for path in input_root.rglob("attack_labels.csv"))
+    scenarios = sorted(
+        path.parent
+        for path in input_root.rglob("attack_labels.csv")
+        if path.parent.name == "csv"
+        and any(path.parent.glob("veh_*_veh_output.csv"))
+    )
     if not scenarios:
         parser.error(f"no attack_labels.csv files found under {input_root}")
     if not math.isfinite(args.split_tolerance) or not 0 <= args.split_tolerance < 0.2:
@@ -447,9 +560,25 @@ def main() -> int:
     message_ttl_ns = int(args.message_ttl_seconds * 1_000_000_000)
     try:
         for scenario in scenarios:
-            written, benign, attack = process_scenario(
-                scenario, input_root, output, message_ttl_ns,
-            )
+            run_output = output.joinpath(*scenario.relative_to(input_root).parent.parts)
+            signature = scenario_signature(scenario, message_ttl_ns)
+            cached_counts = completed_scenario(run_output, signature)
+            if cached_counts is None:
+                cached_counts = existing_scenario_outputs(
+                    scenario, input_root, run_output, signature,
+                )
+                if cached_counts is not None:
+                    mark_scenario_complete(run_output, signature, cached_counts)
+            if cached_counts is None:
+                written, benign, attack = process_scenario(
+                    scenario, input_root, output, message_ttl_ns,
+                )
+                mark_scenario_complete(
+                    run_output, signature, (written, benign, attack),
+                )
+            else:
+                written, benign, attack = cached_counts
+                print(f"{scenario}: already processed; skipping", file=sys.stderr)
             total += written
             attack_share = attack / written if written else 0.0
             is_benign_run = scenario.parent.parent.parent.name.upper() == "BENIGN"

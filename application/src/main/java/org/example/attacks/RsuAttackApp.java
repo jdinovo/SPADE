@@ -33,8 +33,8 @@ public abstract class RsuAttackApp extends RsuSpatApp {
 
     // Flag indicating an attack is in progress (set on the attack tick and cleared when control returns to benign)
     private volatile boolean attackInProgress = false;
-    // events to suppress while attack is in progress
-    private final Set<String> suppressedDuringAttack = new HashSet<>(Set.of("SPAT", "MAP"));
+    // SPaT is suppressed during attacks; MAP geometry remains available.
+    private final Set<String> suppressedDuringAttack = new HashSet<>(Set.of("SPAT"));
 
     @Override
     public void onStartup() {
@@ -66,9 +66,7 @@ public abstract class RsuAttackApp extends RsuSpatApp {
         }
 
         if ("MAP".equals(resource)) {
-            if (!attackInProgress) {
-                super.broadcastMapMessage();
-            }
+            super.broadcastMapMessage();
             getOs().getEventManager().addEvent(new Event(
                     getOs().getSimulationTime() + MAP_SEND_INTERVAL, this, "MAP"
             ));
@@ -83,15 +81,6 @@ public abstract class RsuAttackApp extends RsuSpatApp {
 
         // Delegate other events to parent
         super.processEvent(event);
-    }
-
-    @Override
-    protected void broadcastMapMessage() {
-        if (attackInProgress) {
-            getLog().debug("Skipping MAP broadcast because attack is in progress");
-            return;
-        }
-        super.broadcastMapMessage();
     }
 
     @Override

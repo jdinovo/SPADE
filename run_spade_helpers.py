@@ -287,6 +287,29 @@ def balance_vehicle_logs(args: argparse.Namespace) -> None:
     )
 
 
+def validate_vehicle_logs(args: argparse.Namespace) -> None:
+    directory = Path(args.csv_dir)
+    vehicle_files = 0
+    records = 0
+    for path in sorted(directory.glob("veh_*_veh_output.csv")):
+        file_records = 0
+        with path.open(newline="", encoding="utf-8-sig") as source:
+            for line, row in enumerate(csv.reader(source), 1):
+                if row and row[0] == "VEHICLE_DATA":
+                    if len(row) != 13:
+                        raise ValueError(
+                            f"{path}:{line}: expected 13 VEHICLE_DATA fields"
+                        )
+                    file_records += 1
+        if file_records:
+            vehicle_files += 1
+            records += file_records
+
+    if not records:
+        raise SystemExit(f"ERROR: no vehicle records found in {directory}")
+    print(f"vehicle logs: files={vehicle_files} records={records}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
@@ -312,6 +335,10 @@ def main() -> int:
     balancing.add_argument("seed")
     balancing.add_argument("density", choices=("medium", "high"))
     balancing.set_defaults(handler=balance_vehicle_logs)
+
+    validation = commands.add_parser("validate-vehicle-logs")
+    validation.add_argument("csv_dir")
+    validation.set_defaults(handler=validate_vehicle_logs)
 
     args = parser.parse_args()
     args.handler(args)
