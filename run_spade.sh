@@ -260,6 +260,28 @@ clear_mosaic_logs() {
   done
 }
 
+# Move the current run's MOSAIC logs out of the shared log roots.
+capture_mosaic_logs() {
+  local destination="$1" index src entry
+  local -a labels=(mosaic repo)
+  mkdir -p "$destination" || return 1
+  for index in "${!LOG_SOURCES[@]}"; do
+    src="${LOG_SOURCES[$index]}"
+    [[ -d "$src" ]] || continue
+    mkdir -p "$destination/${labels[$index]}" || return 1
+    while IFS= read -r -d '' entry; do
+      mv -- "$entry" "$destination/${labels[$index]}/" || return 1
+    done < <(find "$src" -mindepth 1 -maxdepth 1 -print0)
+  done
+}
+
+# Captured logs already live in the run output; leave them there on errors.
+preserve_mosaic_logs() {
+  local logs="$1"
+  [[ -d "$logs" ]] || return 0
+  echo "  preserved MOSAIC logs -> $logs"
+}
+
 # collect_outputs <scenario> <seed> <dest_dir>  -> prints number of files moved
 collect_outputs() {
   local scen="$1" seed="$2" dest="$3" count=0 f
@@ -351,8 +373,9 @@ for scen in "${SCENARIOS[@]}"; do
             > "$LOG_DIR/$tag.log" 2>&1
           rc=$?
 
-          if ! clear_mosaic_logs; then
-            echo "  ERROR: could not clear MOSAIC logs after run" >&2
+          pending_logs="$dest/mosaic_logs/attempt_${tag}_$(date +%s%N)"
+          if ! capture_mosaic_logs "$pending_logs"; then
+            echo "  ERROR: could not capture MOSAIC logs after run" >&2
             rc=1
           fi
 
@@ -361,13 +384,19 @@ for scen in "${SCENARIOS[@]}"; do
           cp "$scenario_path/mapping/mapping_config.json" "$dest/mapping_config.used.json"
 
           if [[ $rc -ne 0 ]]; then
+            preserve_mosaic_logs "$pending_logs" || \
+              echo "  ERROR: could not preserve MOSAIC logs in $dest" >&2
             echo "  FAILED rc=$rc (partial output in $dest, console in $LOG_DIR/$tag.log)"
             failed+=("$tag")
           elif [[ "$moved" -eq 0 ]]; then
+            preserve_mosaic_logs "$pending_logs" || \
+              echo "  ERROR: could not preserve MOSAIC logs in $dest" >&2
             echo "  WARNING: run succeeded but no output files were found to collect"
             empty+=("$tag")
           else
             if ! vehicle_summary=$(python3 "$REPO_ROOT/run_spade_helpers.py" validate-vehicle-logs "$dest/csv"); then
+              preserve_mosaic_logs "$pending_logs" || \
+                echo "  ERROR: could not preserve MOSAIC logs in $dest" >&2
               echo "  ERROR: no usable vehicle logs for $tag"
               echo "  $vehicle_summary"
               failed+=("$tag")
@@ -375,6 +404,8 @@ for scen in "${SCENARIOS[@]}"; do
             fi
             if [[ "$dens" != "low" ]]; then
               if ! balance_summary=$(python3 "$REPO_ROOT/run_spade_helpers.py" balance-vehicle-logs "$dest/csv" "$low_calibration_dir/csv" "$dest" "$seed" "$dens"); then
+                preserve_mosaic_logs "$pending_logs" || \
+                  echo "  ERROR: could not preserve MOSAIC logs in $dest" >&2
                 echo "  ERROR: could not balance vehicle logs for $tag"
                 echo "$balance_summary"
                 failed+=("$tag")
@@ -385,6 +416,7 @@ for scen in "${SCENARIOS[@]}"; do
             [[ "$dens" == "low" ]] && echo "  $vehicle_summary"
             echo "  collected $moved file(s) -> $dest"
             touch "$STATE_DIR/$tag.done"
+            rm -rf "$pending_logs"
           fi
         done
       done
