@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parent
 INTERVAL_NS = 100_000_000
 MESSAGE_TTL_SECONDS = 2.0
 MESSAGE_TTL_NS = int(MESSAGE_TTL_SECONDS * 1_000_000_000)
+PROCESSOR_VERSION = 2
 FEATURES = [
     "vehicle_id", "route_id", "lane_id", "is_parked", "position", "heading",
     "speed", "throttle", "brake", "longitudinal_accel", "slope",
@@ -70,7 +71,8 @@ def awareness(raw: str) -> dict[str, Any]:
 
 def label_name(raw: str) -> str:
     labels = [part.strip().upper() for part in raw.split("|") if part.strip()]
-    return "|".join("FALSE_STATE" if part == "TAMPER" else part for part in labels) or "BENIGN"
+    aliases = {"TAMPER": "FALSE_STATE", "TIMING": "TIMING_MANIP"}
+    return "|".join(aliases.get(part, part) for part in labels) or "BENIGN"
 
 
 def load_labels(path: Path, attack_class: str) -> tuple[list[int], list[str]]:
@@ -409,6 +411,7 @@ def process_scenario(
 def scenario_signature(scenario: Path, message_ttl_ns: int) -> dict[str, Any]:
     sources = [scenario / "attack_labels.csv", *sorted(scenario.glob("*_veh_output.csv"))]
     return {
+        "processor_version": PROCESSOR_VERSION,
         "message_ttl_ns": message_ttl_ns,
         "sources": [
             {
@@ -444,6 +447,17 @@ def existing_scenario_outputs(
     run_output: Path,
     signature: dict[str, Any],
 ) -> tuple[int, int, int] | None:
+    marker = run_output / ".process_spade.json"
+    if marker.is_file():
+        try:
+            previous_signature = json.loads(
+                marker.read_text(encoding="utf-8"),
+            )["signature"]
+        except (OSError, ValueError, KeyError, TypeError):
+            return None
+        if previous_signature != signature:
+            return None
+
     identifiers = RunIdRemapper(scenario.relative_to(input_root).parent.as_posix())
     expected_outputs: set[str] = set()
     try:
